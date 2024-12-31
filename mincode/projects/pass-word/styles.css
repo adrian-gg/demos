@@ -232,6 +232,7 @@ button:focus-visible {
    padding-top: .7rem;
    border: none;
    border-radius: 360px;
+   background-color: white;
    text-transform: uppercase;
    text-align: center;
    font-size: 1.2rem;

@@ -1,0 +1,184 @@
+/*
+ * ===================================================================
+ * -- RESET ----------------------------------------------------------
+ * ===================================================================
+ */
+
+* {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-wrap: balance;
+}
+
+p,
+span {
+  text-wrap: pretty;
+}
+
+a {
+  color: initial;
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+input,
+textarea,
+button {
+  appearance: none;
+  border: none;
+  background: none;
+}
+
+input:focus-visible,
+textarea:focus-visible,
+button:focus-visible {
+  outline: none;
+}
+
+/*
+ * ===================================================================
+ * -- STYLES ---------------------------------------------------------
+ * ===================================================================
+ */
+
+ :root{
+  --size-tile: 8rem;
+}
+
+html{
+  font-size: 10px;
+}
+
+body{
+  width: 100%;
+  height: 100vh;
+  background-color: #202020;
+}
+
+main{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.tiles_container{
+  --size-grid: 3;
+  background-color: #AAA9AA;
+  display: grid;
+  grid-template-columns: repeat(var(--size-grid), auto);
+  grid-gap: .1rem;
+}
+
+ul{ list-style: none; }
+
+li.tile{
+  width: var(--size-tile);
+  height: var(--size-tile);
+  background-color: #DBD9DB;
+  position: relative;
+}
+li.tile::before{
+  content: "";
+  width: calc(100% - (1.2rem * 2));
+  height: calc(100% - (1.2rem * 2));
+  margin: 1.2rem;
+  border-radius: 360px;
+  background-color: #EDECED;
+  position: absolute;
+}
+
+li.tile:hover .tile__menu,
+li.tile:hover .tile__options{
+  visibility: initial;
+}
+
+li.tile.t--on .tile__menu{
+  display: none;
+}
+li.tile.t--on .tile__options{
+  display: grid;
+}
+
+.tile__menu{
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, .3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  z-index: 9;
+  color: white;
+  font-size: 3rem;
+  visibility: hidden;
+  cursor: pointer;
+}
+
+.tile__options{
+  width: 100%;
+  height: 100%;
+  display: none;
+  grid-template-columns: repeat(2, auto);
+  position: absolute;
+  z-index: 9;
+  font-size: 2rem;
+  visibility: hidden;  
+}
+
+.tile__option{
+  margin: .5rem;
+  border-radius: 360px;
+  background-color: rgba(255, 255, 255, .3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: background .1s;
+}
+
+.tile__option:hover{
+  background-color: rgba(255, 255, 255, .9);
+}
+
+.tile__base{
+  width: 100%;
+  height: 100%;
+  visibility: hidden;
+  position: relative;
+}
+
+li.tile.t--on .tile__base{ visibility: initial; }
+/*--rotation--*/
+.tile__base.tr-1{ transform: rotate(0deg); }
+.tile__base.tr-2{ transform: rotate(90deg); }
+.tile__base.tr-3{ transform: rotate(180deg); }
+.tile__base.tr-4{ transform: rotate(270deg); }
+/*--color--*/
+.tile__base.tc-1{ background-color: #000000; }
+.tile__base.tc-2{ background-color: #FE7304; }
+.tile__base.tc-3{ background-color: #11AB62; }
+.tile__base.tc-4{ background-color: #1A6ED0; }
+.tile__base.tc-5{ background-color: #CF197B; }
+/*--shape--*/
+.tile__base.tf-1{ border-radius: 0; }
+.tile__base.tf-2{ border-radius: 0 100% 0 0; }
+.tile__base.tf-3{ border-radius: 50% 50% 0 0; }
+.tile__base.tf-4{ border-radius: 100%; }

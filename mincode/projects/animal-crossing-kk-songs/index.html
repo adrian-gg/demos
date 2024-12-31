@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Animal Crossing: K.K. Songs</title>
+    <meta name="author" content="Adrián García" />
+
+    <!-- UA and Viewport -->
+    <meta http-equiv="X-UA-Compatible" content="Chrome=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
+      name="viewport" />
+    <!-- END: UA and Viewport -->
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <!-- END: Font Awesome -->
+
+    <link rel="stylesheet" href="./styles.css" />
+    <script src="https://code.jquery.com/jquery-3.5.0.min.js"></script>
+  </head>
+  <body
+    oncontextmenu="return false"
+    onselectstart="return false"
+    ondragstart="return false">
+    <style>
+      .referer-warning{
+        display: none;
+      }
+    </style>
+    
+    <main>
+        <div class="reproductor"></div>
+        <div class="nombre">
+          <h1>♪</h1>
+        </div>
+        <div class="controles-contenedor">
+          <div class="controles">
+            <div class="directo">
+              <h2>CD</h2>
+              <div class="directo-toggle"><span></span></div>
+              <h2>LIVE</h2>
+            </div>
+          </div>
+        </div>
+        <div class="galeria">
+    
+          <div class="contenedor-cancion">
+            <div class="marco-cancion">
+              <div class="cancion"><img src="https://vignette.wikia.nocookie.net/animalcrossing/images/5/5d/NH-Album_Cover-Aloha_K.K..png/revision/latest?cb=20200502231742" alt="AC - Aloha K.K."></div>
+            </div>
+          </div>
+          <div class="contenedor-cancion">
+            <div class="marco-cancion">
+              <div class="cancion"><img src="https://vignette.wikia.nocookie.net/animalcrossing/images/2/29/NH-Album_Cover-Cafe_K.K..png/revision/latest?cb=20200502232412" alt="AC - Cafe K.K."></div>
+            </div>
+          </div>
+          <div class="contenedor-cancion">
+            <div class="marco-cancion">
+              <div class="cancion"><img src="https://vignette.wikia.nocookie.net/animalcrossing/images/6/67/NH-Album_Cover-Comrade_K.K..png/revision/latest?cb=20200502232547" alt="AC - Comrade K.K."></div>
+            </div>
+          </div>
+          <div class="contenedor-cancion">
+            <div class="marco-cancion">
+              <div class="cancion"><img src="https://vignette.wikia.nocookie.net/animalcrossing/images/7/7a/NH-Album_Cover-DJ_K.K..png/revision/latest?cb=20200502232717" alt="AC - DJ K.K."></div>
+            </div>
+          </div>
+    
+          <div class="contenedor-cancion">
+            <div class="marco-cancion">
+              <div class="cancion"><img src="https://vignette.wikia.nocookie.net/animalcrossing/images/e/ed/NH-Album_Cover-Go_K.K._Rider.png/revision/latest?cb=20200502233137" alt="AC - Go K.K. Rider!"></div>
+            </div>
+          </div>
+          <div class="contenedor-cancion">
+            <div class="marco-cancion">
+              <div class="cancion"><img src="https://vignette.wikia.nocookie.net/animalcrossing/images/b/b0/NH-Album_Cover-I_Love_You.png/revision/latest?cb=20200502233248" alt="AC - I Love You"></div>
+            </div>
+          </div>
+          <div class="contenedor-cancion">
+            <div class="marco-cancion">
+              <div class="cancion"><img src="https://vignette.wikia.nocookie.net/animalcrossing/images/3/3b/NH-Album_Cover-Imperial_K.K..png/revision/latest?cb=20200502233318" alt="AC - Imperial K.K."></div>
+            </div>
+          </div>
+          <div class="contenedor-cancion">
+            <div class="marco-cancion">
+              <div class="cancion"><img src="https://vignette.wikia.nocookie.net/animalcrossing/images/6/66/NH-Album_Cover-K.K._Aria.png/revision/latest?cb=20200502233737" alt="AC - K.K. Aria"></div>
+            </div>
+          </div>
+    
+          <div class="contenedor-cancion">
+            <div class="marco-cancion">
+              <div class="cancion"><img src="https://vignette.wikia.nocookie.net/animalcrossing/images/b/bb/NH-Album_Cover-K.K._Ballad.png/revision/latest?cb=20200502233813" alt="AC - K.K. Ballad"></div>
+            </div>
+          </div>
+          <div class="contenedor-cancion">
+            <div class="marco-cancion">
+              <div class="cancion"><img src="https://vignette.wikia.nocookie.net/animalcrossing/images/a/ac/NH-Album_Cover-K.K._Blues.png/revision/latest?cb=20200502234026" alt="AC - K.K. Blues"></div>
+            </div>
+          </div>
+          <div class="contenedor-cancion">
+            <div class="marco-cancion">
+              <div class="cancion"><img src="https://vignette.wikia.nocookie.net/animalcrossing/images/4/41/NH-Album_Cover-K.K._Bossa.png/revision/latest?cb=20200502234110" alt="AC - K.K. Bossa"></div>
+            </div>
+          </div>
+          <div class="contenedor-cancion">
+            <div class="marco-cancion">
+              <div class="cancion"><img src="https://vignette.wikia.nocookie.net/animalcrossing/images/e/e2/NH-Album_Cover-K.K._Calypso.png/revision/latest?cb=20200502234139" alt="AC - K.K. Calypso"></div>
+            </div>
+          </div>
+    
+          <div class="contenedor-cancion">
+            <div class="marco-cancion">
+              <div class="cancion"><img src="https://vignette.wikia.nocookie.net/animalcrossing/images/3/3b/NH-Album_Cover-K.K._Casbah.png/revision/latest?cb=20200502234206" alt="AC - K.K. Casbah"></div>
+            </div>
+          </div>
+          <div class="contenedor-cancion">
+            <div class="marco-cancion">
+              <div class="cancion"><img src="https://vignette.wikia.nocookie.net/animalcrossing/images/6/6d/NH-Album_Cover-K.K._Chorale.png/revision/latest?cb=20200502234227" alt="AC - K.K. Chorale"></div>
+            </div>
+          </div>
+          <div class="contenedor-cancion">
+            <div class="marco-cancion">
+              <div class="cancion"><img src="https://vignette.wikia.nocookie.net/animalcrossing/images/d/d0/NH-Album_Cover-K.K._Condor.png/revision/latest?cb=20200502234250" alt="AC - K.K. Condor"></div>
+            </div>
+          </div>
+          <div class="contenedor-cancion">
+            <div class="marco-cancion">
+              <div class="cancion"><img src="https://vignette.wikia.nocookie.net/animalcrossing/images/5/5a/NH-Album_Cover-K.K._Country.png/revision/latest?cb=20200502234335" alt="AC - K.K. Country"></div>
+            </div>
+          </div>
+    
+          <div class="contenedor-cancion">
+            <div class="marco-cancion">
+              <div class="cancion"><img src="https://vignette.wikia.nocookie.net/animalcrossing/images/4/4c/NH-Album_Cover-K.K._Cruisin%27.png/revision/latest?cb=20200502234448" alt="AC - K.K. Cruisin'"></div>
+            </div>
+          </div>
+          <div class="contenedor-cancion">
+            <div class="marco-cancion">
+              <div class="cancion"><img src="https://vignette.wikia.nocookie.net/animalcrossing/images/5/5b/NH-Album_Cover-K.K._D%26B.png/revision/latest?cb=20200502234513" alt="AC - K.K. D & B"></div>
+            </div>
+          </div>
+          <div class="contenedor-cancion">
+            <div class="marco-cancion">
+              <div class="cancion"><img src="https://vignette.wikia.nocookie.net/animalcrossing/images/1/19/NH-Album_Cover-K.K._Dirge.png/revision/latest?cb=20200502234542" alt="AC - K.K. Dirge"></div>
+            </div>
+          </div>
+          <div class="contenedor-cancion">
+            <div class="marco-cancion">
+              <div class="cancion"><img src="https://vignette.wikia.nocookie.net/animalcrossing/images/f/fa/NH-Album_Cover-K.K._Etude.png/revision/latest?cb=20200502234735" alt="AC - K.K. Etude"></div>
+            </div>
+          </div>
+    
+          <div class="contenedor-cancion">
+            <div class="marco-cancion">
+              <div class="cancion"><img src="https://vignette.wikia.nocookie.net/animalcrossing/images/6/67/NH-Album_Cover-K.K._Faire.png/revision/latest?cb=20200502235042" alt="AC - K.K. Faire"></div>
+            </div>
+          </div>
+          <div class="contenedor-cancion">
+            <div class="marco-cancion">
+              <div class="cancion"><img src="https://vignette.wikia.nocookie.net/animalcrossing/images/8/89/NH-Album_Cover-K.K._Folk.png/revision/latest?cb=20200502235400" alt="AC - K.K. Folk"></div>
+            </div>
+          </div>
+          <div class="contenedor-cancion">
+            <div class="marco-cancion">
+              <div class="cancion"><img src="https://vignette.wikia.nocookie.net/animalcrossing/images/7/7b/NH-Album_Cover-K.K._Fusion.png/revision/latest?cb=20200502235452" alt="AC - K.K. Fusion"></div>
+            </div>
+          </div>
+          <div class="contenedor-cancion">
+            <div class="marco-cancion">
+              <div class="cancion"><img src="https://vignette.wikia.nocookie.net/animalcrossing/images/9/91/NH-Album_Cover-K.K._Gumbo.png/revision/latest?cb=20200503000342" alt="AC - K.K. Gumbo"></div>
+            </div>
+          </div>
+    
+          <div class="contenedor-cancion">
+            <div class="marco-cancion">
+              <div class="cancion"><img src="https://vignette.wikia.nocookie.net/animalcrossing/images/7/75/NH-Album_Cover-K.K._Jazz.png/revision/latest?cb=20200503000610" alt="AC - K.K. Jazz"></div>
+            </div>
+          </div>
+          <div class="contenedor-cancion">
+            <div class="marco-cancion">
+              <div class="cancion"><img src="https://vignette.wikia.nocookie.net/animalcrossing/images/6/61/NH-Album_Cover-K.K._Lament.png/revision/latest?cb=20200503000701" alt="AC - K.K. Lament"></div>
+            </div>
+          </div>
+          <div class="contenedor-cancion">
+            <div class="marco-cancion">
+              <div class="cancion"><img src="https://vignette.wikia.nocookie.net/animalcrossing/images/6/67/NH-Album_Cover-K.K._Love_Song.png/revision/latest?cb=20200503000726" alt="AC - K.K. Love Song"></div>
+            </div>
+          </div>
+          <div class="contenedor-cancion">
+            <div class="marco-cancion">
+              <div class="cancion"><img src="https://vignette.wikia.nocookie.net/animalcrossing/images/a/ac/NH-Album_Cover-K.K._Lullaby.png/revision/latest?cb=20200503000857" alt="AC - K.K. Lullaby"></div>
+            </div>
+          </div>
+    
+          <div class="contenedor-cancion">
+            <div class="marco-cancion">
+              <div class="cancion"><img src="https://vignette.wikia.nocookie.net/animalcrossing/images/1/1c/NH-Album_Cover-K.K._Mambo.png/revision/latest?cb=20200503000930" alt="AC - K.K. Mambo"></div>
+            </div>
+          </div>
+          <div class="contenedor-cancion">
+            <div class="marco-cancion">
+              <div class="cancion"><img src="https://vignette.wikia.nocookie.net/animalcrossing/images/c/cb/NH-Album_Cover-K.K._March.png/revision/latest?cb=20200503001201" alt="AC - K.K. March"></div>
+            </div>
+          </div>
+          <div class="contenedor-cancion">
+            <div class="marco-cancion">
+              <div class="cancion"><img src="https://vignette.wikia.nocookie.net/animalcrossing/images/2/28/NH-Album_Cover-K.K._Parade.png/revision/latest?cb=20200503001506" alt="AC - K.K. Parade"></div>
+            </div>
+          </div>
+          <div class="contenedor-cancion">
+            <div class="marco-cancion">
+              <div class="cancion"><img src="https://vignette.wikia.nocookie.net/animalcrossing/images/2/27/NH-Album_Cover-K.K._Ragtime.png/revision/latest?cb=20200503001531" alt="AC - K.K. Ragtime"></div>
+            </div>
+          </div>
+    
+          <div class="contenedor-cancion">
+            <div class="marco-cancion">
+              <div class="cancion"><img src="https://vignette.wikia.nocookie.net/animalcrossing/images/f/f2/NH-Album_Cover-K.K._Reggae.png/revision/latest?cb=20200503001633" alt="AC - K.K. Reggae"></div>
+            </div>
+          </div>
+          <div class="contenedor-cancion">
+            <div class="marco-cancion">
+              <div class="cancion"><img src="https://vignette.wikia.nocookie.net/animalcrossing/images/2/2a/NH-Album_Cover-K.K._Rock.png/revision/latest?cb=20200503001655" alt="AC - K.K. Rock"></div>
+            </div>
+          </div>
+          <div class="contenedor-cancion">
+            <div class="marco-cancion">
+              <div class="cancion"><img src="https://vignette.wikia.nocookie.net/animalcrossing/images/e/ee/NH-Album_Cover-K.K._Safari.png/revision/latest?cb=20200503001852" alt="AC - K.K. Safari"></div>
+            </div>
+          </div>
+          <div class="contenedor-cancion">
+            <div class="marco-cancion">
+              <div class="cancion"><img src="https://vignette.wikia.nocookie.net/animalcrossing/images/6/64/NH-Album_Cover-K.K._Salsa.png/revision/latest?cb=20200503001921" alt="AC - K.K. Salsa"></div>
+            </div>
+          </div>
+    
+          <div class="contenedor-cancion">
+            <div class="marco-cancion">
+              <div class="cancion"><img src="https://vignette.wikia.nocookie.net/animalcrossing/images/a/aa/NH-Album_Cover-K.K._Samba.png/revision/latest?cb=20200503002002" alt="AC - K.K. Samba"></div>
+            </div>
+          </div>
+          <div class="contenedor-cancion">
+            <div class="marco-cancion">
+              <div class="cancion"><img src="https://vignette.wikia.nocookie.net/animalcrossing/images/f/f0/NH-Album_Cover-K.K._Ska.png/revision/latest?cb=20200503002028" alt="AC - K.K. Ska"></div>
+            </div>
+          </div>
+          <div class="contenedor-cancion">
+            <div class="marco-cancion">
+              <div class="cancion"><img src="https://vignette.wikia.nocookie.net/animalcrossing/images/c/ca/NH-Album_Cover-K.K._Song.png/revision/latest?cb=20200503002118" alt="AC - K.K. Song"></div>
+            </div>
+          </div>
+          <div class="contenedor-cancion">
+            <div class="marco-cancion">
+              <div class="cancion"><img src="https://vignette.wikia.nocookie.net/animalcrossing/images/8/84/NH-Album_Cover-K.K._Soul.png/revision/latest?cb=20200503002212" alt="AC - K.K. Soul"></div>
+            </div>
+          </div>
+    
+          <div class="contenedor-cancion">
+            <div class="marco-cancion">
+              <div class="cancion"><img src="https://vignette.wikia.nocookie.net/animalcrossing/images/8/8e/NH-Album_Cover-K.K._Steppe.png/revision/latest?cb=20200503002234" alt="AC - K.K. Steppe"></div>
+            </div>
+          </div>
+          <div class="contenedor-cancion">
+            <div class="marco-cancion">
+              <div class="cancion"><img src="https://vignette.wikia.nocookie.net/animalcrossing/images/a/a6/NH-Album_Cover-K.K._Swing.png/revision/latest?cb=20200503002319" alt="AC - K.K. Swing"></div>
+            </div>
+          </div>
+          <div class="contenedor-cancion">
+            <div class="marco-cancion">
+              <div class="cancion"><img src="https://vignette.wikia.nocookie.net/animalcrossing/images/0/0d/NH-Album_Cover-K.K._Tango.png/revision/latest?cb=20200503002420" alt="AC - K.K. Tango"></div>
+            </div>
+          </div>
+          <div class="contenedor-cancion">
+            <div class="marco-cancion">
+              <div class="cancion"><img src="https://vignette.wikia.nocookie.net/animalcrossing/images/2/22/NH-Album_Cover-K.K._Technopop.png/revision/latest?cb=20200503002443" alt="AC - K.K. Technopop"></div>
+            </div>
+          </div>
+    
+          <div class="contenedor-cancion">
+            <div class="marco-cancion">
+              <div class="cancion"><img src="https://vignette.wikia.nocookie.net/animalcrossing/images/0/01/NH-Album_Cover-K.K._Waltz.png/revision/latest?cb=20200503002514" alt="AC - K.K. Waltz"></div>
+            </div>
+          </div>
+          <div class="contenedor-cancion">
+            <div class="marco-cancion">
+              <div class="cancion"><img src="https://vignette.wikia.nocookie.net/animalcrossing/images/5/51/NH-Album_Cover-K.K._Western.png/revision/latest?cb=20200503002538" alt="AC - K.K. Western"></div>
+            </div>
+          </div>
+          <div class="contenedor-cancion">
+            <div class="marco-cancion">
+              <div class="cancion"><img src="https://vignette.wikia.nocookie.net/animalcrossing/images/d/de/NH-Album_Cover-Lucky_K.K..png/revision/latest?cb=20200503002638" alt="AC - Lucky K.K."></div>
+            </div>
+          </div>
+          <div class="contenedor-cancion">
+            <div class="marco-cancion">
+              <div class="cancion"><img src="https://vignette.wikia.nocookie.net/animalcrossing/images/6/6c/NH-Album_Cover-Mr._K.K..png/revision/latest?cb=20200503002745" alt="AC - Mr. K.K."></div>
+            </div>
+          </div>
+    
+          <div class="contenedor-cancion">
+            <div class="marco-cancion">
+              <div class="cancion"><img src="https://vignette.wikia.nocookie.net/animalcrossing/images/b/b5/NH-Album_Cover-Only_Me.png/revision/latest?cb=20200503002906" alt="AC - Only Me"></div>
+            </div>
+          </div>
+          <div class="contenedor-cancion">
+            <div class="marco-cancion">
+              <div class="cancion"><img src="https://vignette.wikia.nocookie.net/animalcrossing/images/1/15/NH-Album_Cover-Rockin%27_K.K..png/revision/latest?cb=20200503002952" alt="AC - Rockin' K.K."></div>
+            </div>
+          </div>
+          <div class="contenedor-cancion">
+            <div class="marco-cancion">
+              <div class="cancion"><img src="https://vignette.wikia.nocookie.net/animalcrossing/images/8/89/NH-Album_Cover-K.K._Mariachi.png/revision/latest?cb=20200503001110" alt="AC - Senor K.K."></div>
+            </div>
+          </div>
+          <div class="contenedor-cancion">
+            <div class="marco-cancion">
+              <div class="cancion"><img src="https://vignette.wikia.nocookie.net/animalcrossing/images/2/29/NH-Album_Cover-Soulful_K.K..png/revision/latest?cb=20200503003023" alt="AC - Soulful K.K."></div>
+            </div>
+          </div>
+    
+          <div class="contenedor-cancion">
+            <div class="marco-cancion">
+              <div class="cancion"><img src="https://vignette.wikia.nocookie.net/animalcrossing/images/7/70/NH-Album_Cover-Surfin%27_K.K..png/revision/latest?cb=20200503003244" alt="AC - Surfin' K.K."></div>
+            </div>
+          </div>
+          <div class="contenedor-cancion">
+            <div class="marco-cancion">
+              <div class="cancion"><img src="https://vignette.wikia.nocookie.net/animalcrossing/images/c/c4/NH-Album_Cover-The_K._Funk.png/revision/latest?cb=20200503003346" alt="AC - The K. Funk"></div>
+            </div>
+          </div>
+          <div class="contenedor-cancion">
+            <div class="marco-cancion">
+              <div class="cancion"><img src="https://vignette.wikia.nocookie.net/animalcrossing/images/6/65/NH-Album_Cover-Two_Days_Ago.png/revision/latest?cb=20200503003434" alt="AC - Two Days Ago"></div>
+            </div>
+          </div>
+          <div class="contenedor-cancion">
+            <div class="marco-cancion">
+              <div class="cancion"><img src="https://vignette.wikia.nocookie.net/animalcrossing/images/9/91/NH-Album_Cover-Agent_K.K..png/revision/latest?cb=20200502231523" alt="CF - Agent K.K."></div>
+            </div>
+          </div>
+    
+          <div class="contenedor-cancion">
+            <div class="marco-cancion">
+              <div class="cancion"><img src="https://vignette.wikia.nocookie.net/animalcrossing/images/6/60/NH-Album_Cover-Forest_Life.png/revision/latest?cb=20200502233052" alt="CF - Forest Life"></div>
+            </div>
+          </div>
+          <div class="contenedor-cancion">
+            <div class="marco-cancion">
+              <div class="cancion"><img src="https://vignette.wikia.nocookie.net/animalcrossing/images/f/fc/NH-Album_Cover-K.K._Dixie.png/revision/latest?cb=20200502234711" alt="CF - K.K. Dixie"></div>
+            </div>
+          </div>
+          <div class="contenedor-cancion">
+            <div class="marco-cancion">
+              <div class="cancion"><img src="https://vignette.wikia.nocookie.net/animalcrossing/images/f/f4/NH-Album_Cover-K.K._House.png/revision/latest?cb=20200503000403" alt="CF - K.K. House"></div>
+            </div>
+          </div>
+          <div class="contenedor-cancion">
+            <div class="marco-cancion">
+              <div class="cancion"><img src="https://vignette.wikia.nocookie.net/animalcrossing/images/8/82/NH-Album_Cover-K.K._Marathon.png/revision/latest?cb=20200503001015" alt="CF - K.K. Marathon"></div>
+            </div>
+          </div>
+    
+          <div class="contenedor-cancion">
+            <div class="marco-cancion">
+              <div class="cancion"><img src="https://vignette.wikia.nocookie.net/animalcrossing/images/b/bb/NH-Album_Cover-K.K._Metal.png/revision/latest?cb=20200503001307" alt="CF - K.K. Metal"></div>
+            </div>
+          </div>
+          <div class="contenedor-cancion">
+            <div class="marco-cancion">
+              <div class="cancion"><img src="https://vignette.wikia.nocookie.net/animalcrossing/images/0/04/NH-Album_Cover-K.K._Rally.png/revision/latest?cb=20200503001607" alt="CF - K.K. Rally"></div>
+            </div>
+          </div>
+          <div class="contenedor-cancion">
+            <div class="marco-cancion">
+              <div class="cancion"><img src="https://vignette.wikia.nocookie.net/animalcrossing/images/a/a3/NH-Album_Cover-K.K._Rockabilly.png/revision/latest?cb=20200503001828" alt="CF - K.K. Rockabilly"></div>
+            </div>
+          </div>
+          <div class="contenedor-cancion">
+            <div class="marco-cancion">
+              <div class="cancion"><img src="https://vignette.wikia.nocookie.net/animalcrossing/images/d/dc/NH-Album_Cover-K.K._Sonata.png/revision/latest?cb=20200503002056" alt="CF - K.K. Sonata"></div>
+            </div>
+          </div>
+    
+          <div class="contenedor-cancion">
+            <div class="marco-cancion">
+              <div class="cancion"><img src="https://vignette.wikia.nocookie.net/animalcrossing/images/6/6e/NH-Album_Cover-King_K.K..png/revision/latest?cb=20200503002601" alt="CF - King K.K."></div>
+            </div>
+          </div>
+          <div class="contenedor-cancion">
+            <div class="marco-cancion">
+              <div class="cancion"><img src="https://vignette.wikia.nocookie.net/animalcrossing/images/f/ff/NH-Album_Cover-Marine_Song_2001.png/revision/latest?cb=20200503002702" alt="CF - Marine Song 2001"></div>
+            </div>
+          </div>
+          <div class="contenedor-cancion">
+            <div class="marco-cancion">
+              <div class="cancion"><img src="https://vignette.wikia.nocookie.net/animalcrossing/images/5/5c/NH-Album_Cover-Mountain_Song.png/revision/latest?cb=20200503002723" alt="CF - Mountain Song"></div>
+            </div>
+          </div>
+          <div class="contenedor-cancion">
+            <div class="marco-cancion">
+              <div class="cancion"><img src="https://vignette.wikia.nocookie.net/animalcrossing/images/6/6d/NH-Album_Cover-My_Place.png/revision/latest?cb=20200503002809" alt="CF - My Place"></div>
+            </div>
+          </div>
+    
+          <div class="contenedor-cancion">
+            <div class="marco-cancion">
+              <div class="cancion"><img src="https://vignette.wikia.nocookie.net/animalcrossing/images/0/0d/NH-Album_Cover-Neapolitan.png/revision/latest?cb=20200503002841" alt="CF - Neapolitan"></div>
+            </div>
+          </div>
+          <div class="contenedor-cancion">
+            <div class="marco-cancion">
+              <div class="cancion"><img src="https://vignette.wikia.nocookie.net/animalcrossing/images/3/30/NH-Album_Cover-Pondering.png/revision/latest?cb=20200503002929" alt="CF - Pondering"></div>
+            </div>
+          </div>
+          <div class="contenedor-cancion">
+            <div class="marco-cancion">
+              <div class="cancion"><img src="https://vignette.wikia.nocookie.net/animalcrossing/images/b/bb/NH-Album_Cover-Spring_Blossoms.png/revision/latest?cb=20200503003122" alt="CF - Spring Blossoms"></div>
+            </div>
+          </div>
+          <div class="contenedor-cancion">
+            <div class="marco-cancion">
+              <div class="cancion"><img src="https://vignette.wikia.nocookie.net/animalcrossing/images/8/87/NH-Album_Cover-Stale_Cupcakes.png/revision/latest?cb=20200503003148" alt="CF - Stale Cupcakes"></div>
+            </div>
+          </div>
+    
+          <div class="contenedor-cancion">
+            <div class="marco-cancion">
+              <div class="cancion"><img src="https://vignette.wikia.nocookie.net/animalcrossing/images/e/e5/NH-Album_Cover-Steep_Hill.png/revision/latest?cb=20200503003211" alt="CF - Steep Hill"></div>
+            </div>
+          </div>
+          <div class="contenedor-cancion">
+            <div class="marco-cancion">
+              <div class="cancion"><img src="https://vignette.wikia.nocookie.net/animalcrossing/images/5/52/NH-Album_Cover-To_the_Edge.png/revision/latest?cb=20200503003411" alt="CF - To the Edge"></div>
+            </div>
+          </div>
+          <div class="contenedor-cancion">
+            <div class="marco-cancion">
+              <div class="cancion"><img src="https://vignette.wikia.nocookie.net/animalcrossing/images/3/3c/NH-Album_Cover-Wandering.png/revision/latest?cb=20200503003456" alt="CF - Wandering"></div>
+            </div>
+          </div>
+          <div class="contenedor-cancion">
+            <div class="marco-cancion">
+              <div class="cancion"><img src="https://vignette.wikia.nocookie.net/animalcrossing/images/2/21/NH-Album_Cover-Animal_City.png/revision/latest?cb=20200502231911" alt="NH - Animal City"></div>
+            </div>
+          </div>
+    
+          <div class="contenedor-cancion">
+            <div class="marco-cancion">
+              <div class="cancion"><img src="https://vignette.wikia.nocookie.net/animalcrossing/images/0/0b/NH-Album_Cover-Drivin%27.png/revision/latest?cb=20200502233001" alt="NH - Drivin'"></div>
+            </div>
+          </div>
+          <div class="contenedor-cancion">
+            <div class="marco-cancion">
+              <div class="cancion"><img src="https://vignette.wikia.nocookie.net/animalcrossing/images/2/21/NH-Album_Cover-Farewell.png/revision/latest?cb=20200502233025" alt="NH - Farewell"></div>
+            </div>
+          </div>
+          <div class="contenedor-cancion">
+            <div class="marco-cancion">
+              <div class="cancion"><img src="https://vignette.wikia.nocookie.net/animalcrossing/images/0/0c/NH-Album_Cover-Welcome_Horizons.png/revision/latest?cb=20200503003519" alt="NH - Welcome Horizons"></div>
+            </div>
+          </div>
+          <div class="contenedor-cancion">
+            <div class="marco-cancion">
+              <div class="cancion"><img src="https://vignette.wikia.nocookie.net/animalcrossing/images/e/e6/NH-Album_Cover-Bubblegum_K.K..png/revision/latest?cb=20200502232328" alt="NL - Bubblegum K.K."></div>
+            </div>
+          </div>
+    
+          <div class="contenedor-cancion">
+            <div class="marco-cancion">
+              <div class="cancion"><img src="https://vignette.wikia.nocookie.net/animalcrossing/images/4/4e/NH-Album_Cover-Hypno_K.K..png/revision/latest?cb=20200502233221" alt="NL - Hypno K.K."></div>
+            </div>
+          </div>
+          <div class="contenedor-cancion">
+            <div class="marco-cancion">
+              <div class="cancion"><img src="https://vignette.wikia.nocookie.net/animalcrossing/images/a/a6/NH-Album_Cover-K.K._Adventure.png/revision/latest?cb=20200502233349" alt="NL - K.K. Adventure"></div>
+            </div>
+          </div>
+          <div class="contenedor-cancion">
+            <div class="marco-cancion">
+              <div class="cancion"><img src="https://vignette.wikia.nocookie.net/animalcrossing/images/7/7b/NH-Album_Cover-K.K._Bazaar.png/revision/latest?cb=20200502233842" alt="NL - K.K. Bazaar"></div>
+            </div>
+          </div>
+          <div class="contenedor-cancion">
+            <div class="marco-cancion">
+              <div class="cancion"><img src="https://vignette.wikia.nocookie.net/animalcrossing/images/8/89/NH-Album_Cover-K.K._Birthday.png/revision/latest?cb=20200502233959" alt="NL - K.K. Birthday"></div>
+            </div>
+          </div>
+    
+          <div class="contenedor-cancion">
+            <div class="marco-cancion">
+              <div class="cancion"><img src="https://vignette.wikia.nocookie.net/animalcrossing/images/3/31/NH-Album_Cover-K.K._Disco.png/revision/latest?cb=20200502234613" alt="NL - K.K. Disco"></div>
+            </div>
+          </div>
+          <div class="contenedor-cancion">
+            <div class="marco-cancion">
+              <div class="cancion"><img src="https://vignette.wikia.nocookie.net/animalcrossing/images/8/80/NH-Album_Cover-K.K._Flamenco.png/revision/latest?cb=20200502235159" alt="NL - K.K. Flamenco"></div>
+            </div>
+          </div>
+          <div class="contenedor-cancion">
+            <div class="marco-cancion">
+              <div class="cancion"><img src="https://vignette.wikia.nocookie.net/animalcrossing/images/c/c7/NH-Album_Cover-K.K._Groove.png/revision/latest?cb=20200503000239" alt="NL - K.K. Groove"></div>
+            </div>
+          </div>
+          <div class="contenedor-cancion">
+            <div class="marco-cancion">
+              <div class="cancion"><img src="https://vignette.wikia.nocookie.net/animalcrossing/images/7/7d/NH-Album_Cover-K.K._Island.png/revision/latest?cb=20200503000534" alt="NL - K.K. Island"></div>
+            </div>
+          </div>
+    
+          <div class="contenedor-cancion">
+            <div class="marco-cancion">
+              <div class="cancion"><img src="https://vignette.wikia.nocookie.net/animalcrossing/images/8/84/NH-Album_Cover-K.K._Jongara.png/revision/latest?cb=20200503000636" alt="NL - K.K. Jongara"></div>
+            </div>
+          </div>
+          <div class="contenedor-cancion">
+            <div class="marco-cancion">
+              <div class="cancion"><img src="https://vignette.wikia.nocookie.net/animalcrossing/images/2/28/NH-Album_Cover-K.K._Milonga.png/revision/latest?cb=20200503001343" alt="NL - K.K. Milonga"></div>
+            </div>
+          </div>
+          <div class="contenedor-cancion">
+            <div class="marco-cancion">
+              <div class="cancion"><img src="https://vignette.wikia.nocookie.net/animalcrossing/images/d/d3/NH-Album_Cover-K.K._Moody.png/revision/latest?cb=20200503001415" alt="NL - K.K. Moody"></div>
+            </div>
+          </div>
+          <div class="contenedor-cancion">
+            <div class="marco-cancion">
+              <div class="cancion"><img src="https://vignette.wikia.nocookie.net/animalcrossing/images/b/bc/NH-Album_Cover-K.K._Oasis.png/revision/latest?cb=20200503001440" alt="NL - K.K. Oasis"></div>
+            </div>
+          </div>
+    
+          <div class="contenedor-cancion">
+            <div class="marco-cancion">
+              <div class="cancion"><img src="https://vignette.wikia.nocookie.net/animalcrossing/images/2/2a/NH-Album_Cover-K.K._Stroll.png/revision/latest?cb=20200503002257" alt="NL - K.K. Stroll"></div>
+            </div>
+          </div>
+          <div class="contenedor-cancion">
+            <div class="marco-cancion">
+              <div class="cancion"><img src="https://vignette.wikia.nocookie.net/animalcrossing/images/d/d7/NH-Album_Cover-K.K._Synth.png/revision/latest?cb=20200503002343" alt="NL - K.K. Synth"></div>
+            </div>
+          </div>
+          <div class="contenedor-cancion">
+            <div class="marco-cancion">
+              <div class="cancion"><img src="https://vignette.wikia.nocookie.net/animalcrossing/images/d/d6/NH-Album_Cover-Space_K.K..png/revision/latest?cb=20200503003058" alt="NL - Space K.K."></div>
+            </div>
+          </div>
+    
+        </div>
+      </main>
+    <script src="./script.js"></script>
+  </body>
+</html>

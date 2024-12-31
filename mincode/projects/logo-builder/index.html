@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>Titulo</title>
+    <title>Logo builder</title>
     <meta name="author" content="Adrián García" />
 
     <!-- UA and Viewport -->
@@ -26,26 +26,9 @@
     oncontextmenu="return false"
     onselectstart="return false"
     ondragstart="return false">
-    <div class="main">
-      <div class="scene scene-home"></div>
-      <div class="scene scene-game">
-        <div class="title">
-          <h1>1-TO-20</h1>
-          <p>
-            Sort 20 random numbers from 1 to 1000 without changing the order.
-          </p>
-        </div>
-        <div class="container">
-          <ul id="listNums" class="list"></ul>
-
-          <div class="current-num">
-            <div id="current-num">0</div>
-            <div class="score">Score: <span id="score">0/20</span></div>
-            <button id="reset">Reset game</button>
-          </div>
-        </div>
-      </div>
-    </div>
+    <main oncontextmenu="return false" onselectstart="return false" ondragstart="return false" cz-shortcut-listen="true">
+      <ul id="tilesContainer" class="tiles_container"></ul>
+    </main>
     <script src="./script.js"></script>
   </body>
 </html>

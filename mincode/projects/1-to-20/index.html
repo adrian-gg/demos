@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>1 TO 20</title>
+    <meta name="author" content="Adrián García" />
+
+    <!-- UA and Viewport -->
+    <meta http-equiv="X-UA-Compatible" content="Chrome=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
+      name="viewport" />
+    <!-- END: UA and Viewport -->
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <!-- END: Font Awesome -->
+
+    <link rel="stylesheet" href="./styles.css" />
+    <script src="https://code.jquery.com/jquery-3.5.0.min.js"></script>
+  </head>
+  <body
+    oncontextmenu="return false"
+    onselectstart="return false"
+    ondragstart="return false">
+    <div class="main">
+      <div class="scene scene-home"></div>
+      <div class="scene scene-game">
+        <div class="title">
+          <h1>1-TO-20</h1>
+          <p>
+            Sort 20 random numbers from 1 to 1000 without changing the order.
+          </p>
+        </div>
+        <div class="container">
+          <ul id="listNums" class="list"></ul>
+
+          <div class="current-num">
+            <div id="current-num">0</div>
+            <div class="score">Score: <span id="score">0/20</span></div>
+            <button id="reset">Reset game</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>

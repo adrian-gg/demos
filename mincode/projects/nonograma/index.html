@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Nonograma (Picross)</title>
+    <meta name="author" content="Adrián García" />
+
+    <!-- UA and Viewport -->
+    <meta http-equiv="X-UA-Compatible" content="Chrome=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
+      name="viewport" />
+    <!-- END: UA and Viewport -->
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <!-- END: Font Awesome -->
+
+    <link rel="stylesheet" href="./styles.css" />
+    <script src="https://code.jquery.com/jquery-3.5.0.min.js"></script>
+  </head>
+  <body
+    oncontextmenu="return false"
+    onselectstart="return false"
+    ondragstart="return false">
+    <div id="btnStart" class="btn_start">↻</div>
+    <div class="main_container">
+      <ul id="numbersTop" class="box_container box_container--number_top">
+        <li class="box">3</li>
+        <li class="box">2</li>
+        <li class="box">3</li>
+      </ul>
+      <ul id="numbersLeft" class="box_container box_container--number_left">
+        <li class="box">3</li>
+        <li class="box">3</li>
+        <li class="box">2</li>
+      </ul>
+      <ul id="gameBoard" class="box_container">
+        <li class="box"></li>
+        <li class="box"></li>
+        <li class="box"></li>
+        <li class="box"></li>
+        <li class="box"></li>
+        <li class="box"></li>
+        <li class="box"></li>
+        <li class="box"></li>
+        <li class="box"></li>
+      </ul>
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>

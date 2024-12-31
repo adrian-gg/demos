@@ -1,12 +1,12 @@
 [
   {
-    "id": "1_to_20",
+    "id": "1-to-20",
     "name": "1-TO-20",
     "createdOn": "2024-09-16 10:16:48 UTC",
     "updatedOn": "2024-10-03 12:24:17 UTC"
   },
   {
-    "id": "logo_builder",
+    "id": "logo-builder",
     "name": "Logo builder",
     "createdOn": "2023-12-22 00:55:56 UTC",
     "updatedOn": "2023-12-22 03:41:33 UTC"
@@ -18,19 +18,19 @@
     "updatedOn": "2023-05-01 06:48:42 UTC"
   },
   {
-    "id": "pass_word",
+    "id": "pass-word",
     "name": "PASS-WORD",
     "createdOn": "2023-04-02 00:29:33 UTC",
     "updatedOn": "2023-05-03 20:46:56 UTC"
   },
   {
-    "id": "animal_crossing_kk_songs",
+    "id": "animal-crossing-kk-songs",
     "name": "Animal Crossing: K.K. Songs",
     "createdOn": "2020-08-06 17:48:07 UTC",
     "updatedOn": "2022-10-27 14:30:57 UTC"
   },
   {
-    "id": "time_machine",
+    "id": "time-machine",
     "name": "Time Machine (pull the lever)",
     "createdOn": "2020-06-14 23:27:57 UTC",
     "updatedOn": "2023-03-29 16:45:07 UTC"

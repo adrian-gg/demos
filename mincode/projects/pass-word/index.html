@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>PSS-WORD</title>
+    <meta name="author" content="Adrián García" />
+
+    <!-- UA and Viewport -->
+    <meta http-equiv="X-UA-Compatible" content="Chrome=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
+      name="viewport" />
+    <!-- END: UA and Viewport -->
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <!-- END: Font Awesome -->
+
+    <link rel="stylesheet" href="./styles.css" />
+    <script src="https://code.jquery.com/jquery-3.5.0.min.js"></script>
+  </head>
+  <body
+    oncontextmenu="return false"
+    onselectstart="return false"
+    ondragstart="return false">
+    <div class="main_container">
+      <div class="letters_container"></div>
+      <div class="scene_title" id="scene_title">
+        <p>Welcome to</p>
+        <h1>pass-word</h1>
+        <button id="start_btn">Play</button>
+      </div>
+      <div class="scene_questions" id="scene_questions" style="display: none;">
+        <div class="texts_box">
+          <span id="hint_box">CON LA A.</span>
+          <p id="question_box">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquam iusto error inventore quaerat?</p>
+        </div>
+        <div class="inputs_box">
+          <input type="text" id="input_answer" placeholder="answer">
+          <div class="buttons">
+            <button id="pass_btn">Pass</button>
+            <button id="send_btn">Send</button>
+          </div>
+        </div>
+        <div class="timer_box">
+          <div id="timer"></div>
+        </div>
+      </div>
+      <div class="scene_results" id="scene_results" style="display: none;">
+        <h2>Results</h2>
+        <div class="container_results">
+          <div class="container_result">
+            <p>success</p>
+            <div id="success_box">0</div>
+          </div>
+          <div class="container_result">
+            <p>fails</p>
+            <div id="fails_box">0</div>
+          </div>
+          <div class="container_result">
+            <p>passes</p>
+            <div id="passes_box">0</div>        
+          </div>      
+        </div>    
+        <button id="restart_btn">Play again</button>
+      </div>
+    </div>
+    
+    <div class="background_container">
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>

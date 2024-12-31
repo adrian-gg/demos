@@ -6,12 +6,15 @@ Repository of my project builds
 
 | Project | Description | Code | Web |
 | --- | --- | --- | --- |
+| mincode | A site with small projects. | [View][mincode-c] | [Visit][mincode-d] |
 | SOZ | A simple application to check the weather. | [View][soz-c] | [Visit][soz-d] |
 | TheWeather | A simple application to check the weather. | [View][theweather-c] | [Visit][theweather-d] |
 | dotBlog | Locate articles and breaking news headlines from news sources and blogs across the web with dotBlog. | [View][dotblog-c] | [Visit][dotblog-d] |
 | New Super Mario Bros. Minigames | Recreation of the minigames of the game New Super Mario Bros. | [View][nsmb-minigames-c] | [Visit][nsmb-minigames-d] |
 | Hollow Knight - Hall of Gods | Recreation of the Hall of Gods from the video game Hollow knight. | [View][hollow-kinght-hog-c] | [Visit][hollow-kinght-hog-d] |
 
+[mincode-c]: https://github.com/adrian-gg/mincode/
+[mincode-d]: https://adrian-gg.github.io/demos/mincode/
 [soz-c]: https://github.com/adrian-gg/soz/
 [soz-d]: https://adrian-gg.github.io/demos/soz/
 [theweather-c]: https://github.com/adrian-gg/theweather/

@@ -30,9 +30,27 @@
     "updatedOn": "2022-10-27 14:30:57 UTC"
   },
   {
+    "id": "color-picker",
+    "name": "Color picker",
+    "createdOn": "2020-07-01 22:34:12 UTC",
+    "updatedOn": "2020-07-02 08:19:23 UTC"
+  },
+  {
     "id": "time-machine",
     "name": "Time Machine (pull the lever)",
     "createdOn": "2020-06-14 23:27:57 UTC",
     "updatedOn": "2023-03-29 16:45:07 UTC"
+  },
+  {
+    "id": "rooms",
+    "name": "Rooms",
+    "createdOn": "2020-06-09 21:44:13 UTC",
+    "updatedOn": "2020-06-09 22:18:10 UTC"
+  },
+  {
+    "id": "wheel",
+    "name": "Wheel",
+    "createdOn": "2020-06-01 17:26:25 UTC",
+    "updatedOn": "2022-11-06 17:21:04 UTC"
   }
 ]

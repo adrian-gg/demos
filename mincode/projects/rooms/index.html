@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Rooms</title>
+    <meta name="author" content="Adrián García" />
+
+    <!-- UA and Viewport -->
+    <meta http-equiv="X-UA-Compatible" content="Chrome=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
+      name="viewport" />
+    <!-- END: UA and Viewport -->
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <!-- END: Font Awesome -->
+
+    <link rel="stylesheet" href="./styles.css" />
+    <script src="https://code.jquery.com/jquery-3.5.0.min.js"></script>
+  </head>
+  <body
+    oncontextmenu="return false"
+    onselectstart="return false"
+    ondragstart="return false">
+    <div id="CONT-GEN">
+      <div class="resize-cont-gen">
+        <div class="cont-plano">
+          <div class="box-plano">
+            <div class="cond-plano">
+              <div class="-txt-plano"><p>&lt;/BLUE&gt;</p></div>
+            </div>
+            <div class="cond-flechas">
+              <span class="-flecha-left"
+                ><svg class="-flecha" viewBox="0 0 70 20">
+                  <path
+                    class="-flecha-triangle"
+                    d="M52.5,10L70,0v20L52.5,10z"></path>
+                  <path
+                    class="-flecha-line"
+                    d="M55.1,11.4H0V8.6h55.1V11.4z"></path>
+                </svg>
+              </span>
+              <span class="-flecha-right"
+                ><svg class="-flecha" viewBox="0 0 70 20">
+                  <path
+                    class="-flecha-triangle"
+                    d="M52.5,10L70,0v20L52.5,10z"></path>
+                  <path
+                    class="-flecha-line"
+                    d="M55.1,11.4H0V8.6h55.1V11.4z"></path>
+                </svg>
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <div class="cont-room">
+          <div class="box-room -active" id="box-room-0">
+            <div class="cond-room">
+              <div class="-pared -top"></div>
+              <div class="-pared -bottom"></div>
+              <div class="-pared -left"></div>
+              <div class="-pared -right"></div>
+              <div class="-pared -front"></div>
+            </div>
+          </div>
+          <div class="box-room" id="box-room-1">
+            <div class="cond-room">
+              <div class="-pared -top"></div>
+              <div class="-pared -bottom"></div>
+              <div class="-pared -left"><h1>LEFT B</h1></div>
+              <div class="-pared -right"><h1>RIGHT B</h1></div>
+              <div class="-pared -front"><h1>FRONT B</h1></div>
+            </div>
+          </div>
+          <div class="box-room" id="box-room-2">
+            <div class="cond-room">
+              <div class="-pared -top"></div>
+              <div class="-pared -bottom"></div>
+              <div class="-pared -left"><h1>LEFT C</h1></div>
+              <div class="-pared -right"><h1>RIGHT C</h1></div>
+              <div class="-pared -front"><h1>FRONT C</h1></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>

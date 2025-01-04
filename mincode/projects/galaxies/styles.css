@@ -1,0 +1,119 @@
+/*
+ * ===================================================================
+ * -- RESET ----------------------------------------------------------
+ * ===================================================================
+ */
+
+* {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-wrap: balance;
+}
+
+p,
+span {
+  text-wrap: pretty;
+}
+
+a {
+  color: initial;
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+input,
+textarea,
+button {
+  appearance: none;
+  border: none;
+  background: none;
+}
+
+input:focus-visible,
+textarea:focus-visible,
+button:focus-visible {
+  outline: none;
+}
+
+/*
+ * ===================================================================
+ * -- STYLES ---------------------------------------------------------
+ * ===================================================================
+ */
+
+:root {
+  --size-bulge-galaxy: 2;
+  --size-galaxy: 6;
+  --size-cursor: 0.6;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  min-height: 100vh;
+  background-color: #000;
+  overflow: hidden;
+}
+
+.galaxy {
+  --x: 0;
+  --y: 0;
+  width: calc(var(--size-galaxy) * 1rem);
+  height: calc(var(--size-galaxy) * 1rem);
+  border: 1px solid #fff;
+  border-radius: 360px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: calc(var(--y) * 1rem);
+  left: calc(var(--x) * 1rem);
+  transition: all 0.2s;
+}
+
+.galaxy:hover ~ #cursor {
+  width: calc(var(--size-bulge-galaxy) * 1rem);
+  height: calc(var(--size-bulge-galaxy) * 1rem);
+}
+
+.galaxy-bulge {
+  width: calc(var(--size-bulge-galaxy) * 1rem);
+  height: calc(var(--size-bulge-galaxy) * 1rem);
+  border-radius: 360px;
+  background-color: #fff;
+  pointer-events: none;
+}
+
+#cursor {
+  width: calc(var(--size-cursor) * 1rem);
+  height: calc(var(--size-cursor) * 1rem);
+  border-radius: 360px;
+  background-color: #ff0000;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  will-change: top, left;
+  pointer-events: none;
+  opacity: 0;
+}
+
+body:hover #cursor {
+  opacity: 1;
+}

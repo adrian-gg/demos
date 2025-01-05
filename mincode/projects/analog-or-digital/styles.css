@@ -1,0 +1,139 @@
+/*
+ * ===================================================================
+ * -- RESET ----------------------------------------------------------
+ * ===================================================================
+ */
+
+* {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-wrap: balance;
+}
+
+p,
+span {
+  text-wrap: pretty;
+}
+
+a {
+  color: initial;
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+input,
+textarea,
+button {
+  appearance: none;
+  border: none;
+  background: none;
+}
+
+input:focus-visible,
+textarea:focus-visible,
+button:focus-visible {
+  outline: none;
+}
+
+/*
+ * ===================================================================
+ * -- STYLES ---------------------------------------------------------
+ * ===================================================================
+ */
+
+:root {
+  --size: 4rem;
+  --gap-size: 1rem;
+}
+
+html {
+  font-size: 1.6vmin;
+}
+
+body {
+  height: 100vh;
+  background-color: #202020;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+#main-container {
+  display: inline-grid;
+  grid-template-columns: repeat(5, auto);
+  grid-gap: var(--gap-size);
+}
+
+.box-number {
+  width: (calc(var(--size) * 4) + (var(--gap-size) * 3));
+  display: inline-grid;
+  grid-template-columns: repeat(4, auto);
+  grid-gap: var(--gap-size);
+}
+
+#space.box-number {
+  grid-template-columns: repeat(2, auto);
+}
+
+.clock {
+  width: var(--size);
+  height: var(--size);
+
+  border-radius: 360px;
+  /*background-color: red;*/
+  position: relative;
+  transition: 1s;
+}
+
+#main-container.digital-mode .clock {
+  border: 0.1rem solid #606060;
+}
+.clock {
+  border: 0.1rem solid #303030;
+}
+#main-container.digital-mode .clock span.p-h,
+#main-container.digital-mode .clock span.p-m {
+  background-color: #ffffff;
+}
+
+.clock span.p-m,
+.clock span.p-h {
+  width: 0.2rem;
+  display: inline-block;
+  position: absolute;
+  left: 50%;
+  translate: -50%;
+  transform-origin: bottom;
+  transition: 1s;
+}
+
+.clock span.p-m {
+  height: calc(var(--size) / 2.5);
+  background-color: green;
+  background-color: #fff;
+  top: calc((var(--size) / 2) - (var(--size) / 2.5));
+}
+
+.clock span.p-h {
+  height: calc(var(--size) / 3);
+  background-color: blue;
+  background-color: #fff;
+  top: calc((var(--size) / 2) - (var(--size) / 3));
+}

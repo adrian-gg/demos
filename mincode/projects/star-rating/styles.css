@@ -1,0 +1,122 @@
+/*
+ * ===================================================================
+ * -- RESET ----------------------------------------------------------
+ * ===================================================================
+ */
+
+* {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-wrap: balance;
+}
+
+p,
+span {
+  text-wrap: pretty;
+}
+
+a {
+  color: initial;
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+input,
+textarea,
+button {
+  appearance: none;
+  border: none;
+  background: none;
+}
+
+input:focus-visible,
+textarea:focus-visible,
+button:focus-visible {
+  outline: none;
+}
+
+/*
+ * ===================================================================
+ * -- STYLES ---------------------------------------------------------
+ * ===================================================================
+ */
+
+:root {
+  --fz-main: 10px;
+  --bgc-black: #101010;
+  --c-grey: #303030;
+  --c-orange: #ffa500;
+  --c-yellow: #fbbc05;
+}
+
+html {
+  font-size: var(--fz-main);
+}
+
+input[type="radio"],
+input[type="radio"]:checked {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+body {
+  background-color: var(--bgc-black);
+}
+
+.container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.stars {
+  display: inline-flex;
+  gap: 0.4rem;
+  transform-origin: center;
+  transform: rotate(180deg);
+}
+
+.star {
+  font-size: 4rem;
+  transform-origin: center;
+  transform: rotate(180deg);
+  cursor: pointer;
+}
+
+.star:before {
+  color: var(--c-grey);
+  transition: color 0.2s;
+}
+
+.star:checked:before,
+.star:checked ~ .star:before {
+  color: var(--c-yellow);
+}
+
+/* .stars:hover .star:before{
+  color: var(--c-grey);
+} */
+
+.stars:hover .star:hover:before,
+.stars:hover .star:hover ~ .star:before {
+  color: var(--c-orange);
+}

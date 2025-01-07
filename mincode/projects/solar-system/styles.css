@@ -1,0 +1,238 @@
+/*
+ * ===================================================================
+ * -- RESET ----------------------------------------------------------
+ * ===================================================================
+ */
+
+* {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-wrap: balance;
+}
+
+p,
+span {
+  text-wrap: pretty;
+}
+
+a {
+  color: initial;
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+input,
+textarea,
+button {
+  appearance: none;
+  border: none;
+  background: none;
+}
+
+input:focus-visible,
+textarea:focus-visible,
+button:focus-visible {
+  outline: none;
+}
+
+/*
+ * ===================================================================
+ * -- STYLES ---------------------------------------------------------
+ * ===================================================================
+ */
+
+:root {
+  --bg-w: #ffffff;
+  --bg-space: #101010;
+  --bg-orbit: #606060;
+  --bg-sun: #e16122;
+  --speed: 88;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  height: 100vh;
+  background-color: var(--bg-space);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.space {
+  width: 42.2rem;
+  height: 42.2rem;
+  background-color: var(--bg-space);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 0;
+}
+
+.orbit-container {
+  border-radius: 360px;
+  position: absolute;
+}
+.orbit {
+  width: 100%;
+  height: 100%;
+  border: 0.1rem solid var(--bg-orbit);
+  border-radius: 360px;
+}
+
+.planet {
+  border: 0.1rem solid var(--bg-w);
+  border-radius: 360px;
+  background-color: var(--bg-space);
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#mercury {
+  width: 6.2rem;
+  height: 6.2rem;
+  animation: planet calc((88 / var(--speed)) * 1s) linear infinite;
+}
+#mercury .planet {
+  width: 0.6rem;
+  height: 0.6rem;
+}
+
+#venus {
+  width: 8.4rem;
+  height: 8.4rem;
+  animation: planet calc((225 / var(--speed)) * 1s) linear infinite;
+}
+#venus .planet {
+  width: 0.6rem;
+  height: 0.6rem;
+}
+
+#earth {
+  width: 10.4rem;
+  height: 10.4rem;
+  animation: planet calc((365 / var(--speed)) * 1s) linear infinite;
+}
+#earth .planet {
+  width: 0.8rem;
+  height: 0.8rem;
+}
+
+#mars {
+  width: 12.8rem;
+  height: 12.8rem;
+  animation: planet calc((687 / var(--speed)) * 1s) linear infinite;
+}
+#mars .planet {
+  width: 0.8rem;
+  height: 0.8rem;
+}
+
+#jupiter {
+  width: 16.2rem;
+  height: 16.2rem;
+  animation: planet calc((4333 / var(--speed)) * 1s) linear infinite;
+}
+#jupiter .planet {
+  width: 1.8rem;
+  height: 1.8rem;
+}
+
+#saturn {
+  width: 20rem;
+  height: 20rem;
+  animation: planet calc((10759 / var(--speed)) * 1s) linear infinite;
+}
+#saturn .planet {
+  width: 1.2rem;
+  height: 1.2rem;
+}
+
+#uranus {
+  width: 24.2rem;
+  height: 24.2rem;
+  animation: planet calc((30687 / var(--speed)) * 1s) linear infinite;
+}
+#uranus .planet {
+  width: 1rem;
+  height: 1rem;
+}
+
+#neptune {
+  width: 28.2rem;
+  height: 28.2rem;
+  animation: planet calc((60190 / var(--speed)) * 1s) linear infinite;
+}
+#neptune .planet {
+  width: 0.8rem;
+  height: 0.8rem;
+}
+
+@keyframes planet {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.sun {
+  width: 4.2rem;
+  height: 4.2rem;
+  border-radius: 360px;
+  background-color: var(--bg-sun);
+}
+
+.tonearm {
+  width: 12.5rem;
+  position: absolute;
+  top: 2.1rem;
+  right: 2.5rem;
+}
+.tonearm:before {
+  content: "";
+  width: 4.58rem;
+  height: 4.58rem;
+  border: 0.1rem solid var(--bg-orbit);
+  border-radius: 360px;
+  position: absolute;
+  top: 1rem;
+  right: 1.9rem;
+  z-index: -1;
+}
+.tonearm svg {
+  width: 100%;
+  height: 100%;
+}
+
+@media (max-width: 420px) {
+  html {
+    font-size: 2.4vmin;
+  }
+}
+
+@media (max-height: 420px) {
+  html {
+    font-size: 2.4vmin;
+  }
+}

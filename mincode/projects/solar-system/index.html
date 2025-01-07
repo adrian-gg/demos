@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Solar System</title>
+    <meta name="author" content="Adrián García" />
+
+    <!-- UA and Viewport -->
+    <meta http-equiv="X-UA-Compatible" content="Chrome=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
+      name="viewport" />
+    <!-- END: UA and Viewport -->
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <!-- END: Font Awesome -->
+
+    <link rel="stylesheet" href="./styles.css" />
+    <script src="https://code.jquery.com/jquery-3.5.0.min.js"></script>
+  </head>
+  <body
+    oncontextmenu="return false"
+    onselectstart="return false"
+    ondragstart="return false">
+    <div class="space">
+      <div id="mercury" class="orbit-container">
+        <div class="orbit">
+          <div class="planet"></div>
+        </div>
+      </div>
+      <div id="venus" class="orbit-container">
+        <div class="orbit">
+          <div class="planet"></div>
+        </div>
+      </div>
+      <div id="earth" class="orbit-container">
+        <div class="orbit">
+          <div class="planet"></div>
+        </div>
+      </div>
+      <div id="mars" class="orbit-container">
+        <div class="orbit">
+          <div class="planet"></div>
+        </div>
+      </div>
+      <div id="jupiter" class="orbit-container">
+        <div class="orbit">
+          <div class="planet"></div>
+        </div>
+      </div>
+      <div id="saturn" class="orbit-container">
+        <div class="orbit">
+          <div class="planet"></div>
+        </div>
+      </div>
+      <div id="uranus" class="orbit-container">
+        <div class="orbit">
+          <div class="planet"></div>
+        </div>
+      </div>
+      <div id="neptune" class="orbit-container">
+        <div class="orbit">
+          <div class="planet"></div>
+        </div>
+      </div>
+      <div class="sun"></div>
+      <div class="tonearm">
+        <svg
+          width="125"
+          height="183"
+          viewBox="0 0 125 183"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg">
+          <circle class="circle" cx="82.2267" cy="33.4117" r="22.9" />
+          <path
+            d="M96.0413 35.9173C94.6576 43.5469 87.3508 48.6101 79.7212 47.2264C72.0916 45.8426 67.0283 38.5358 68.4121 30.9062C69.7959 23.2766 77.1027 18.2133 84.7323 19.5971C92.3619 20.9809 97.4251 28.2877 96.0413 35.9173Z"
+            fill="white" />
+          <path
+            d="M79.0621 29.8808L86.4299 31.2171L70.3943 119.631L63.0265 118.294L79.0621 29.8808Z"
+            fill="white" />
+          <path
+            d="M64.2911 115.292L70.3943 119.631L43.3666 157.653L37.2634 153.315L64.2911 115.292Z"
+            fill="white" />
+          <path
+            d="M47.1446 132.032L60.4228 141.47L39.8103 170.468L26.532 161.029L47.1446 132.032Z"
+            fill="white" />
+        </svg>
+      </div>
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>

@@ -12,10 +12,22 @@
     "updatedOn": "2024-10-03 12:24:17 UTC"
   },
   {
+    "id": "solar-system",
+    "name": "Solar System",
+    "createdOn": "2024-04-13 03:42:28 UTC",
+    "updatedOn": "2024-04-13 17:06:39 UTC"
+  },
+  {
     "id": "logo-builder",
     "name": "Logo builder",
     "createdOn": "2023-12-22 00:55:56 UTC",
     "updatedOn": "2023-12-22 03:41:33 UTC"
+  },
+  {
+    "id": "star-rating",
+    "name": "Star Rating",
+    "createdOn": "2023-09-20 18:55:26 UTC",
+    "updatedOn": "2023-09-20 19:00:26 UTC"
   },
   {
     "id": "nonograma",

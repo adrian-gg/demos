@@ -12,10 +12,22 @@
     "updatedOn": "2024-10-03 12:24:17 UTC"
   },
   {
+    "id": "daily-tiles",
+    "name": "Daily tiles",
+    "createdOn": "2024-08-22 23:25:16 UTC",
+    "updatedOn": "2024-10-10 13:26:13 UTC"
+  },
+  {
     "id": "solar-system",
     "name": "Solar System",
     "createdOn": "2024-04-13 03:42:28 UTC",
     "updatedOn": "2024-04-13 17:06:39 UTC"
+  },
+  {
+    "id": "keyboard",
+    "name": "Keyboard",
+    "createdOn": "2024-01-13 20:20:43 UTC",
+    "updatedOn": "2024-01-13 21:56:24 UTC"
   },
   {
     "id": "logo-builder",

@@ -1,0 +1,185 @@
+/*
+ * ===================================================================
+ * -- RESET ----------------------------------------------------------
+ * ===================================================================
+ */
+
+* {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-wrap: balance;
+}
+
+p,
+span {
+  text-wrap: pretty;
+}
+
+a {
+  color: initial;
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+input,
+textarea,
+button {
+  appearance: none;
+  border: none;
+  background: none;
+}
+
+input:focus-visible,
+textarea:focus-visible,
+button:focus-visible {
+  outline: none;
+}
+
+/*
+ * ===================================================================
+ * -- STYLES ---------------------------------------------------------
+ * ===================================================================
+ */
+
+:root {
+  --size-tile: 4rem;
+}
+
+html {
+  font-size: 3vmin;
+  font-family: monospace, sans-serif;
+  user-select: none;
+}
+
+body {
+  width: 100%;
+  height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.table {
+  display: grid;
+  grid-template-columns: repeat(4, var(--size-tile));
+  grid-template-rows: repeat(4, var(--size-tile));
+  grid-gap: calc(var(--size-tile) / 8);
+}
+
+.tile {
+  width: var(--size-tile);
+  height: var(--size-tile);
+  background-color: #ededed;
+  position: relative;
+  transition: opacity 0.3s;
+}
+
+.table .tile {
+  cursor: pointer;
+}
+
+.tile-num {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  font-size: 1.8rem;
+}
+
+input[type="checkbox"] {
+  appearance: none;
+  display: none;
+}
+
+input[id*="tile-0"]:checked ~ div label[for*="tile-0"],
+input[id$="-0"]:checked ~ div label[for$="-0"],
+input[id*="tile-1"]:checked ~ div label[for*="tile-1"],
+input[id$="-1"]:checked ~ div label[for$="-1"],
+input[id*="tile-2"]:checked ~ div label[for*="tile-2"],
+input[id$="-2"]:checked ~ div label[for$="-2"],
+input[id*="tile-3"]:checked ~ div label[for*="tile-3"],
+input[id$="-3"]:checked ~ div label[for$="-3"] {
+  opacity: 0;
+  pointer-events: none;
+}
+
+input[id*="tile-0-0"]:checked ~ div label[for*="tile-0-0"],
+input[id*="tile-0-1"]:checked ~ div label[for*="tile-0-1"],
+input[id*="tile-0-2"]:checked ~ div label[for*="tile-0-2"],
+input[id*="tile-0-3"]:checked ~ div label[for*="tile-0-3"],
+input[id*="tile-1-0"]:checked ~ div label[for*="tile-1-0"],
+input[id*="tile-1-1"]:checked ~ div label[for*="tile-1-1"],
+input[id*="tile-1-2"]:checked ~ div label[for*="tile-1-2"],
+input[id*="tile-1-3"]:checked ~ div label[for*="tile-1-3"],
+input[id*="tile-2-0"]:checked ~ div label[for*="tile-2-0"],
+input[id*="tile-2-1"]:checked ~ div label[for*="tile-2-1"],
+input[id*="tile-2-2"]:checked ~ div label[for*="tile-2-2"],
+input[id*="tile-2-3"]:checked ~ div label[for*="tile-2-3"],
+input[id*="tile-3-0"]:checked ~ div label[for*="tile-3-0"],
+input[id*="tile-3-1"]:checked ~ div label[for*="tile-3-1"],
+input[id*="tile-3-2"]:checked ~ div label[for*="tile-3-2"],
+input[id*="tile-3-3"]:checked ~ div label[for*="tile-3-3"] {
+  background-color: #99e0ff;
+  font-weight: 700;
+  opacity: 1;
+  pointer-events: initial;
+}
+
+.result {
+  margin-top: 2.4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.result-title {
+  margin-bottom: 1.4rem;
+  font-size: 1.4rem;
+}
+.result-content {
+  height: var(--size-tile);
+  display: flex;
+  gap: calc(var(--size-tile) / 8);
+}
+.result-content .tile {
+  width: calc(var(--size-tile));
+}
+.result-content .tile:nth-child(even) {
+  width: calc(var(--size-tile) / 2);
+  background-color: transparent;
+}
+
+.result-content .tile:last-of-type {
+  width: calc(var(--size-tile) * 2);
+  background-color: #99e0ff;
+  font-weight: 700;
+}
+
+.result .tile-num span:nth-child(2) {
+  margin: 0 calc(var(--size-tile) / 8);
+  animation: blinking 2s linear infinite;
+  opacity: 0;
+}
+@keyframes blinking {
+  50% {
+    opacity: 0.5;
+  }
+}

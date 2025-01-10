@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>What color is this?</title>
+    <meta name="author" content="Adrián García" />
+
+    <!-- UA and Viewport -->
+    <meta http-equiv="X-UA-Compatible" content="Chrome=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
+      name="viewport" />
+    <!-- END: UA and Viewport -->
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <!-- END: Font Awesome -->
+
+    <link rel="stylesheet" href="./styles.css" />
+    <script src="https://code.jquery.com/jquery-3.5.0.min.js"></script>
+  </head>
+  <body
+    oncontextmenu="return false"
+    onselectstart="return false"
+    ondragstart="return false">
+    <div class="main">
+      <div id="panel" class="panel-color">
+        <div id="btnStart" class="btn_start" onclick="retry()">↻</div>
+        <div class="color-question">
+          <h1 id="title">What color is this?</h1>
+          <p id="color-question-result"></p>
+        </div>
+        <div class="color-answer">
+          <h2 id="color-answer-title">Your color is:</h2>
+          <p id="color-answer-result"></p>
+        </div>
+      </div>
+      <div class="form-color">
+        <form id="form">
+          <div class="form-group">
+            <input
+              max="255"
+              min="0"
+              type="number"
+              value="0"
+              name="red"
+              class="red" />
+            <input
+              max="255"
+              min="0"
+              type="number"
+              value="0"
+              name="green"
+              class="green" />
+            <input
+              max="255"
+              min="0"
+              type="number"
+              value="0"
+              name="blue"
+              class="blue" />
+          </div>
+          <div class="form-group">
+            <button type="submit" class="btn_submit">Check color</button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>

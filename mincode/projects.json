@@ -3,102 +3,119 @@
     "id": "what-color-is-this",
     "name": "What color is this?",
     "createdOn": "2025-01-10 17:00:00 UTC",
-    "updatedOn": "2025-01-10 17:00:00 UTC"
+    "updatedOn": "2025-01-10 17:00:00 UTC",
+    "tags": ["html", "css", "js"]
   },
   {
     "id": "galaxies",
     "name": "Galaxies",
     "createdOn": "2025-01-01 20:55:20 UTC",
-    "updatedOn": "2025-01-01 23:17:30 UTC"
+    "updatedOn": "2025-01-01 23:17:30 UTC",
+    "tags": ["html", "css", "js"]
   },
   {
     "id": "1-to-20",
     "name": "1-TO-20",
     "createdOn": "2024-09-16 10:16:48 UTC",
-    "updatedOn": "2024-10-03 12:24:17 UTC"
+    "updatedOn": "2024-10-03 12:24:17 UTC",
+    "tags": ["html", "css", "js"]
   },
   {
     "id": "daily-tiles",
     "name": "Daily tiles",
     "createdOn": "2024-08-22 23:25:16 UTC",
-    "updatedOn": "2024-10-10 13:26:13 UTC"
+    "updatedOn": "2024-10-10 13:26:13 UTC",
+    "tags": ["html", "css", "js"]
   },
   {
     "id": "solar-system",
     "name": "Solar System",
     "createdOn": "2024-04-13 03:42:28 UTC",
-    "updatedOn": "2024-04-13 17:06:39 UTC"
+    "updatedOn": "2024-04-13 17:06:39 UTC",
+    "tags": ["html", "css", "js"]
   },
   {
     "id": "keyboard",
     "name": "Keyboard",
     "createdOn": "2024-01-13 20:20:43 UTC",
-    "updatedOn": "2024-01-13 21:56:24 UTC"
+    "updatedOn": "2024-01-13 21:56:24 UTC",
+    "tags": ["html", "css", "js"]
   },
   {
     "id": "logo-builder",
     "name": "Logo builder",
     "createdOn": "2023-12-22 00:55:56 UTC",
-    "updatedOn": "2023-12-22 03:41:33 UTC"
+    "updatedOn": "2023-12-22 03:41:33 UTC",
+    "tags": ["html", "css", "js"]
   },
   {
     "id": "star-rating",
     "name": "Star Rating",
     "createdOn": "2023-09-20 18:55:26 UTC",
-    "updatedOn": "2023-09-20 19:00:26 UTC"
+    "updatedOn": "2023-09-20 19:00:26 UTC",
+    "tags": ["html", "css"]
   },
   {
     "id": "nonograma",
     "name": "Nonograma (Picross)",
     "createdOn": "2023-05-01 02:34:14 UTC",
-    "updatedOn": "2023-05-01 06:48:42 UTC"
+    "updatedOn": "2023-05-01 06:48:42 UTC",
+    "tags": ["html", "css", "js"]
   },
   {
     "id": "pass-word",
     "name": "PASS-WORD",
     "createdOn": "2023-04-02 00:29:33 UTC",
-    "updatedOn": "2023-05-03 20:46:56 UTC"
+    "updatedOn": "2023-05-03 20:46:56 UTC",
+    "tags": ["html", "css", "js"]
   },
   {
     "id": "analog-or-digital",
     "name": "Analog or digital?",
     "createdOn": "2023-03-29 17:25:26 UTC",
-    "updatedOn": "2023-12-07 12:43:56 UTC"
+    "updatedOn": "2023-12-07 12:43:56 UTC",
+    "tags": ["html", "css", "js"]
   },
   {
     "id": "doors",
     "name": "Doors",
     "createdOn": "2022-10-26 22:56:09 UTC",
-    "updatedOn": "2022-10-27 14:25:17 UTC"
+    "updatedOn": "2022-10-27 14:25:17 UTC",
+    "tags": ["html", "css"]
   },
   {
     "id": "animal-crossing-kk-songs",
     "name": "Animal Crossing: K.K. Songs",
     "createdOn": "2020-08-06 17:48:07 UTC",
-    "updatedOn": "2022-10-27 14:30:57 UTC"
+    "updatedOn": "2022-10-27 14:30:57 UTC",
+    "tags": ["html", "css", "js"]
   },
   {
     "id": "color-picker",
     "name": "Color picker",
     "createdOn": "2020-07-01 22:34:12 UTC",
-    "updatedOn": "2020-07-02 08:19:23 UTC"
+    "updatedOn": "2020-07-02 08:19:23 UTC",
+    "tags": ["html", "css", "js"]
   },
   {
     "id": "time-machine",
     "name": "Time Machine (pull the lever)",
     "createdOn": "2020-06-14 23:27:57 UTC",
-    "updatedOn": "2023-03-29 16:45:07 UTC"
+    "updatedOn": "2023-03-29 16:45:07 UTC",
+    "tags": ["html", "css", "js"]
   },
   {
     "id": "rooms",
     "name": "Rooms",
     "createdOn": "2020-06-09 21:44:13 UTC",
-    "updatedOn": "2020-06-09 22:18:10 UTC"
+    "updatedOn": "2020-06-09 22:18:10 UTC",
+    "tags": ["html", "css", "js"]
   },
   {
     "id": "wheel",
     "name": "Wheel",
     "createdOn": "2020-06-01 17:26:25 UTC",
-    "updatedOn": "2022-11-06 17:21:04 UTC"
+    "updatedOn": "2022-11-06 17:21:04 UTC",
+    "tags": ["html", "css", "js"]
   }
 ]

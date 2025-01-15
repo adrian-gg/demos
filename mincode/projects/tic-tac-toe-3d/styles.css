@@ -1,0 +1,165 @@
+/*
+ * ===================================================================
+ * -- RESET ----------------------------------------------------------
+ * ===================================================================
+ */
+
+* {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+/*
+ * ===================================================================
+ * -- STYLES ---------------------------------------------------------
+ * ===================================================================
+ */
+
+:root {
+  --bg-primary: #202020;
+  --bg-secondary: #303030;
+  --bg-tertiary: #404040;
+  --red: #f03a17;
+  --cell-size: 10rem;
+
+  /* -- sizes --*/
+  --aspect-ratio: 9 / 16;
+  --size-base: 400;
+  --size-base-horizontal: calc(
+    ((10 * 100) / (var(--size-base) / calc(var(--aspect-ratio)))) * 1dvh
+  );
+  --size-base-vertical: calc(((10 * 100) / var(--size-base)) * 1vw);
+
+  -webkit-tap-highlight-color: transparent;
+}
+
+html {
+  font-size: 10px;
+}
+
+@media (min-aspect-ratio: 9/16) {
+  html {
+    font-size: var(--size-base-horizontal);
+  }
+}
+@media (max-aspect-ratio: 9/16) {
+  html {
+    font-size: var(--size-base-vertical);
+  }
+}
+
+body {
+  height: 100dvh;
+  background-color: var(--bg-primary);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: sans-serif;
+}
+
+.game-container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.game-board {
+  display: grid;
+  grid-template-columns: repeat(3, var(--cell-size));
+  grid-template-rows: repeat(3, var(--cell-size));
+  grid-gap: 0.4rem;
+  position: absolute;
+  transform: perspective(100rem) rotateX(0deg);
+  transform-origin: center;
+  transform-style: preserve-3d;
+  filter: drop-shadow(2px 4px 6px var(--bg-primary));
+}
+
+.OPENING .game-board {
+  animation: OPENING-rotation 2s ease-in-out forwards;
+}
+
+@keyframes OPENING-rotation {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+    transform: perspective(100rem) rotateX(0deg);
+  }
+  100% {
+    transform: perspective(100rem) rotateX(60deg);
+  }
+}
+
+.game-board:nth-child(1),
+.game-board:nth-child(3) {
+  top: 50%;
+  transform: translateY(-50%) perspective(100rem) rotateX(60deg);
+  opacity: 0;
+}
+
+.OPENING .game-board:nth-child(1) {
+  animation: OPENING-translate-1 1s ease-in-out 2s forwards;
+}
+.OPENING .game-board:nth-child(3) {
+  animation: OPENING-translate-3 1s ease-in-out 2s forwards;
+}
+
+@keyframes OPENING-translate-1 {
+  1% {
+    opacity: 1;
+  }
+  to {
+    opacity: 1;
+    top: calc(50% + 17rem);
+  }
+}
+@keyframes OPENING-translate-3 {
+  1% {
+    opacity: 1;
+  }
+  to {
+    opacity: 1;
+    top: calc(50% - 17rem);
+  }
+}
+
+.game-cell {
+  width: var(--cell-size);
+  height: var(--cell-size);
+  background-color: var(--bg-secondary);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  font-size: 4rem;
+  cursor: pointer;
+  transition: background 0.2s ease-in-out;
+}
+
+.game-cell:hover {
+  background-color: var(--bg-tertiary);
+}
+
+.game-cell.cell--played,
+.game-win .game-cell {
+  pointer-events: none;
+}
+
+.game-cell.cell--win {
+  background-color: var(--red);
+  font-weight: bold;
+}
+
+.game-win .game-cell:not(.cell--win) {
+  filter: saturate(0);
+}

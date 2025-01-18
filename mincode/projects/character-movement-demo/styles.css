@@ -1,0 +1,167 @@
+/*
+ * ===================================================================
+ * -- RESET ----------------------------------------------------------
+ * ===================================================================
+ */
+
+* {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-wrap: balance;
+}
+
+p,
+span {
+  text-wrap: pretty;
+}
+
+a {
+  color: initial;
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+input,
+textarea,
+button {
+  appearance: none;
+  border: none;
+  background: none;
+}
+
+input:focus-visible,
+textarea:focus-visible,
+button:focus-visible {
+  outline: none;
+}
+
+/*
+ * ===================================================================
+ * -- STYLES ---------------------------------------------------------
+ * ===================================================================
+ */
+
+* {
+  --size-w-user: 16px;
+  --size-h-user: 8px;
+  --scale-user: 6;
+  --border-size-user: 1;
+  --border-color-user: black;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  background-color: #202020;
+  overflow: hidden;
+  position: relative;
+}
+
+#plaza {
+  width: 100%;
+  height: 100%;
+}
+
+.user-container {
+  --user-travel-time: 0;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  transition: calc(var(--user-travel-time) * 1s) linear, scale 0s;
+  transform-origin: left;
+  scale: -1 1;
+}
+.user-container[data-direction="left"] {
+  scale: 1 1;
+}
+.user-container[data-direction="right"] {
+  scale: -1 1;
+}
+
+.user {
+  width: calc(var(--size-w-user) * var(--scale-user));
+  height: calc(var(--size-h-user) * var(--scale-user));
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAICAYAAACYhf2vAAAACXBIWXMAAAsTAAALEwEAmpwYAAABNmlDQ1BQaG90b3Nob3AgSUNDIHByb2ZpbGUAAHjarY6xSsNQFEDPi6LiUCsEcXB4kygotupgxqQtRRCs1SHJ1qShSmkSXl7VfoSjWwcXd7/AyVFwUPwC/0Bx6uAQIYODCJ7p3MPlcsGo2HWnYZRhEGvVbjrS9Xw5+8QMUwDQCbPUbrUOAOIkjvjB5ysC4HnTrjsN/sZ8mCoNTIDtbpSFICpA/0KnGsQYMIN+qkHcAaY6addAPAClXu4vQCnI/Q0oKdfzQXwAZs/1fDDmADPIfQUwdXSpAWpJOlJnvVMtq5ZlSbubBJE8HmU6GmRyPw4TlSaqo6MukP8HwGK+2G46cq1qWXvr/DOu58vc3o8QgFh6LFpBOFTn3yqMnd/n4sZ4GQ5vYXpStN0ruNmAheuirVahvAX34y/Axk/96FpPYgAAACBjSFJNAAB6JQAAgIMAAPn/AACA6AAAUggAARVYAAA6lwAAF2/XWh+QAAABE0lEQVR42mL8//8/Ay4Q3BwJk2RcW7ucgVRAjH5GXA548OAhXKJ4cQXJjiBWPxMuA4qrZVBoUgGx+lmQOXGr3eBB1hxTzHDeMIGhedkChtozuA1YLygJ9+n6WboMpOpn+P//PxzHrnJleLJ2xv91AhL/P7Xy/DeOVfv/qZXn/zoBif/rBCT+P1k74z+y+v///zP8O2j//1Mrz/9PrTxk6WdBd1Dl37WMDLN0GRjSLv/fX/qMYU83D8O3b98ZGBgYGLF54MuRsww8NsYQzkvS9aM4YFHoLoan62YyMDAwMJxiuMywp5uHYFzzVn2GG7yIgYFk/QzoQQLDdZJy/z+18jCsE5BgKBcS+7+EjR+nWkr0AwYADf34P6w3exUAAAAASUVORK5CYII=");
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+  background-position: 0 0;
+  image-rendering: pixelated;
+  transform-origin: center bottom;
+  transform: scale(1, 1);
+  filter: drop-shadow(
+      calc(var(--border-size-user) * -1px) 0 0px var(--border-color-user)
+    )
+    drop-shadow(
+      0 calc(var(--border-size-user) * -1px) 0px var(--border-color-user)
+    )
+    drop-shadow(
+      calc(var(--border-size-user) * 1px) 0 0px var(--border-color-user)
+    )
+    drop-shadow(
+      0 calc(var(--border-size-user) * 1px) 0px var(--border-color-user)
+    );
+}
+
+.user-container[data-action="stoped"] .user {
+  animation: stoped 1.2s ease-in-out infinite;
+}
+.user-container[data-action="walking"] .user {
+  animation: walking 0.3s linear infinite;
+}
+.user-container[data-action="attacking"] .user {
+  animation: attacking 1s steps(2) infinite;
+}
+@keyframes stoped {
+  50% {
+    transform: scale(1.1, 0.9);
+  }
+}
+@keyframes walking {
+  0% {
+    transform: rotate(0) translate(0, 0);
+  }
+  12.5% {
+    transform: rotate(-5deg) translate(0, -5px);
+  }
+  25% {
+    transform: rotate(-10deg) translate(0, -10px);
+  }
+  37.5% {
+    transform: rotate(-5deg) translate(0, -5px);
+  }
+  50% {
+    transform: rotate(0) translate(0, 0);
+  }
+  62.5% {
+    transform: rotate(5deg) translate(0, -5px);
+  }
+  75% {
+    transform: rotate(10deg) translate(0, -10px);
+  }
+  87.5% {
+    transform: rotate(5deg) translate(0, -5px);
+  }
+  100% {
+    transform: rotate(0) translate(0, 0);
+  }
+}
+@keyframes attacking {
+  to {
+    background-position: 200% 0;
+  }
+}

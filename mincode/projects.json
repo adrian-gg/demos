@@ -72,6 +72,18 @@
     }
   },
   {
+    "id": "character-movement-demo",
+    "name": "Character movement demo",
+    "createdOn": "2024-02-08 23:31:47 UTC",
+    "updatedOn": "2024-02-28 23:09:21 UTC",
+    "tags": ["html", "css", "js"],
+    "link": "https://adrian-gg.github.io/demos/mincode/projects/character-movement-demo/",
+    "thumbnail": {
+      "url": "https://adrian-gg.github.io/demos/mincode/img/projects/character-movement-demo.png",
+      "alt": "Character movement demo"
+    }
+  },
+  {
     "id": "keyboard",
     "name": "Keyboard",
     "createdOn": "2024-01-13 20:20:43 UTC",

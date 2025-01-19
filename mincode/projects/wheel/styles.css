@@ -66,13 +66,12 @@ button:focus-visible {
 
 html,
 body {
-  height: 100vh;
+  height: 100dvh;
   font-family: sans-serif;
-  margin: 0;
 }
 
 html {
-  font-size: 1.5vh;
+  font-size: 1.5vmin;
 }
 
 body {
@@ -81,23 +80,23 @@ body {
   overflow: hidden;
 }
 
-.contenedor {
+.container {
   height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.ruleta {
+.wheel {
   width: 42rem;
   height: 42rem;
+  border-radius: 360rem;
+  background-color: white;
   position: relative;
   cursor: pointer;
-  background-color: white;
-  border-radius: 360rem;
 }
 
-.ruleta:before {
+.wheel:before {
   content: "";
   width: 0;
   height: 0;
@@ -111,53 +110,53 @@ body {
   z-index: 999;
 }
 
-.ruleta:after {
+.wheel:after {
   content: "";
   width: 2rem;
   height: 2rem;
+  border-radius: 36rem;
+  background-color: #fff;
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
-  border-radius: 36rem;
-  background-color: #fff;
   z-index: 999;
+  transform: translate(-50%, -50%);
 }
 
-.colores {
+.colors {
   width: 40rem;
   height: 40rem;
+  border: 1rem solid white;
+  border-radius: 36rem;
   display: flex;
   flex-wrap: wrap;
-  border-radius: 36rem;
-  border: 1rem solid white;
   overflow: hidden;
   position: relative;
 }
 
-.animacion {
-  animation: animacion 4s ease-out forwards;
+.animation {
+  animation: animation 4s ease-out forwards;
   pointer-events: none;
 }
 
-.colorUno,
-.colorDos,
-.colorTres,
-.colorCuatro {
+.color {
   width: 20rem;
   height: 20rem;
   display: inline-block;
 }
 
-.colorUno {
+.color-blue {
   background-color: var(--bg-b);
 }
-.colorDos {
+
+.color-red {
   background-color: var(--bg-r);
 }
-.colorTres {
+
+.color-yellow {
   background-color: var(--bg-y);
 }
-.colorCuatro {
+
+.color-green {
   background-color: var(--bg-g);
 }

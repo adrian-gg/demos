@@ -1,50 +1,50 @@
-var multiplicador = 7
+const bodyBox = $("body")
+const wheelBox = $(".wheel")
+const colorsBox = $(".colors")
+let multiplier = 7
 
-$(".ruleta").click(function () {
-  $("body").css("background-color", "var(--bg-cont-b")
-  $(".ruleta").css("pointer-events", "none")
-  $(".colores").removeClass("animacion")
-  var color = colorAleatorio(1, 360)
+function getRandomColor(min, max) {
+  let randomColor = (Math.random() * (max - min) + min).toFixed(0) * 1
+  randomColor = randomColor + 360 * multiplier
+  return randomColor
+}
 
-  $("#animacion")
-    .empty()
-    .append(
-      "@keyframes animacion{" +
-        "0%{transform: rotate(0deg)}" +
-        "100%{transform: rotate(" +
-        color +
-        "deg)}" +
-        "}"
-    )
+wheelBox.click(function () {
+  bodyBox.css("background-color", "var(--bg-cont-b)")
+  wheelBox.css("pointer-events", "none")
+  colorsBox.removeClass("animation")
+  let color = getRandomColor(1, 360)
+
+  $("#animation").html(
+    `@keyframes animation{
+        0%{transform: rotate(0deg)}
+        100%{transform: rotate(${color}deg)}
+      }`
+  )
 
   setTimeout(function () {
-    $(".colores").addClass("animacion")
-    //$('.colores').css('animation', 'animacion 4s ease-out forwards');
+    colorsBox.addClass("animation")
   }, 1)
 
   setTimeout(function () {
-    if (color > 0 && color <= 90 + 360 * multiplicador) {
-      $("body").css("background-color", "var(--bg-b)")
+    let bgc
+    if (color > 0 && color <= 90 + 360 * multiplier) {
+      bgc = "b"
     } else if (
-      color > 90 + 360 * multiplicador &&
-      color <= 180 + 360 * multiplicador
+      color > 90 + 360 * multiplier &&
+      color <= 180 + 360 * multiplier
     ) {
-      $("body").css("background-color", "var(--bg-y)")
+      bgc = "y"
     } else if (
-      color > 180 + 360 * multiplicador &&
-      color <= 270 + 360 * multiplicador
+      color > 180 + 360 * multiplier &&
+      color <= 270 + 360 * multiplier
     ) {
-      $("body").css("background-color", "var(--bg-g)")
-    } else if (color > 270 + 360 * multiplicador) {
-      $("body").css("background-color", "var(--bg-r)")
+      bgc = "g"
+    } else if (color > 270 + 360 * multiplier) {
+      bgc = "r"
     }
 
-    $(".ruleta").css("pointer-events", "initial")
+    bodyBox.css("background-color", `var(--bg-${bgc})`)
+    wheelBox.css("pointer-events", "initial")
   }, 4000)
 })
-
-function colorAleatorio(min, max) {
-  var colorAleatorio = (Math.random() * (max - min) + min).toFixed(0) * 1
-  colorAleatorio = colorAleatorio + 360 * multiplicador
-  return colorAleatorio
-}

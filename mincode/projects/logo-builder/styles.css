@@ -57,21 +57,21 @@ button:focus-visible {
  * ===================================================================
  */
 
- :root{
+:root {
   --size-tile: 8rem;
 }
 
-html{
-  font-size: 10px;
+html {
+  font-size: 1.5vmin;
 }
 
-body{
+body {
   width: 100%;
-  height: 100vh;
+  height: 100dvh;
   background-color: #202020;
 }
 
-main{
+main {
   width: 100%;
   height: 100%;
   display: flex;
@@ -79,48 +79,53 @@ main{
   align-items: center;
 }
 
-.tiles_container{
+.tiles_container {
   --size-grid: 3;
-  background-color: #AAA9AA;
+  max-width: 50rem;
+  background-color: #aaa9aa;
   display: grid;
   grid-template-columns: repeat(var(--size-grid), auto);
-  grid-gap: .1rem;
+  grid-gap: 0.1rem;
 }
 
-ul{ list-style: none; }
+ul {
+  list-style: none;
+}
 
-li.tile{
+li.tile {
   width: var(--size-tile);
   height: var(--size-tile);
-  background-color: #DBD9DB;
+  background-color: #dbd9db;
   position: relative;
 }
-li.tile::before{
+
+li.tile::before {
   content: "";
   width: calc(100% - (1.2rem * 2));
   height: calc(100% - (1.2rem * 2));
   margin: 1.2rem;
   border-radius: 360px;
-  background-color: #EDECED;
+  background-color: #edeced;
   position: absolute;
 }
 
 li.tile:hover .tile__menu,
-li.tile:hover .tile__options{
+li.tile:hover .tile__options {
   visibility: initial;
 }
 
-li.tile.t--on .tile__menu{
+li.tile.t--on .tile__menu {
   display: none;
 }
-li.tile.t--on .tile__options{
+
+li.tile.t--on .tile__options {
   display: grid;
 }
 
-.tile__menu{
+.tile__menu {
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, .3);
+  background-color: rgba(0, 0, 0, 0.3);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -128,57 +133,98 @@ li.tile.t--on .tile__options{
   z-index: 9;
   color: white;
   font-size: 3rem;
-  visibility: hidden;
   cursor: pointer;
+  visibility: hidden;
 }
 
-.tile__options{
+.tile__options {
   width: 100%;
   height: 100%;
   display: none;
-  grid-template-columns: repeat(2, auto);
+  grid-template-columns: repeat(2, 1fr);
   position: absolute;
   z-index: 9;
   font-size: 2rem;
-  visibility: hidden;  
+  visibility: hidden;
 }
 
-.tile__option{
-  margin: .5rem;
+.tile__option {
+  margin: 0.5rem;
   border-radius: 360px;
-  background-color: rgba(255, 255, 255, .3);
+  background-color: rgba(255, 255, 255, 0.3);
   display: flex;
   justify-content: center;
   align-items: center;
   cursor: pointer;
-  transition: background .1s;
+  transition: background 0.1s;
 }
 
-.tile__option:hover{
-  background-color: rgba(255, 255, 255, .9);
+.tile__option:hover {
+  background-color: rgba(255, 255, 255, 0.9);
 }
 
-.tile__base{
+.tile__base {
   width: 100%;
   height: 100%;
   visibility: hidden;
   position: relative;
 }
 
-li.tile.t--on .tile__base{ visibility: initial; }
+li.tile.t--on .tile__base {
+  visibility: initial;
+}
+
 /*--rotation--*/
-.tile__base.tr-1{ transform: rotate(0deg); }
-.tile__base.tr-2{ transform: rotate(90deg); }
-.tile__base.tr-3{ transform: rotate(180deg); }
-.tile__base.tr-4{ transform: rotate(270deg); }
+.tile__base.tr-1 {
+  transform: rotate(0deg);
+}
+
+.tile__base.tr-2 {
+  transform: rotate(90deg);
+}
+
+.tile__base.tr-3 {
+  transform: rotate(180deg);
+}
+
+.tile__base.tr-4 {
+  transform: rotate(270deg);
+}
+
 /*--color--*/
-.tile__base.tc-1{ background-color: #000000; }
-.tile__base.tc-2{ background-color: #FE7304; }
-.tile__base.tc-3{ background-color: #11AB62; }
-.tile__base.tc-4{ background-color: #1A6ED0; }
-.tile__base.tc-5{ background-color: #CF197B; }
+.tile__base.tc-1 {
+  background-color: #000000;
+}
+
+.tile__base.tc-2 {
+  background-color: #fe7304;
+}
+
+.tile__base.tc-3 {
+  background-color: #11ab62;
+}
+
+.tile__base.tc-4 {
+  background-color: #1a6ed0;
+}
+
+.tile__base.tc-5 {
+  background-color: #cf197b;
+}
+
 /*--shape--*/
-.tile__base.tf-1{ border-radius: 0; }
-.tile__base.tf-2{ border-radius: 0 100% 0 0; }
-.tile__base.tf-3{ border-radius: 50% 50% 0 0; }
-.tile__base.tf-4{ border-radius: 100%; }
+.tile__base.tf-1 {
+  border-radius: 0;
+}
+
+.tile__base.tf-2 {
+  border-radius: 0 100% 0 0;
+}
+
+.tile__base.tf-3 {
+  border-radius: 50% 50% 0 0;
+}
+
+.tile__base.tf-4 {
+  border-radius: 100%;
+}

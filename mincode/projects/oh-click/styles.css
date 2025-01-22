@@ -1,0 +1,129 @@
+/*
+ * ===================================================================
+ * -- RESET ----------------------------------------------------------
+ * ===================================================================
+ */
+
+* {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-wrap: balance;
+}
+
+p,
+span {
+  text-wrap: pretty;
+}
+
+a {
+  color: initial;
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+input,
+textarea,
+button {
+  appearance: none;
+  border: none;
+  background: none;
+}
+
+input:focus-visible,
+textarea:focus-visible,
+button:focus-visible {
+  outline: none;
+}
+
+/*
+ * ===================================================================
+ * -- STYLES ---------------------------------------------------------
+ * ===================================================================
+ */
+
+html {
+  font-size: 10px;
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  width: 100%;
+  height: 100dvh;
+  position: relative;
+  font-family: monospace;
+}
+
+.section {
+  width: 100%;
+  height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.section-gameover {
+  background-color: #202020;
+  color: #fff;
+  font-size: 2rem;
+}
+
+.section-gameover p {
+  margin-top: 2rem;
+}
+
+.section-game {
+  background-color: #fff;
+}
+
+.section-game .click {
+  width: 20%;
+  height: 20%;
+  background-color: #202020;
+  color: #fff;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 1.4rem;
+  text-align: center;
+  cursor: pointer;
+}
+
+.section-game .click .time {
+  font-weight: 700;
+}
+
+.btn-retry {
+  padding: 1rem;
+  transition: opacity 0.2s;
+  cursor: pointer;
+}
+
+.btn-retry:hover {
+  opacity: 0.6;
+}

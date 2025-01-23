@@ -141,7 +141,7 @@ body {
   justify-content: center;
   align-items: center;
   position: relative;
-  font-size: 4rem;
+  font-size: 5rem;
   cursor: pointer;
   transition: background 0.2s ease-in-out;
 }
@@ -156,8 +156,12 @@ body {
 }
 
 .game-cell.cell--win {
-  background-color: var(--red);
+  background-color: var(--bg-tertiary);
   font-weight: bold;
+}
+
+.game-cell.played-O .cell-pawn {
+  filter: hue-rotate(190deg);
 }
 
 .game-win .game-cell:not(.cell--win) {

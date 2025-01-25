@@ -172,11 +172,11 @@
     "name": "4 views",
     "createdOn": "2022-10-27 01:04:11 UTC",
     "updatedOn": "2025-01-25 15:28:50 UTC",
-    "tags": ["html", "css"],
-    "link": "https://adrian-gg.github.io/demos/mincode/projects/doors/",
+    "tags": ["html", "css", "js"],
+    "link": "https://adrian-gg.github.io/demos/mincode/projects/4-views/",
     "thumbnail": {
-      "url": "https://adrian-gg.github.io/demos/mincode/img/projects/doors.png",
-      "alt": "Doors"
+      "url": "https://adrian-gg.github.io/demos/mincode/img/projects/4-views.png",
+      "alt": "4 views"
     }
   },
   {

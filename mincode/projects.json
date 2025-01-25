@@ -168,6 +168,18 @@
     }
   },
   {
+    "id": "4-views",
+    "name": "4 views",
+    "createdOn": "2022-10-27 01:04:11 UTC",
+    "updatedOn": "2025-01-25 15:28:50 UTC",
+    "tags": ["html", "css"],
+    "link": "https://adrian-gg.github.io/demos/mincode/projects/doors/",
+    "thumbnail": {
+      "url": "https://adrian-gg.github.io/demos/mincode/img/projects/doors.png",
+      "alt": "Doors"
+    }
+  },
+  {
     "id": "doors",
     "name": "Doors",
     "createdOn": "2022-10-26 22:56:09 UTC",

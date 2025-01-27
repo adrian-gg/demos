@@ -72,6 +72,18 @@
     }
   },
   {
+    "id": "game-of-life-3d",
+    "name": "Game of life 3D",
+    "createdOn": "2024-05-12 21:08:40 UTC",
+    "updatedOn": "2025-01-27 19:43:47 UTC",
+    "tags": ["html", "css", "js"],
+    "link": "https://adrian-gg.github.io/demos/mincode/projects/game-of-life-3d/",
+    "thumbnail": {
+      "url": "https://adrian-gg.github.io/demos/mincode/img/projects/game-of-life-3d.png",
+      "alt": "Game of life 3D"
+    }
+  },
+  {
     "id": "solar-system",
     "name": "Solar System",
     "createdOn": "2024-04-13 03:42:28 UTC",

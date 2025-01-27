@@ -1,0 +1,81 @@
+* {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+:root {
+  --bgc-main: #101010;
+}
+
+html {
+  font-size: 4.5vmin;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  /* background-color: #000; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  backface-visibility: visible;
+  perspective: 100rem;
+}
+
+.board {
+  --rows: 5;
+  --cols: 5;
+  --depth: 5;
+  width: calc(1rem * var(--rows));
+  height: calc(1rem * var(--rows));
+  position: relative;
+  transform-style: preserve-3d;
+  transform-origin: center;
+  transform: rotateX(60deg) rotateZ(45deg)
+    translateZ(calc(var(--depth) / 2 * 1rem));
+  animation: rotation 20s linear infinite;
+}
+
+@keyframes rotation {
+  from {
+    transform: rotateX(60deg) rotateZ(0deg)
+      translateZ(calc(var(--depth) / 2 * 1rem));
+  }
+  to {
+    transform: rotateX(60deg) rotateZ(360deg)
+      translateZ(calc(var(--depth) / 2 * 1rem));
+  }
+}
+
+.layer {
+  width: 100%;
+  height: 100%;
+  /*border: .1rem solid #E2E2E2;*/
+  display: grid;
+  grid-template-columns: repeat(var(--cols), 1rem);
+  grid-template-rows: repeat(var(--rows), 1rem);
+  position: absolute;
+}
+
+.cell {
+  width: 1rem;
+  height: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.3rem;
+}
+
+.cell[data-cell="0"]:before {
+  content: "⬜";
+  opacity: 0.3;
+}
+.cell[data-cell="1"]:before {
+  content: "⬛";
+}

@@ -6,17 +6,11 @@ const tilesBox = document.querySelectorAll(".tile")
 const btnPlayerOneBox = document.querySelector("#btn-P1")
 const btnPlayerTwoBox = document.querySelector("#btn-P2")
 const gradientsBox = document.querySelector(".gradients")
-const gradientPlayerOneBox = document.querySelector("#gradient-P1")
-const gradientPlayerTwoBox = document.querySelector("#gradient-P2")
 
 const data = {
   btns: {
     P1: btnPlayerOneBox,
     P2: btnPlayerTwoBox,
-  },
-  gradients: {
-    P1: gradientPlayerOneBox,
-    P2: gradientPlayerTwoBox,
   },
 }
 

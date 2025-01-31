@@ -175,13 +175,15 @@ body.P2 .tile.selected::before {
 body.P1,
 .tile.P1 .pawn,
 #btn-P1,
-body.P1 .bar-top {
+body.P1 .bar-top,
+body.P1 .bar-bot {
   background-color: var(--color-player1);
 }
 
 body.P2,
 .tile.P2 .pawn,
 #btn-P2,
+body.P2 .bar-top,
 body.P2 .bar-bot {
   background-color: var(--color-player2);
 }
@@ -219,8 +221,8 @@ body.P2 .bar-bot {
   animation: opacity 8s ease-in-out infinite;
 }
 
-body.P1 #gradient-P1,
-body.P2 #gradient-P2 {
+body.P1 .gradient,
+body.P2 .gradient {
   display: initial;
 }
 
@@ -235,21 +237,29 @@ body.P2 #gradient-P2 {
 }
 
 .gradient-top {
+  top: -24%;
+}
+
+.gradient-bot {
+  bottom: -24%;
+}
+
+body.P1 .gradient-top,
+body.P1 .gradient-bot {
   background-image: radial-gradient(
     closest-side,
     var(--color-player1) 0%,
     transparent 90%
   );
-  top: -24%;
 }
 
-.gradient-bot {
+body.P2 .gradient-top,
+body.P2 .gradient-bot {
   background-image: radial-gradient(
     closest-side,
     var(--color-player2) 0%,
     transparent 90%
   );
-  bottom: -24%;
 }
 
 .time-bar {

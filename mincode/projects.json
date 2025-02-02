@@ -96,6 +96,18 @@
     }
   },
   {
+    "id": "measured-scroll",
+    "name": "Measured scroll",
+    "createdOn": "2024-04-15 00:46:02 UTC",
+    "updatedOn": "2024-04-15 22:32:56 UTC",
+    "tags": ["html", "css", "js"],
+    "link": "https://adrian-gg.github.io/demos/mincode/projects/measured-scroll/",
+    "thumbnail": {
+      "url": "https://adrian-gg.github.io/demos/mincode/img/projects/measured-scroll.png",
+      "alt": "Measured scroll"
+    }
+  },
+  {
     "id": "solar-system",
     "name": "Solar System",
     "createdOn": "2024-04-13 03:42:28 UTC",

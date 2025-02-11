@@ -1,5 +1,17 @@
 [
   {
+    "id": "expanding-cards",
+    "name": "Expanding Cards",
+    "createdOn": "2025-02-11 23:00:00 UTC",
+    "updatedOn": "2025-02-11 23:00:00 UTC",
+    "tags": ["html", "css"],
+    "link": "https://adrian-gg.github.io/demos/mincode/projects/expanding-cards/",
+    "thumbnail": {
+      "url": "https://adrian-gg.github.io/demos/mincode/img/projects/expanding-cards.png",
+      "alt": "Expanding Cards"
+    }
+  },
+  {
     "id": "15s",
     "name": "15s",
     "createdOn": "2025-01-30 17:00:00 UTC",

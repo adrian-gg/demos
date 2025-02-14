@@ -1,0 +1,266 @@
+* {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+:root {
+  --bg-w: #ffffff;
+  --bg-b: #101010;
+  --translate: -11rem;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  height: 100vh;
+  background-color: var(--bg-b);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.watch {
+  width: calc(1rem * 12 * 2);
+  height: calc(1rem * 12 * 2);
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.anim.watch {
+  animation: opacity var(--opacity-speed) ease-out
+    calc(var(--in-speed) + (var(--rotation-speed) * 11) + var(--move-speed))
+    forwards;
+}
+
+.box-container {
+  width: calc(1rem * 12);
+  height: calc(1rem * 12);
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  position: absolute;
+  transform-origin: center bottom;
+}
+.anim .box-container {
+  animation: rotate 100s linear var(--rotation-delay) forwards;
+}
+.box {
+  width: 1rem;
+  height: 1rem;
+  background-color: var(--bg-w);
+  transform-origin: center bottom;
+  scale: 1 0;
+}
+.anim .box {
+  animation: in var(--in-speed) ease-out 0s forwards,
+    move var(--move-speed) ease-out 100s forwards,
+    move2 var(--opacity-speed) ease-out 100s forwards;
+}
+
+.box-container:nth-child(1) {
+  --rotation: 330deg;
+  animation-duration: calc(var(--rotation-speed) * 11);
+}
+.box-container:nth-child(1) .box {
+  transform: translateY(0rem);
+  animation-delay: 0s,
+    calc(
+      var(--rotation-speed) * 11 + (var(--rotation-delay) - var(--move-speed))
+    ),
+    var(--move2-delay);
+}
+
+.box-container:nth-child(2) {
+  --rotation: 300deg;
+  animation-duration: calc(var(--rotation-speed) * 10);
+}
+.box-container:nth-child(2) .box {
+  transform: translateY(-1rem);
+  animation-delay: 0s,
+    calc(
+      var(--rotation-speed) * 10 + (var(--rotation-delay) - var(--move-speed))
+    ),
+    var(--move2-delay);
+}
+
+.box-container:nth-child(3) {
+  --rotation: 270deg;
+  animation-duration: calc(var(--rotation-speed) * 9);
+}
+.box-container:nth-child(3) .box {
+  transform: translateY(-2rem);
+  animation-delay: 0s,
+    calc(
+      var(--rotation-speed) * 9 + (var(--rotation-delay) - var(--move-speed))
+    ),
+    var(--move2-delay);
+}
+
+.box-container:nth-child(4) {
+  --rotation: 240deg;
+  animation-duration: calc(var(--rotation-speed) * 8);
+}
+.box-container:nth-child(4) .box {
+  transform: translateY(-3rem);
+  animation-delay: 0s,
+    calc(
+      var(--rotation-speed) * 8 + (var(--rotation-delay) - var(--move-speed))
+    ),
+    var(--move2-delay);
+}
+
+.box-container:nth-child(5) {
+  --rotation: 210deg;
+  animation-duration: calc(var(--rotation-speed) * 7);
+}
+.box-container:nth-child(5) .box {
+  transform: translateY(-4rem);
+  animation-delay: 0s,
+    calc(
+      var(--rotation-speed) * 7 + (var(--rotation-delay) - var(--move-speed))
+    ),
+    var(--move2-delay);
+}
+
+.box-container:nth-child(6) {
+  --rotation: 180deg;
+  animation-duration: calc(var(--rotation-speed) * 6);
+}
+.box-container:nth-child(6) .box {
+  transform: translateY(-5rem);
+  animation-delay: 0s,
+    calc(
+      var(--rotation-speed) * 6 + (var(--rotation-delay) - var(--move-speed))
+    ),
+    var(--move2-delay);
+}
+
+.box-container:nth-child(7) {
+  --rotation: 150deg;
+  animation-duration: calc(var(--rotation-speed) * 5);
+}
+.box-container:nth-child(7) .box {
+  transform: translateY(-6rem);
+  animation-delay: 0s,
+    calc(
+      var(--rotation-speed) * 5 + (var(--rotation-delay) - var(--move-speed))
+    ),
+    var(--move2-delay);
+}
+
+.box-container:nth-child(8) {
+  --rotation: 120deg;
+  animation-duration: calc(var(--rotation-speed) * 4);
+}
+.box-container:nth-child(8) .box {
+  transform: translateY(-7rem);
+  animation-delay: 0s,
+    calc(
+      var(--rotation-speed) * 4 + (var(--rotation-delay) - var(--move-speed))
+    ),
+    var(--move2-delay);
+}
+
+.box-container:nth-child(9) {
+  --rotation: 90deg;
+  animation-duration: calc(var(--rotation-speed) * 3);
+}
+.box-container:nth-child(9) .box {
+  transform: translateY(-8rem);
+  animation-delay: 0s,
+    calc(
+      var(--rotation-speed) * 3 + (var(--rotation-delay) - var(--move-speed))
+    ),
+    var(--move2-delay);
+}
+
+.box-container:nth-child(10) {
+  --rotation: 60deg;
+  animation-duration: calc(var(--rotation-speed) * 2);
+}
+.box-container:nth-child(10) .box {
+  transform: translateY(-9rem);
+  animation-delay: 0s,
+    calc(
+      var(--rotation-speed) * 2 + (var(--rotation-delay) - var(--move-speed))
+    ),
+    var(--move2-delay);
+}
+
+.box-container:nth-child(11) {
+  --rotation: 30deg;
+  animation-duration: calc(var(--rotation-speed));
+}
+.box-container:nth-child(11) .box {
+  transform: translateY(-10rem);
+  animation-delay: 0s,
+    calc(
+      var(--rotation-speed) * 1 + (var(--rotation-delay) - var(--move-speed))
+    ),
+    var(--move2-delay);
+}
+
+.box-container:nth-child(12) .box {
+  transform: translateY(-11rem);
+  animation-delay: 0s,
+    calc(
+      var(--rotation-speed) * 1 + (var(--rotation-delay) - var(--move-speed))
+    ),
+    var(--move2-delay);
+}
+
+@keyframes in {
+  to {
+    scale: 1 1;
+  }
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(var(--rotation));
+  }
+}
+@keyframes move {
+  100% {
+    transform: translateY(var(--translate));
+  }
+}
+
+@keyframes move2 {
+  0% {
+    transform: translateY(var(--translate));
+  }
+  100% {
+    transform: translateY(calc(var(--translate) - 1rem));
+  }
+}
+
+@keyframes opacity {
+  100% {
+    opacity: 0;
+  }
+}
+
+@media (max-width: 300px) {
+  html {
+    font-size: 1vmin;
+  }
+}
+
+@media (max-height: 300px) {
+  html {
+    font-size: 3.3vmin;
+  }
+}

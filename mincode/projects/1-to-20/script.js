@@ -2,7 +2,7 @@ $(document).ready(function () {
   const listNumsBox = $("#listNums")
   const currentNumBox = $("#current-num")
   const scoreBox = $("#score")
-  const resetBtn = $("#reset")
+  const resetBtn = $(".reset")
   let listNumsBase = []
   let numsPlayedBase = []
   let nextNum
@@ -43,8 +43,6 @@ $(document).ready(function () {
       if (nextLargerNum === null && numPlayedForLarge > num) {
         nextLargerNum = listNumsBase.indexOf(numPlayedForLarge)
       }
-      //console.log(numPlayedForLow, num, numPlayedForLow < num, prevLowerNum)
-      //console.log(numPlayedForLarge, num, numPlayedForLarge > num, nextLargerNum)
     }
 
     if (prevLowerNum === null || prevLowerNum === 0) {

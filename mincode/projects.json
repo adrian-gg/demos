@@ -240,6 +240,18 @@
     }
   },
   {
+    "id": "sprite-animation",
+    "name": "Sprite animation",
+    "createdOn": "2023-02-09 23:35:28 UTC",
+    "updatedOn": "2023-04-06 09:03:41 UTC",
+    "tags": ["html", "css"],
+    "link": "https://adrian-gg.github.io/demos/mincode/projects/sprite-animation/",
+    "thumbnail": {
+      "url": "https://adrian-gg.github.io/demos/mincode/img/projects/sprite-animation.png",
+      "alt": "Sprite animation"
+    }
+  },
+  {
     "id": "4-views",
     "name": "4 views",
     "createdOn": "2022-10-27 01:04:11 UTC",

@@ -1,0 +1,264 @@
+* {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  width: 100%;
+  height: 100dvh;
+  background-color: #2e2e2e;
+  background-color: #f4eff3;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.collection {
+  --z: 1.4rem;
+  width: 100%;
+  max-width: 120rem;
+  margin: 0 auto;
+  padding: 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  row-gap: 6rem;
+  filter: drop-shadow(0 8px 30px rgba(14, 21, 47, 0.6));
+  filter: drop-shadow(0 4px 4px rgba(14, 21, 47, 0.4));
+  gap: 2rem;
+}
+
+.card-container {
+  aspect-ratio: 3 / 4;
+  max-width: 32rem;
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.name {
+  position: absolute;
+  bottom: -1rem;
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: 1.8rem;
+}
+
+.card {
+  --xRotate: 0;
+  --yRotate: 0;
+  --xPosition: calc(var(--xRotate) / 2);
+  --yPosition: calc(var(--yRotate) / 2);
+  --angle: 60deg;
+  --alpha: 0.2;
+  aspect-ratio: 3/4;
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  transition: transform 0.1s;
+  transform: rotateY(calc(var(--yRotate) * 1deg))
+    rotateX(calc(var(--xRotate) * 1deg));
+  perspective: 100rem;
+  transform-style: preserve-3d;
+  will-change: transform;
+}
+
+.layer {
+  --image: url("");
+  width: 100%;
+  height: 100%;
+  background-image: var(--image);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 120%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  transition: background-size 0.1s;
+  pointer-events: none;
+  will-change: transform;
+  /* filter: grayscale(1); */
+}
+
+.layer:nth-child(1) {
+  transform: translateZ(calc(var(--z) * 2));
+}
+.layer:nth-child(2) {
+  transform: translateZ(calc(var(--z) * 2));
+  scale: 1.06;
+}
+.layer:nth-child(3) {
+  transform: translateZ(calc(var(--z) * 2));
+}
+.layer:nth-child(4) {
+  transform: translateZ(calc(var(--z) * 2.5));
+  scale: 1.06;
+}
+.layer:nth-child(5) {
+  transform: translateZ(calc(var(--z) * 3));
+  scale: 1.06;
+}
+.layer:nth-child(6) {
+  transform: translateZ(calc(var(--z) * 3.5));
+  scale: 1.06;
+}
+.layer:nth-child(7) {
+  transform: translateZ(calc(var(--z) * 4));
+  scale: 1.06;
+}
+.layer:nth-child(8) {
+  transform: translateZ(calc(var(--z) * 4.5));
+}
+
+.layer.logo {
+  transform: translateZ(calc(var(--z) * 4));
+  filter: none;
+}
+
+.mask {
+  background: none;
+  mask-image: url("./img/mask-card.png");
+  mask-size: 133% 101%;
+  mask-position: center;
+  mask-repeat: no-repeat;
+  -webkit-mask-image: url("./img/mask-card.png");
+  -webkit-mask-size: 133% 101%;
+  -webkit-mask-position: center;
+  -webkit-mask-repeat: no-repeat;
+}
+
+.background {
+  width: 100%;
+  height: 100%;
+  background-image: var(--image);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 118%;
+  position: absolute;
+  transition: transform 0.1s;
+  will-change: transform;
+}
+
+.layer:nth-child(1) .background {
+  transform: translateX(calc(var(--yPosition) * 1px / -1))
+    translateY(calc(var(--xPosition) * 1px / 1));
+}
+
+.layer:nth-child(2) .background {
+  transform: translateX(calc(var(--yPosition) * 1px / -2))
+    translateY(calc(var(--xPosition) * 1px / 2));
+}
+
+.effect {
+  aspect-ratio: 1/1;
+  --animation: "";
+  --duration: "";
+  width: auto;
+  height: 100%;
+  background-image: var(--image);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 80%;
+  position: absolute;
+  animation: var(--animation) var(--duration) linear infinite;
+  mix-blend-mode: var(--blend);
+  filter: sepia(1);
+  will-change: transform;
+}
+
+.frame {
+  background-size: cover;
+  filter: none;
+}
+
+.frame-colored .frame-green {
+  filter: sepia(1) saturate(10) hue-rotate(25deg) grayscale(0.4);
+}
+.frame-colored .frame-orange {
+  filter: sepia(1) saturate(10) hue-rotate(-35deg) grayscale(0.2);
+}
+
+.logo {
+  aspect-ratio: 2/1;
+  height: auto;
+  background-size: contain;
+  background-size: 120%;
+  top: initial;
+  left: 0;
+  bottom: 1%; /*2.8*/
+  z-index: 9;
+}
+
+.shine {
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+  background: linear-gradient(
+    var(--angle),
+    rgba(255, 255, 255, var(--alpha)) 0%,
+    rgba(255, 255, 255, 0) 60%
+  );
+  pointer-events: none;
+  mix-blend-mode: plus-lighter;
+  mask-image: var(--image);
+  mask-size: 120%;
+  mask-position: center;
+  mask-repeat: no-repeat;
+  -webkit-mask-image: var(--image);
+  -webkit-mask-size: 120%;
+  -webkit-mask-position: center;
+  -webkit-mask-repeat: no-repeat;
+  z-index: 9;
+}
+
+.frame .shine {
+  mask-size: cover;
+  -webkit-mask-size: cover;
+}
+
+.hover-box {
+  width: 100%;
+  height: 100%;
+  border-radius: 4rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 99999;
+  cursor: pointer;
+}
+
+@keyframes rotation {
+  to {
+    rotate: 360deg;
+  }
+}
+
+@media (max-width: 500px) {
+  .collection {
+    padding: 2rem;
+  }
+  /* .card{
+    perspective: initial;
+    transform-style: initial;
+  }
+
+  .shine{
+    display: none;
+  } */
+}

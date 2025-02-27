@@ -1,5 +1,17 @@
 [
   {
+    "id": "marvel-snap-card",
+    "name": "Marvel Snap card",
+    "createdOn": "2025-02-27 21:00:00 UTC",
+    "updatedOn": "2025-02-27 21:00:00 UTC",
+    "tags": ["html", "css", "js"],
+    "link": "https://adrian-gg.github.io/demos/mincode/projects/marvel-snap-card/",
+    "thumbnail": {
+      "url": "https://adrian-gg.github.io/demos/mincode/img/projects/marvel-snap-card.png",
+      "alt": "Marvel Snap card"
+    }
+  },
+  {
     "id": "dotted-demo",
     "name": "Dotted demo",
     "createdOn": "2025-02-19 23:00:00 UTC",

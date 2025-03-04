@@ -1,5 +1,17 @@
 [
   {
+    "id": "binary-watch",
+    "name": "Binary watch",
+    "createdOn": "2025-03-05 17:00:00 UTC",
+    "updatedOn": "2025-03-05 17:00:00 UTC",
+    "tags": ["html", "css", "js"],
+    "link": "https://adrian-gg.github.io/demos/mincode/projects/binary-watch/",
+    "thumbnail": {
+      "url": "https://adrian-gg.github.io/demos/mincode/img/projects/binary-watch.png",
+      "alt": "Binary watch"
+    }
+  },
+  {
     "id": "marvel-snap-card",
     "name": "Marvel Snap card",
     "createdOn": "2025-02-27 21:00:00 UTC",

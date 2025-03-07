@@ -276,6 +276,18 @@
     }
   },
   {
+    "id": "pixelated-eye",
+    "name": "Pixelated eye",
+    "createdOn": "2023-03-26 17:02:24 UTC",
+    "updatedOn": "2023-04-26 16:03:33 UTC",
+    "tags": ["html", "css"],
+    "link": "https://adrian-gg.github.io/demos/mincode/projects/pixelated-eye/",
+    "thumbnail": {
+      "url": "https://adrian-gg.github.io/demos/mincode/img/projects/pixelated-eye.png",
+      "alt": "Pixelated eye"
+    }
+  },
+  {
     "id": "sprite-animation",
     "name": "Sprite animation",
     "createdOn": "2023-02-09 23:35:28 UTC",

@@ -1,0 +1,227 @@
+* {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  -webkit-tap-highlight-color: transparent;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+:root {
+  --size: 440px;
+  --unit: calc(var(--size) / 22);
+}
+
+body {
+  height: 100vh;
+  background-color: #a7da3d;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.eye {
+  scale: 0.6;
+  width: var(--size);
+  height: var(--size);
+  background: linear-gradient(
+      to right,
+      transparent 0px calc(var(--unit) * 8),
+      white calc(var(--unit) * 8) calc(var(--unit) * 14),
+      transparent calc(var(--unit) * 14) var(--size)
+    ),
+    linear-gradient(
+      to right,
+      transparent 0px calc(var(--unit) * 5),
+      white calc(var(--unit) * 5) calc(var(--unit) * 17),
+      transparent calc(var(--unit) * 17) var(--size)
+    ),
+    linear-gradient(
+      to right,
+      transparent 0px calc(var(--unit) * 4),
+      white calc(var(--unit) * 4) calc(var(--unit) * 18),
+      transparent calc(var(--unit) * 18) var(--size)
+    ),
+    linear-gradient(
+      to right,
+      transparent 0px calc(var(--unit) * 3),
+      white calc(var(--unit) * 3) calc(var(--unit) * 18),
+      #dad9d1 calc(var(--unit) * 18) calc(var(--unit) * 19),
+      transparent calc(var(--unit) * 19) var(--size)
+    ),
+    linear-gradient(
+      to right,
+      transparent 0px calc(var(--unit) * 2),
+      white calc(var(--unit) * 2) calc(var(--unit) * 18),
+      #dad9d1 calc(var(--unit) * 18) calc(var(--unit) * 20),
+      transparent calc(var(--unit) * 20) var(--size)
+    ),
+    linear-gradient(
+      to right,
+      transparent 0px var(--unit),
+      white var(--unit) calc(var(--unit) * 9),
+      #d3fef2 calc(var(--unit) * 9) calc(var(--unit) * 11),
+      #c4fdec calc(var(--unit) * 11) calc(var(--unit) * 13),
+      white calc(var(--unit) * 13) calc(var(--unit) * 19),
+      #dad9d1 calc(var(--unit) * 18) calc(var(--unit) * 21),
+      transparent calc(var(--unit) * 21) var(--size)
+    ),
+    linear-gradient(
+      to right,
+      transparent 0px var(--unit),
+      white var(--unit) calc(var(--unit) * 7),
+      #d3fef2 calc(var(--unit) * 7) calc(var(--unit) * 9),
+      #404040 calc(var(--unit) * 9) calc(var(--unit) * 11),
+      black calc(var(--unit) * 11) calc(var(--unit) * 13),
+      #c4fdec calc(var(--unit) * 13) calc(var(--unit) * 15),
+      white calc(var(--unit) * 15) calc(var(--unit) * 19),
+      #dad9d1 calc(var(--unit) * 19) calc(var(--unit) * 21),
+      transparent calc(var(--unit) * 21) var(--size)
+    ),
+    linear-gradient(
+      to right,
+      transparent 0px var(--unit),
+      white var(--unit) calc(var(--unit) * 6),
+      #d3fef2 calc(var(--unit) * 6) calc(var(--unit) * 7),
+      #404040 calc(var(--unit) * 7) calc(var(--unit) * 11),
+      black calc(var(--unit) * 11) calc(var(--unit) * 15),
+      #c4fdec calc(var(--unit) * 15) calc(var(--unit) * 16),
+      white calc(var(--unit) * 16) calc(var(--unit) * 19),
+      #dad9d1 calc(var(--unit) * 19) calc(var(--unit) * 21),
+      transparent calc(var(--unit) * 21) var(--size)
+    ),
+    linear-gradient(
+      to right,
+      white var(--unit) calc(var(--unit) * 6),
+      #d3fef2 calc(var(--unit) * 6) calc(var(--unit) * 7),
+      #404040 calc(var(--unit) * 7) calc(var(--unit) * 10),
+      black calc(var(--unit) * 10) calc(var(--unit) * 15),
+      #c4fdec calc(var(--unit) * 15) calc(var(--unit) * 16),
+      white calc(var(--unit) * 16) calc(var(--unit) * 19),
+      #dad9d1 calc(var(--unit) * 19) var(--size)
+    ),
+    linear-gradient(
+      to right,
+      white var(--unit) calc(var(--unit) * 5),
+      #c4fdec calc(var(--unit) * 5) calc(var(--unit) * 6),
+      black calc(var(--unit) * 6) calc(var(--unit) * 16),
+      #c4fdec calc(var(--unit) * 16) calc(var(--unit) * 17),
+      white calc(var(--unit) * 17) calc(var(--unit) * 19),
+      #dad9d1 calc(var(--unit) * 19) var(--size)
+    ),
+    linear-gradient(
+      to right,
+      white var(--unit) calc(var(--unit) * 5),
+      #c4fdec calc(var(--unit) * 5) calc(var(--unit) * 6),
+      black calc(var(--unit) * 6) calc(var(--unit) * 16),
+      #c4fdec calc(var(--unit) * 16) calc(var(--unit) * 17),
+      white calc(var(--unit) * 17) calc(var(--unit) * 19),
+      #dad9d1 calc(var(--unit) * 19) var(--size)
+    ),
+    linear-gradient(
+      to right,
+      white var(--unit) calc(var(--unit) * 5),
+      #c4fdec calc(var(--unit) * 5) calc(var(--unit) * 6),
+      black calc(var(--unit) * 6) calc(var(--unit) * 16),
+      #c4fdec calc(var(--unit) * 16) calc(var(--unit) * 17),
+      white calc(var(--unit) * 17) calc(var(--unit) * 18),
+      #dad9d1 calc(var(--unit) * 18) var(--size)
+    ),
+    linear-gradient(
+      to right,
+      white var(--unit) calc(var(--unit) * 5),
+      #c4fdec calc(var(--unit) * 5) calc(var(--unit) * 6),
+      black calc(var(--unit) * 6) calc(var(--unit) * 16),
+      #c4fdec calc(var(--unit) * 16) calc(var(--unit) * 17),
+      white calc(var(--unit) * 17) calc(var(--unit) * 18),
+      #dad9d1 calc(var(--unit) * 18) var(--size)
+    ),
+    linear-gradient(
+      to right,
+      white 0px calc(var(--unit) * 6),
+      #c4fdec calc(var(--unit) * 6) calc(var(--unit) * 7),
+      black calc(var(--unit) * 7) calc(var(--unit) * 15),
+      #c4fdec calc(var(--unit) * 15) calc(var(--unit) * 16),
+      white calc(var(--unit) * 16) calc(var(--unit) * 18),
+      #dad9d1 calc(var(--unit) * 18) var(--size)
+    ),
+    linear-gradient(
+      to right,
+      transparent 0px var(--unit),
+      white var(--unit) calc(var(--unit) * 6),
+      #c4fdec calc(var(--unit) * 6) calc(var(--unit) * 7),
+      black calc(var(--unit) * 7) calc(var(--unit) * 15),
+      #c4fdec calc(var(--unit) * 15) calc(var(--unit) * 16),
+      white calc(var(--unit) * 16) calc(var(--unit) * 17),
+      #dad9d1 calc(var(--unit) * 17) calc(var(--unit) * 21),
+      transparent calc(var(--unit) * 21) var(--size)
+    ),
+    linear-gradient(
+      to right,
+      transparent 0px var(--unit),
+      white var(--unit) calc(var(--unit) * 7),
+      #c4fdec calc(var(--unit) * 7) calc(var(--unit) * 9),
+      black calc(var(--unit) * 9) calc(var(--unit) * 13),
+      #c4fdec calc(var(--unit) * 13) calc(var(--unit) * 15),
+      white calc(var(--unit) * 15) calc(var(--unit) * 16),
+      #dad9d1 calc(var(--unit) * 16) calc(var(--unit) * 21),
+      transparent calc(var(--unit) * 21) var(--size)
+    ),
+    linear-gradient(
+      to right,
+      transparent 0px var(--unit),
+      white var(--unit) calc(var(--unit) * 9),
+      #c4fdec calc(var(--unit) * 9) calc(var(--unit) * 13),
+      white calc(var(--unit) * 13) calc(var(--unit) * 15),
+      #dad9d1 calc(var(--unit) * 15) calc(var(--unit) * 21),
+      transparent calc(var(--unit) * 21) var(--size)
+    ),
+    linear-gradient(
+      to right,
+      transparent 0px calc(var(--unit) * 2),
+      white calc(var(--unit) * 2) calc(var(--unit) * 14),
+      #dad9d1 calc(var(--unit) * 14) calc(var(--unit) * 20),
+      transparent calc(var(--unit) * 20) var(--size)
+    ),
+    linear-gradient(
+      to right,
+      transparent 0px calc(var(--unit) * 3),
+      #dad9d1 calc(var(--unit) * 3) calc(var(--unit) * 5),
+      white calc(var(--unit) * 5) calc(var(--unit) * 11),
+      #dad9d1 calc(var(--unit) * 11) calc(var(--unit) * 19),
+      transparent calc(var(--unit) * 19) var(--size)
+    ),
+    linear-gradient(
+      to right,
+      transparent 0px calc(var(--unit) * 4),
+      #dad9d1 calc(var(--unit) * 4) calc(var(--unit) * 18),
+      transparent calc(var(--unit) * 18) var(--size)
+    ),
+    linear-gradient(
+      to right,
+      transparent 0px calc(var(--unit) * 5),
+      #dad9d1 calc(var(--unit) * 5) calc(var(--unit) * 17),
+      transparent calc(var(--unit) * 17) var(--size)
+    ),
+    linear-gradient(
+      to right,
+      transparent 0px calc(var(--unit) * 8),
+      #dad9d1 calc(var(--unit) * 8) calc(var(--unit) * 14),
+      transparent calc(var(--unit) * 14) var(--size)
+    );
+  background-repeat: no-repeat;
+  background-size: var(--size) var(--unit);
+  background-position: 0 0, 0 var(--unit), 0 calc(var(--unit) * 2),
+    0 calc(var(--unit) * 3), 0 calc(var(--unit) * 4), 0 calc(var(--unit) * 5),
+    0 calc(var(--unit) * 6), 0 calc(var(--unit) * 7), 0 calc(var(--unit) * 8),
+    0 calc(var(--unit) * 9), 0 calc(var(--unit) * 10), 0 calc(var(--unit) * 11),
+    0 calc(var(--unit) * 12), 0 calc(var(--unit) * 13), 0 calc(var(--unit) * 14),
+    0 calc(var(--unit) * 15), 0 calc(var(--unit) * 16), 0 calc(var(--unit) * 17),
+    0 calc(var(--unit) * 18), 0 calc(var(--unit) * 19), 0 calc(var(--unit) * 20),
+    0 calc(var(--unit) * 21), 0 var(--size);
+}

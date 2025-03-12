@@ -1,5 +1,17 @@
 [
   {
+    "id": "circle-tic-tac-toe",
+    "name": "Circle Tic-Tac-Toe",
+    "createdOn": "2025-03-12 17:00:00 UTC",
+    "updatedOn": "2025-03-12 17:00:00 UTC",
+    "tags": ["html", "css", "js"],
+    "link": "https://adrian-gg.github.io/demos/mincode/projects/circle-tic-tac-toe/",
+    "thumbnail": {
+      "url": "https://adrian-gg.github.io/demos/mincode/img/projects/circle-tic-tac-toe.png",
+      "alt": "Circle Tic-Tac-Toe"
+    }
+  },
+  {
     "id": "binary-watch",
     "name": "Binary watch",
     "createdOn": "2025-03-05 17:00:00 UTC",

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Write this game</title>
+
+    <!-- UA and Viewport -->
+    <meta http-equiv="X-UA-Compatible" content="Chrome=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
+      name="viewport"
+    />
+    <!-- END: UA and Viewport -->
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <h1>
+      <div class="box">W</div>
+      <div class="box">R</div>
+      <div class="box">I</div>
+      <div class="box">T</div>
+      <div class="box">E</div>
+      <div class="box"></div>
+      <div class="box">T</div>
+      <div class="box">H</div>
+      <div class="box">I</div>
+      <div class="box">S</div>
+      <div class="box"></div>
+      <div class="box">G</div>
+      <div class="box">A</div>
+      <div class="box">M</div>
+      <div class="box">E</div>
+    </h1>
+    <div id="container"></div>
+    <script>
+      const containerBox=document.getElementById("container");
+      const chars=document
+        .getElementsByTagName("script")[0]
+        .innerHTML.toUpperCase()
+        .replace(/\s\s+/g,"");
+      let count=0;
+
+      function renderBoxes(){
+        containerBox.innerHTML=chars
+          .split("")
+          .map((c,i)=>`<div class="box ${i<count?"w":""}">${c}</div>`)
+          .join("");
+      }
+
+      function keyUp(e){
+        if(
+          count<chars.length&&
+          (chars[count].charCodeAt()==e.keyCode||
+            chars[count].charCodeAt()<65||
+            chars[count].charCodeAt()>90)
+        ){
+          count+=1;
+          renderBoxes();
+        }
+        if(count==chars.length){
+          alert("You win");
+          window.location.reload();
+        }
+      }
+
+      renderBoxes();
+      window.addEventListener("keyup",keyUp,false);
+    </script>
+  </body>
+</html>

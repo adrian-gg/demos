@@ -1,0 +1,110 @@
+* {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  -webkit-tap-highlight-color: transparent;
+  user-select: none;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 2.5vmin;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  background-color: #f5f5f5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cover {
+  width: 20rem;
+  height: 30rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  perspective: 250rem;
+}
+
+.layer {
+  position: absolute;
+  transition: transform 0.5s, scale 0.5s, bottom 0.5s;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.bg {
+  width: 20rem;
+  height: 30rem;
+  border-radius: 1rem;
+  overflow: hidden;
+  transition: 0.5s;
+}
+
+.cover:hover .bg {
+  transform: perspective(90rem) rotateX(45deg);
+  box-shadow: 0.2rem 3.5rem 3.2rem -0.8rem rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 0.2rem 3.5rem 3.2rem -0.8rem rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0.2rem 3.5rem 3.2rem -0.8rem rgba(0, 0, 0, 0.75);
+}
+
+.bg::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to bottom,
+    transparent 0%,
+    rgba(27, 33, 64, 1) 60%,
+    black 100%
+  );
+  position: absolute;
+  transform: translateY(10rem);
+  opacity: 0;
+  transition: all 0.5s;
+}
+
+.cover:hover .bg::before {
+  transform: translateY(0rem);
+  opacity: 1;
+}
+
+.bg img {
+  object-fit: cover;
+  height: 100%;
+}
+
+.hero {
+  scale: 0.4;
+  bottom: -1.5rem;
+}
+
+.cover:hover .hero {
+  scale: 0.7;
+  bottom: 6rem;
+}
+
+.logo {
+  scale: 0.7;
+  bottom: -0.5rem;
+}
+
+.cover:hover .logo {
+  scale: 0.8;
+  bottom: 3rem;
+}
+
+.logo img {
+  aspect-ratio: 800/456;
+}

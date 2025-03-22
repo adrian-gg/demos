@@ -1,17 +1,5 @@
 [
   {
-    "id": "square-dot-menu",
-    "name": "Square dot menu",
-    "createdOn": "2025-03-26 17:00:00 UTC",
-    "updatedOn": "2025-03-26 17:00:00 UTC",
-    "tags": ["html", "css"],
-    "link": "https://adrian-gg.github.io/demos/mincode/projects/square-dot-menu/",
-    "thumbnail": {
-      "url": "https://adrian-gg.github.io/demos/mincode/img/projects/square-dot-menu.png",
-      "alt": "Square dot menu"
-    }
-  },
-  {
     "id": "write-this-game",
     "name": "Write this game",
     "createdOn": "2025-03-19 17:00:00 UTC",

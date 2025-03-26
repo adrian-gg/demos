@@ -1,14 +1,14 @@
 [
   {
-    "id": "square-dot-menu",
-    "name": "Square dot menu",
+    "id": "squared-dot-menu",
+    "name": "Squared dot menu",
     "createdOn": "2025-03-26 17:00:00 UTC",
     "updatedOn": "2025-03-26 17:00:00 UTC",
     "tags": ["html", "css"],
-    "link": "https://adrian-gg.github.io/demos/mincode/projects/square-dot-menu/",
+    "link": "https://adrian-gg.github.io/demos/mincode/projects/squared-dot-menu/",
     "thumbnail": {
-      "url": "https://adrian-gg.github.io/demos/mincode/img/projects/square-dot-menu.png",
-      "alt": "Square dot menu"
+      "url": "https://adrian-gg.github.io/demos/mincode/img/projects/squared-dot-menu.png",
+      "alt": "Squared dot menu"
     }
   },
   {

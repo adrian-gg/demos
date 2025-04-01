@@ -1,0 +1,206 @@
+* {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  -webkit-tap-highlight-color: transparent;
+  --blue: #4285f4;
+  --red: #ea4335;
+  --green: #34a853;
+  --yellow: #fbbc05;
+
+  --aspect-ratio: 9 / 16;
+  --size-base: 340;
+  --size-base-horizontal: calc(
+    ((10 * 100) / (var(--size-base) / calc(var(--aspect-ratio)))) * 1dvh
+  );
+  --size-base-vertical: calc(((10 * 100) / var(--size-base)) * 1vw);
+  -webkit-tap-highlight-color: transparent;
+}
+
+html {
+  box-sizing: border-box;
+  font-family: monospace;
+}
+
+@media (min-aspect-ratio: 9 / 16) {
+  html {
+    font-size: var(--size-base-horizontal);
+  }
+}
+
+@media (max-aspect-ratio: 9 / 16) {
+  html {
+    font-size: var(--size-base-vertical);
+  }
+}
+
+body {
+  width: 100%;
+  height: 100dvh;
+  padding: 1.2rem;
+  background-color: #101010;
+  font-family: monospace;
+  text-transform: uppercase;
+  color: #eeeeee;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 4rem;
+}
+
+.board {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.row {
+  width: 100%;
+  display: flex;
+  gap: 2rem;
+  pointer-events: none;
+}
+
+.row.playing {
+  pointer-events: initial;
+}
+
+.row.playing .tile {
+  background-color: #303030;
+  cursor: pointer;
+}
+
+.row.playing .tile:not([data-code]) {
+  animation: pulse-bg 3s linear infinite;
+}
+
+@keyframes pulse-bg {
+  50% {
+    background-color: #404040;
+  }
+}
+
+.tiles {
+  display: flex;
+  gap: 1rem;
+}
+
+.tile {
+  width: 4rem;
+  height: 4rem;
+  background-color: #202020;
+  position: relative;
+}
+
+.row:not(.playing) .tile[data-code] {
+  opacity: 0.8;
+}
+
+.row.playing .tile::before,
+.row.playing .checked .check::before,
+.lights.on .light::before {
+  content: "";
+  margin: 1%;
+  width: 98%;
+  height: 98%;
+  background-color: inherit;
+  display: inline-block;
+  position: relative;
+  z-index: -1;
+  filter: blur(1rem);
+  animation: pulse 3s ease-in-out infinite;
+}
+
+.row.playing .checked .check::before,
+.lights.on .light::before {
+  filter: blur(0.7rem);
+}
+
+@keyframes pulse {
+  50% {
+    opacity: 0.7;
+  }
+}
+
+.checks {
+  width: 4rem;
+  height: 4rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.checked .check {
+  transition: background-color 0.2s;
+}
+
+.checked .check:nth-child(1) {
+  transition-delay: 0.5s;
+}
+.checked .check:nth-child(2) {
+  transition-delay: 1s;
+}
+.checked .check:nth-child(3) {
+  transition-delay: 1.5s;
+}
+.checked .check:nth-child(4) {
+  transition-delay: 2s;
+}
+
+.check {
+  width: 1.75rem;
+  height: 1.75rem;
+  background-color: #202020;
+}
+
+.lights {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.light {
+  width: 2rem;
+  height: 2rem;
+  background-color: #202020;
+}
+
+.buttons {
+  display: flex;
+  gap: 1rem;
+}
+
+.btn {
+  width: 100%;
+  min-width: 18rem;
+  padding: 1rem 2rem;
+  border: 0.2rem solid #eeeeee;
+  background-color: #101010;
+  color: #eeeeee;
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-family: monospace;
+  letter-spacing: 0.2rem;
+  transition: letter-spacing 0.2s;
+  cursor: pointer;
+}
+
+.btn:hover {
+  letter-spacing: 0.4rem;
+}
+
+.btn:disabled {
+  border: 0.2rem solid #303030;
+  color: #303030;
+  pointer-events: none;
+}

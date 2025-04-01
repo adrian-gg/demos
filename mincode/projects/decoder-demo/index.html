@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Decode demo</title>
+
+    <!-- UA and Viewport -->
+    <meta http-equiv="X-UA-Compatible" content="Chrome=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
+      name="viewport"
+    />
+    <!-- END: UA and Viewport -->
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.2.0/css/all.css"
+    />
+    <!-- END: Font Awesome -->
+
+    <link rel="stylesheet" href="./styles.css" />
+    <script src="https://code.jquery.com/jquery-3.5.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sortablejs@1.15.2/Sortable.min.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="board">
+        <div class="row" data-i="0">
+          <div class="tiles">
+            <div class="tile"></div>
+            <div class="tile"></div>
+            <div class="tile"></div>
+            <div class="tile"></div>
+          </div>
+          <div class="checks">
+            <div class="check"></div>
+            <div class="check"></div>
+            <div class="check"></div>
+            <div class="check"></div>
+          </div>
+        </div>
+        <div class="row" data-i="1">
+          <div class="tiles">
+            <div class="tile"></div>
+            <div class="tile"></div>
+            <div class="tile"></div>
+            <div class="tile"></div>
+          </div>
+          <div class="checks">
+            <div class="check"></div>
+            <div class="check"></div>
+            <div class="check"></div>
+            <div class="check"></div>
+          </div>
+        </div>
+        <div class="row" data-i="2">
+          <div class="tiles">
+            <div class="tile"></div>
+            <div class="tile"></div>
+            <div class="tile"></div>
+            <div class="tile"></div>
+          </div>
+          <div class="checks">
+            <div class="check"></div>
+            <div class="check"></div>
+            <div class="check"></div>
+            <div class="check"></div>
+          </div>
+        </div>
+        <div class="row" data-i="3">
+          <div class="tiles">
+            <div class="tile"></div>
+            <div class="tile"></div>
+            <div class="tile"></div>
+            <div class="tile"></div>
+          </div>
+          <div class="checks">
+            <div class="check"></div>
+            <div class="check"></div>
+            <div class="check"></div>
+            <div class="check"></div>
+          </div>
+        </div>
+        <div class="row" data-i="4">
+          <div class="tiles">
+            <div class="tile"></div>
+            <div class="tile"></div>
+            <div class="tile"></div>
+            <div class="tile"></div>
+          </div>
+          <div class="checks">
+            <div class="check"></div>
+            <div class="check"></div>
+            <div class="check"></div>
+            <div class="check"></div>
+          </div>
+        </div>
+        <div class="row" data-i="5">
+          <div class="tiles">
+            <div class="tile"></div>
+            <div class="tile"></div>
+            <div class="tile"></div>
+            <div class="tile"></div>
+          </div>
+          <div class="checks">
+            <div class="check"></div>
+            <div class="check"></div>
+            <div class="check"></div>
+            <div class="check"></div>
+          </div>
+        </div>
+        <div class="row" data-i="6">
+          <div class="tiles">
+            <div class="tile"></div>
+            <div class="tile"></div>
+            <div class="tile"></div>
+            <div class="tile"></div>
+          </div>
+          <div class="checks">
+            <div class="check"></div>
+            <div class="check"></div>
+            <div class="check"></div>
+            <div class="check"></div>
+          </div>
+        </div>
+      </div>
+      <div id="lights" class="lights">
+        <p>Available lights:</p>
+        <div class="light"></div>
+        <div class="light"></div>
+        <div class="light"></div>
+        <div class="light"></div>
+      </div>
+      <div class="buttons">
+        <button id="start" class="btn">Start</button>
+        <button id="decode" class="btn" style="display: none" disabled>
+          Decode
+        </button>
+        <button id="restart" class="btn" style="display: none">
+          Play again
+        </button>
+        <button id="retry" class="btn" style="display: none">Retry</button>
+      </div>
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>

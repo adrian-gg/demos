@@ -360,6 +360,18 @@
     }
   },
   {
+    "id": "logo-marquee",
+    "name": "Logo marquee",
+    "createdOn": "2023-01-24 01:34:29 UTC",
+    "updatedOn": "2023-01-24 02:28:25 UTC",
+    "tags": ["html", "css"],
+    "link": "https://adrian-gg.github.io/demos/mincode/projects/logo-marquee/",
+    "thumbnail": {
+      "url": "https://adrian-gg.github.io/demos/mincode/img/projects/logo-marquee.png",
+      "alt": "Logo marquee"
+    }
+  },
+  {
     "id": "4-views",
     "name": "4 views",
     "createdOn": "2022-10-27 01:04:11 UTC",

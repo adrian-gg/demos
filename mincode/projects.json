@@ -372,6 +372,18 @@
     }
   },
   {
+    "id": "twitch-redesign",
+    "name": "Twitch redesign",
+    "createdOn": "2022-10-28 00:23:50 UTC",
+    "updatedOn": "2022-10-28 14:29:14 UTC",
+    "tags": ["html", "css"],
+    "link": "https://adrian-gg.github.io/demos/mincode/projects/twitch-redesign/",
+    "thumbnail": {
+      "url": "https://adrian-gg.github.io/demos/mincode/img/projects/twitch-redesign.png",
+      "alt": "Twitch redesign"
+    }
+  },
+  {
     "id": "4-views",
     "name": "4 views",
     "createdOn": "2022-10-27 01:04:11 UTC",

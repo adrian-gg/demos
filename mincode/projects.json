@@ -1,5 +1,17 @@
 [
   {
+    "id": "coreboot-nav-menu",
+    "name": "Coreboot nav menu",
+    "createdOn": "2025-04-09 17:00:00 UTC",
+    "updatedOn": "2025-04-09 17:00:00 UTC",
+    "tags": ["html", "css"],
+    "link": "https://adrian-gg.github.io/demos/mincode/projects/coreboot-nav-menu/",
+    "thumbnail": {
+      "url": "https://adrian-gg.github.io/demos/mincode/img/projects/coreboot-nav-menu.png",
+      "alt": "Coreboot nav menu"
+    }
+  },
+  {
     "id": "decoder-demo",
     "name": "Decoder demo",
     "createdOn": "2025-04-02 17:00:00 UTC",

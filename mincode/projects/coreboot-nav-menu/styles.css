@@ -1,0 +1,113 @@
+@import url("https://fonts.bunny.net/css?family=nunito:400,400i,600,600i,800,800i");
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  -webkit-tap-highlight-color: transparent;
+  --color1: #000;
+  --color2: #fff;
+  --height: 4rem;
+  --width: 11rem;
+  --border: 0.2rem;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 10px;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Nunito", monospace, sans-serif;
+  font-size: 1.6rem;
+  line-height: 1.5;
+}
+
+.links {
+  width: auto;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  list-style: none;
+}
+
+.links li {
+  min-width: var(--width);
+  height: var(--height);
+  margin: 0 0 0 calc(-1 * var(--border));
+  flex: 1;
+  z-index: 1;
+  perspective: 100rem;
+}
+
+.links li:first-child {
+  margin-left: 0;
+}
+
+.links li:hover {
+  z-index: 2;
+}
+
+.links a {
+  height: var(--height);
+  display: block;
+  position: relative;
+  text-decoration: none;
+  transform-style: preserve-3d;
+  transform: translateZ(calc(-1 * calc(var(--height) / 2)));
+  transition: transform 0.5s cubic-bezier(0.08, 0.82, 0.17, 1);
+}
+
+.links a:hover {
+  transform: translateZ(calc(-1 * calc(var(--height) / 2))) rotateX(-90deg);
+}
+
+.links a::before,
+.links a::after {
+  content: attr(title);
+  width: var(--width);
+  height: var(--height);
+  border: var(--border) solid var(--color1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+}
+
+.links a::before {
+  background-color: var(--color2);
+  color: var(--color1);
+  transform: rotateY(0deg) translateZ(calc(var(--height) / 2));
+}
+
+.links a::after {
+  background-color: var(--color1);
+  color: var(--color2);
+  transform: rotateX(90deg) translateZ(calc(var(--height) / 2));
+}
+
+@media (max-width: 768px) {
+  .links {
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .links li {
+    margin: 0 0 calc(-1 * var(--border)) 0;
+  }
+}

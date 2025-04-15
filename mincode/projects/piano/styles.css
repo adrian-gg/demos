@@ -1,0 +1,141 @@
+* {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  -webkit-tap-highlight-color: transparent;
+
+  --black: #202020;
+  --white: #f5f5f5;
+  --w-white-key: 4.6rem;
+  --w-black-key: 2.6rem;
+  --h-white-key: 18rem;
+  --h-black-key: calc(var(--h-white-key) * 0.65);
+  --white-rgb: 245, 245, 245;
+
+  --aspect-ratio: 9 / 16;
+  --size-base: 340;
+  --size-base-horizontal: calc(
+    ((10 * 100) / (var(--size-base) / calc(var(--aspect-ratio)))) * 1dvh
+  );
+  --size-base-vertical: calc(((10 * 100) / var(--size-base)) * 1vw);
+  -webkit-tap-highlight-color: transparent;
+}
+
+html {
+  box-sizing: border-box;
+  /* font-size: 10px; */
+  font-family: monospace;
+}
+
+@media (min-aspect-ratio: 9 / 16) {
+  html {
+    font-size: var(--size-base-horizontal);
+  }
+}
+
+@media (max-aspect-ratio: 9 / 16) {
+  html {
+    font-size: var(--size-base-vertical);
+  }
+}
+
+body {
+  width: 100%;
+  height: 100dvh;
+  background-color: var(--black);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.piano {
+  display: flex;
+  position: relative;
+}
+
+.piano::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, var(--black), transparent);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 99;
+  pointer-events: none;
+}
+
+.octave:first-child {
+  border-left: 1px solid var(--white);
+}
+.octave:last-child {
+  border-right: 1px solid var(--white);
+}
+
+.octave {
+  display: flex;
+  position: relative;
+}
+
+.black-keys {
+  width: 100%;
+  height: 100%;
+  padding: 0 calc(var(--w-white-key) - (var(--w-black-key) / 2));
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  position: absolute;
+  pointer-events: none;
+}
+
+button {
+  appearance: none;
+  border: none;
+  background: transparent;
+  outline: none;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.key {
+  width: var(--w-white-key);
+  height: var(--h-white-key);
+  padding-bottom: 1rem;
+  border: 1px solid var(--white);
+  border-top: none;
+  background: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  font-size: 20px;
+  font-weight: bold;
+  color: var(--white);
+  cursor: pointer;
+}
+
+.key.key-black {
+  width: var(--w-black-key);
+  height: var(--h-black-key);
+  background-color: var(--black);
+  pointer-events: initial;
+}
+
+.key.key-hide {
+  pointer-events: none;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.key:hover {
+  background: #5f5f5f;
+  color: var(--black);
+}
+
+.key.key-presed {
+  background: var(--white);
+  color: var(--black);
+}

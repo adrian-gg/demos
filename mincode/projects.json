@@ -1,5 +1,17 @@
 [
   {
+    "id": "piano",
+    "name": "Piano",
+    "createdOn": "2025-04-16 17:00:00 UTC",
+    "updatedOn": "2025-04-16 17:00:00 UTC",
+    "tags": ["html", "css", "js"],
+    "link": "https://adrian-gg.github.io/demos/mincode/projects/piano/",
+    "thumbnail": {
+      "url": "https://adrian-gg.github.io/demos/mincode/img/projects/piano.png",
+      "alt": "Piano"
+    }
+  },
+  {
     "id": "coreboot-nav-menu",
     "name": "Coreboot nav menu",
     "createdOn": "2025-04-09 17:00:00 UTC",

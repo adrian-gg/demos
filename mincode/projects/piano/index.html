@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Piano</title>
+
+    <!-- UA and Viewport -->
+    <meta http-equiv="X-UA-Compatible" content="Chrome=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
+      name="viewport"
+    />
+    <!-- END: UA and Viewport -->
+
+    <link rel="stylesheet" href="./styles.css" />
+    <script src="https://code.jquery.com/jquery-3.5.0.min.js"></script>
+  </head>
+  <body>
+    <div class="piano">
+      <div class="octave" data-octave="0">
+        <div class="black-keys">
+          <button class="key key-black" data-key="cis"></button>
+          <button class="key key-black" data-key="dis"></button>
+          <button class="key key-black key-hide"></button>
+          <button class="key key-black" data-key="fis"></button>
+          <button class="key key-black" data-key="gis"></button>
+          <button class="key key-black" data-key="ais"></button>
+        </div>
+        <button class="key" data-key="c"></button>
+        <button class="key" data-key="d"></button>
+        <button class="key" data-key="e"></button>
+        <button class="key" data-key="f"></button>
+        <button class="key" data-key="g"></button>
+        <button class="key" data-key="a"></button>
+        <button class="key" data-key="b"></button>
+      </div>
+    </div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,145 @@
+/*
+ * ===================================================================
+ * -- RESET ----------------------------------------------------------
+ * ===================================================================
+ */
+
+* {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  box-sizing: border-box;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/*
+ * ===================================================================
+ * -- STYLES ---------------------------------------------------------
+ * ===================================================================
+ */
+
+:root {
+  --bg-cont-b: #303030;
+  --bg-cont-b2: #515151;
+  --bg-cont-w: #f5f5f5;
+  --blue: #4285f4;
+  --red: #ea4335;
+  --yellow: #fbbc05;
+  --green: #34a853;
+}
+
+html {
+  font-size: 1.25vmin;
+}
+
+html,
+body {
+  height: 100vh;
+  font-family: monospace;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  background-color: var(--bg-cont-b);
+}
+
+.animation-container {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  pointer-events: none;
+}
+
+.container {
+  margin: 0 auto;
+}
+
+.box,
+.animation {
+  width: 8rem;
+  height: 8rem;
+  border-radius: 1rem;
+  background-color: var(--bg-cont-b2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.box:hover .icon {
+  border: 0.2rem solid var(--bg-cont-b);
+  color: var(--bg-cont-b);
+}
+
+.counter-container {
+  display: flex;
+  justify-content: center;
+}
+
+.counter-container .box {
+  pointer-events: none;
+}
+
+.counter,
+.icon,
+.animation-icon {
+  width: 4rem;
+  height: 4rem;
+  border: 0.2rem solid white;
+  border-radius: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.empty {
+  border-color: grey;
+  color: grey;
+}
+
+.pluses-container {
+  margin-top: 6rem;
+  padding: 1rem;
+  border: 2px solid var(--bg-cont-b2);
+  border-radius: 1.5rem;
+  display: grid;
+  grid-template-columns: repeat(6, 8rem);
+  grid-template-rows: repeat(3, 8rem);
+  grid-gap: 1rem;
+}
+
+.icon {
+  border: 0.2rem solid grey;
+  color: grey;
+  transition: 0.2s;
+}
+
+.animation {
+  background: none;
+  position: absolute;
+  pointer-events: none;
+  transition: 0.4s;
+}
+
+.animation-icon {
+  font-size: 1.4rem;
+  color: white;
+}
+
+.box .add {
+  border-color: lightgrey;
+  color: lightgrey;
+}

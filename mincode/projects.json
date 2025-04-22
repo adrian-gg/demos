@@ -490,5 +490,17 @@
       "url": "https://adrian-gg.github.io/demos/mincode/img/projects/wheel.png",
       "alt": "Wheel"
     }
+  },
+  {
+    "id": "add-animation",
+    "name": "Add animation",
+    "createdOn": "2020-05-29 21:26:02 UTC",
+    "updatedOn": "2025-04-22 21:00:00 UTC",
+    "tags": ["html", "css", "js"],
+    "link": "https://adrian-gg.github.io/demos/mincode/projects/add-animation/",
+    "thumbnail": {
+      "url": "https://adrian-gg.github.io/demos/mincode/img/projects/add-animation.png",
+      "alt": "Add animation"
+    }
   }
 ]

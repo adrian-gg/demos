@@ -1,5 +1,17 @@
 [
   {
+    "id": "3d-scenery",
+    "name": "3D Scenery",
+    "createdOn": "2025-04-25 17:00:00 UTC",
+    "updatedOn": "2025-04-25 17:00:00 UTC",
+    "tags": ["html", "css", "js"],
+    "link": "https://adrian-gg.github.io/demos/mincode/projects/3d-scenery/",
+    "thumbnail": {
+      "url": "https://adrian-gg.github.io/demos/mincode/img/projects/3d-scenery.png",
+      "alt": "3D Scenery"
+    }
+  },
+  {
     "id": "piano",
     "name": "Piano",
     "createdOn": "2025-04-16 17:00:00 UTC",

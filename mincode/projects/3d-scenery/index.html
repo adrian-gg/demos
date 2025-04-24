@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>3D Scenery</title>
+    <meta name="author" content="Adrián García" />
+
+    <!-- UA and Viewport -->
+    <meta http-equiv="X-UA-Compatible" content="Chrome=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
+      name="viewport"
+    />
+    <!-- END: UA and Viewport -->
+
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="./styles.css" />
+    <script src="https://code.jquery.com/jquery-3.5.0.min.js"></script>
+  </head>
+  <body
+    oncontextmenu="return false"
+    onselectstart="return false"
+    ondragstart="return false"
+  >
+    <div
+      class="frame"
+      role="img"
+      aria-label="Multi-layered scene depicting dinosaurs in a jungle setting."
+    >
+      <img src="./img/dino-layer10.svg" alt="" style="--z: 10rem" />
+      <img src="./img/dino-layer9.svg" alt="" style="--z: 9rem" />
+      <img src="./img/dino-layer8.svg" alt="" style="--z: 8rem" />
+      <img src="./img/dino-layer7.svg" alt="" style="--z: 7rem" />
+      <img src="./img/dino-layer6.3.svg" alt="" style="--z: 6.5rem" />
+      <img src="./img/dino-layer6.2.svg" alt="" style="--z: 6rem" />
+      <img src="./img/dino-layer6.1.svg" alt="" style="--z: 5.8rem" />
+      <img src="./img/dino-layer5.svg" alt="" style="--z: 4rem" />
+      <img src="./img/dino-layer4.2.svg" alt="" style="--z: 3.5rem" />
+      <img src="./img/dino-layer4.1.svg" alt="" style="--z: 3rem" />
+      <img src="./img/godrays.png" alt="" style="--z: 2rem" class="rays" />
+      <img src="./img/dino-layer3.svg" alt="" style="--z: 1.2rem" />
+      <img
+        src="./img/dino-layer2.svg"
+        alt=""
+        style="--z: 1rem; --color: #0d0d0d"
+      />
+      <img
+        src="./img/dino-layer1.svg"
+        alt=""
+        style="--z: 0; --color: #000000"
+      />
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>

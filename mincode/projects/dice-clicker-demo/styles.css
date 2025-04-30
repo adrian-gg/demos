@@ -1,0 +1,339 @@
+* {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  -webkit-tap-highlight-color: transparent;
+
+  --active-color: #000;
+  --disabled-color: #c0c0c0;
+  --bg-color: #fff;
+
+  --dice-size: 8rem;
+
+  --aspect-ratio: 16/9;
+  --size-base: 920;
+  --size-base-horizontal: calc(
+    ((10 * 100) / (var(--size-base) / calc(var(--aspect-ratio)))) * 1dvh
+  );
+  --size-base-vertical: calc(((10 * 100) / var(--size-base)) * 1vw);
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 0.9vmax;
+  font-family: "Barlow Semi Condensed", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  user-select: none;
+}
+
+@media (min-aspect-ratio: 16/9) {
+  html {
+    font-size: var(--size-base-horizontal);
+  }
+}
+
+@media (max-aspect-ratio: 16/9) {
+  html {
+    font-size: var(--size-base-vertical);
+  }
+}
+
+body {
+  overflow: hidden;
+}
+
+body,
+main {
+  width: 100%;
+  height: 100vh;
+  height: 100dvh;
+}
+
+button {
+  padding: 0.4rem 1rem;
+  border: 0.3rem solid #000;
+  border-radius: 1rem;
+  background-color: var(--bg-color);
+  box-shadow: 0 0 0 #000;
+  font-size: 1.4rem;
+  font-weight: 500;
+  transition: all 0.1s ease-in-out;
+  cursor: pointer;
+}
+
+button:hover {
+  box-shadow: 0 0.3rem 0 #000;
+}
+
+button:active {
+  box-shadow: 0 0 0 #000;
+  transform: translateY(0.3rem);
+}
+
+main {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+}
+
+header,
+footer {
+  margin: 0 4rem;
+  padding: 1.2rem;
+  border: 0.3rem solid #000;
+  background-color: var(--bg-color);
+  position: relative;
+  z-index: 999;
+  text-align: center;
+}
+
+header {
+  border-top: none;
+  border-radius: 0 0 4rem 4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#currencyCounter {
+  font-size: 3.8rem;
+  font-weight: bold;
+}
+
+#currencyPerSecond {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.main-container {
+  height: 100%;
+  padding: 1rem;
+  /* padding-bottom: 5rem; */
+  display: grid;
+  grid-template-columns: calc(50% + var(--dice-size) / 2) 1fr;
+  filter: drop-shadow(0px 0px 1rem var(--bg-color))
+    drop-shadow(0px 0px 4rem var(--bg-color));
+}
+
+/*== DICE ==================================================================*/
+
+.dice-container {
+  padding-left: 4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  justify-content: center;
+  gap: 0.8rem;
+}
+
+.dice {
+  width: var(--dice-size);
+  height: var(--dice-size);
+  padding: 1rem;
+  border: 0.3rem solid #000;
+  border-radius: 2.4rem;
+  background-color: var(--bg-color);
+  box-shadow: 0 0.3rem 0 #000;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  place-items: center;
+  cursor: pointer;
+}
+
+.dot {
+  width: 1.4rem;
+  height: 1.4rem;
+  border-radius: 100%;
+  background-color: #000;
+  opacity: 0;
+}
+
+.dice[data-value="1"] .dot:nth-child(5),
+.dice[data-value="2"] .dot:nth-child(3),
+.dice[data-value="2"] .dot:nth-child(7),
+.dice[data-value="3"] .dot:nth-child(3),
+.dice[data-value="3"] .dot:nth-child(5),
+.dice[data-value="3"] .dot:nth-child(7),
+.dice[data-value="4"] .dot:nth-child(1),
+.dice[data-value="4"] .dot:nth-child(3),
+.dice[data-value="4"] .dot:nth-child(7),
+.dice[data-value="4"] .dot:nth-child(9),
+.dice[data-value="5"] .dot:nth-child(1),
+.dice[data-value="5"] .dot:nth-child(3),
+.dice[data-value="5"] .dot:nth-child(5),
+.dice[data-value="5"] .dot:nth-child(7),
+.dice[data-value="5"] .dot:nth-child(9),
+.dice[data-value="6"] .dot:nth-child(1),
+.dice[data-value="6"] .dot:nth-child(3),
+.dice[data-value="6"] .dot:nth-child(4),
+.dice[data-value="6"] .dot:nth-child(6),
+.dice[data-value="6"] .dot:nth-child(7),
+.dice[data-value="6"] .dot:nth-child(9) {
+  opacity: 1;
+}
+
+.floatingRoll {
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 3rem;
+  font-weight: 600;
+  opacity: 0.7;
+  transform: translateX(-50%);
+  animation: flyUp 2s 1 linear;
+  user-select: none;
+  pointer-events: none;
+}
+
+@keyframes flyUp {
+  100% {
+    top: 1rem;
+    opacity: -0.4;
+  }
+}
+
+/*== UPGRADES ==============================================================*/
+
+.upgrades {
+  padding-right: 4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.upgrade {
+  width: 100%;
+  max-width: 24rem;
+  padding: 0.6rem;
+  padding-right: 1rem;
+  border: 0.3rem solid #000;
+  border-radius: 1.4rem;
+  background-color: var(--bg-color);
+  box-shadow: 0 0 0 #000;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  cursor: pointer;
+  transition: all 0.1s ease-in-out;
+}
+
+.upgrade:hover {
+  box-shadow: 0 0.3rem 0 #000;
+}
+
+.upgrade:active {
+  box-shadow: 0 0 0 #000;
+  transform: translateY(0.3rem);
+}
+
+.upgrade-icon {
+  aspect-ratio: 1;
+  width: 3.6rem;
+  height: 3.6rem;
+  padding-bottom: 0.3rem;
+  background-color: #000;
+  border-radius: 0.8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem;
+  color: white;
+}
+
+.disabled .upgrade-icon {
+  filter: grayscale(1);
+}
+
+.upgrade-info {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.upgrade-name {
+  font-size: 1.6rem;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+.upgrade-cost {
+  font-size: 1.4rem;
+  font-weight: 500;
+}
+
+.upgrade-level {
+  position: absolute;
+  font-size: 2.8rem;
+  font-weight: 500;
+  right: 0;
+}
+
+.disabled {
+  border: 0.3rem solid var(--disabled-color);
+  box-shadow: 0 0 0 var(--disabled-color);
+  color: var(--disabled-color);
+  pointer-events: none;
+}
+
+.disabled .upgrade-icon {
+  background-color: var(--disabled-color);
+}
+
+/*== FOOTER ==================================================================*/
+
+footer {
+  margin-top: 4rem;
+  border-bottom: none;
+  border-radius: 4rem 4rem 0 0;
+}
+
+/*== BACKGROUND =============================================================*/
+
+#background {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -9999;
+  pointer-events: none;
+}
+
+.frame {
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(transparent, var(--bg-color));
+  position: absolute;
+  z-index: -9998;
+  opacity: 1;
+}
+
+canvas {
+  width: 100%;
+  height: 100%;
+  opacity: 0.05;
+  position: absolute;
+  z-index: -9999;
+  animation: orbit 60s forwards infinite;
+  animation-timing-function: linear;
+  transform-origin: center;
+  filter: blur(1px);
+}
+
+@keyframes orbit {
+  from {
+    transform: rotate(0deg) translateX(3.5rem) rotate(0deg) scale(1.102);
+  }
+  to {
+    transform: rotate(360deg) translateX(3.5rem) rotate(-360deg) scale(1.102);
+  }
+}

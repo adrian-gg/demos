@@ -1,5 +1,17 @@
 [
   {
+    "id": "dice-clicker-demo",
+    "name": "Dice clicker demo",
+    "createdOn": "2025-05-01 17:00:00 UTC",
+    "updatedOn": "2025-05-01 17:00:00 UTC",
+    "tags": ["html", "css", "js"],
+    "link": "https://adrian-gg.github.io/demos/mincode/projects/dice-clicker-demo/",
+    "thumbnail": {
+      "url": "https://adrian-gg.github.io/demos/mincode/img/projects/dice-clicker-demo.png",
+      "alt": "Dice clicker demo"
+    }
+  },
+  {
     "id": "3d-scenery",
     "name": "3D Scenery",
     "createdOn": "2025-04-25 17:00:00 UTC",

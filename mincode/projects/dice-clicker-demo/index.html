@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Clicker</title>
+
+    <!-- UA and Viewport -->
+    <meta http-equiv="X-UA-Compatible" content="Chrome=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
+      name="viewport"
+    />
+    <!-- END: UA and Viewport -->
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main id="main">
+      <header>
+        <p id="currencyCounter">0</p>
+        <p id="currencyPerSecond">0 / second</p>
+      </header>
+
+      <div class="main-container">
+        <section class="dice-container">
+          <div id="dice" class="dice" data-value="1">
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+          </div>
+        </section>
+
+        <section id="upgrades" class="upgrades"></section>
+      </div>
+
+      <footer>
+        <!-- <button onclick="saveGame()">Save Game</button>
+        <button onclick="deleteSave()">Delete Local Save</button> -->
+      </footer>
+    </main>
+
+    <div id="background">
+      <div class="frame"></div>
+      <canvas id="canvas"></canvas>
+    </div>
+
+    <script src="./script.js"></script>
+    <script src="./bg.js"></script>
+  </body>
+</html>

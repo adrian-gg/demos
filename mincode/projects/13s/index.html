@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>13s</title>
+
+    <!-- UA and Viewport -->
+    <meta http-equiv="X-UA-Compatible" content="Chrome=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
+      name="viewport"
+    />
+    <!-- END: UA and Viewport -->
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@100;300;400;500;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- END: Google Fonts -->
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <!-- END: Font Awesome -->
+
+    <link rel="stylesheet" href="./styles.css" />
+    <script src="https://code.jquery.com/jquery-3.5.0.min.js"></script>
+  </head>
+  <body>
+    <div id="info">
+      <div class="info-box">
+        <h1>13s</h1>
+        <h2>¿CÓMO SE JUEGA?</h2>
+        <p>
+          En su turno, cada jugador deberá rellenar 1 o 2 casillas adyacentes.
+          <br />
+          Quien rellene la última gana.
+        </p>
+        <button onclick="startGame()">Jugar</button>
+      </div>
+    </div>
+    <div id="game">
+      <div id="timer">
+        <div class="gradients">
+          <div id="gradient-P1" class="gradient gradient-top"></div>
+          <div id="gradient-P2" class="gradient gradient-bot"></div>
+        </div>
+        <div class="time-bars">
+          <div class="time-bar bar-top"></div>
+          <div class="time-bar bar-bot"></div>
+        </div>
+      </div>
+
+      <button id="btn-P1" disabled>Finalizar turno</button>
+
+      <div id="board"></div>
+
+      <button id="btn-P2" disabled>Finalizar turno</button>
+
+      <div id="alert"></div>
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>

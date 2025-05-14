@@ -1,5 +1,17 @@
 [
   {
+    "id": "vanishing-card",
+    "name": "Vanishing card",
+    "createdOn": "2025-05-14 21:00:00 UTC",
+    "updatedOn": "2025-05-14 21:00:00 UTC",
+    "tags": ["html", "css", "js"],
+    "link": "https://adrian-gg.github.io/demos/mincode/projects/vanishing-card/",
+    "thumbnail": {
+      "url": "https://adrian-gg.github.io/demos/mincode/img/projects/vanishing-card.png",
+      "alt": "Vanishing card"
+    }
+  },
+  {
     "id": "13s",
     "name": "13s",
     "createdOn": "2025-05-07 17:00:00 UTC",

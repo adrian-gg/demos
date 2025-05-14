@@ -1,0 +1,201 @@
+/*
+ * ===================================================================
+ * -- RESET ----------------------------------------------------------
+ * ===================================================================
+ */
+
+* {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-wrap: balance;
+}
+
+p,
+span {
+  text-wrap: pretty;
+}
+
+a {
+  color: initial;
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+input,
+textarea,
+button {
+  appearance: none;
+  border: none;
+  background: none;
+}
+
+input:focus-visible,
+textarea:focus-visible,
+button:focus-visible {
+  outline: none;
+}
+
+/*
+ * ===================================================================
+ * -- STYLES ---------------------------------------------------------
+ * ===================================================================
+ */
+
+:root {
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  height: 100dvh;
+  background-color: #276e4d;
+  background-image: linear-gradient(90deg, #276e4d 0%, #205747 74%);
+  overflow: hidden;
+  color: #fff;
+  font-family: sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.text-container {
+  width: 100%;
+  margin: 0 auto;
+  padding: 4rem;
+  padding-top: 8rem;
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.text {
+  max-width: 40rem;
+  font-size: 2rem;
+  text-align: center;
+  text-wrap-style: balance;
+}
+
+.scene {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cards {
+  --size-board: 80rem;
+  --time-animation: 0.3s;
+  width: var(--size-board);
+  padding-left: 10rem;
+  /* background-color: red; */
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  transition: width var(--time-animation) ease-in-out 0.05s;
+  perspective: 100rem;
+}
+
+.card {
+  aspect-ratio: 226/314;
+  margin-left: -10rem;
+  width: 10rem;
+  height: 14rem;
+  /* filter: drop-shadow(0.2rem 0.2rem 0.1rem rgba(0, 0, 0, 0.2)); */
+  transition: transform 0.1s ease-in-out;
+  transform-style: preserve-3d;
+  cursor: pointer;
+}
+
+.card-front,
+.card-back {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  backface-visibility: hidden;
+  filter: drop-shadow(0.2rem 0.2rem 0.1rem rgba(0, 0, 0, 0.2));
+}
+
+.card-front {
+  transform: rotateY(180deg);
+}
+
+.card-back {
+  z-index: 10;
+}
+
+.card--selected {
+  transform: translateY(-5rem);
+}
+
+.card:not(.card--selected):hover {
+  transform: translateY(-1rem);
+}
+
+.cards-max .card:not(.card--selected) {
+  cursor: initial;
+}
+
+.cards-max .card:not(.card--selected):hover {
+  transform: translateY(0rem);
+}
+
+.card--destroying {
+  width: 0rem;
+  opacity: 0;
+  transform: translateY(10rem);
+  transition: width 0.4s ease-in-out, opacity 0.2s ease-in-out,
+    transform 0.2s ease-in-out;
+}
+
+.card--show {
+  transition: transform 0s ease-in-out;
+  transform: rotateY(180deg);
+  pointer-events: none;
+}
+
+.button-container {
+  width: 100%;
+  padding: 4rem;
+  padding-bottom: 8rem;
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
+.next {
+  padding: 1rem 2rem;
+  border-radius: 0.4rem;
+  background-color: #fff;
+  font-size: 2rem;
+  transition: 0.2s;
+  cursor: pointer;
+}
+
+.next:disabled {
+  opacity: 0;
+  pointer-events: none;
+}

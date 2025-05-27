@@ -1,0 +1,182 @@
+/*
+ * ===================================================================
+ * -- RESET ----------------------------------------------------------
+ * ===================================================================
+ */
+
+* {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-wrap: balance;
+}
+
+p,
+span {
+  text-wrap: pretty;
+}
+
+a {
+  color: initial;
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+input,
+textarea,
+button {
+  appearance: none;
+  border: none;
+  background: none;
+}
+
+input:focus-visible,
+textarea:focus-visible,
+button:focus-visible {
+  outline: none;
+}
+
+/*
+ * ===================================================================
+ * -- STYLES ---------------------------------------------------------
+ * ===================================================================
+ */
+
+:root {
+}
+
+html {
+  font-size: 1.25vmin;
+}
+
+body {
+  height: 100vh;
+  height: 100dvh;
+  background-color: #28232c;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: monospace;
+}
+
+.container {
+  width: 100%;
+  height: inherit;
+  padding: 4rem;
+  display: grid;
+  grid-template-rows: 1fr auto;
+  gap: 2rem;
+}
+
+#board {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+.info {
+  font-size: 1.6rem;
+  color: #fff;
+}
+
+#board .grid {
+  padding: 1.6rem;
+  border: 0.2rem solid #fff;
+  border-radius: 0.84rem;
+  --grid-size: 9;
+  display: grid;
+  grid-template-columns: repeat(var(--grid-size), 1fr);
+  grid-template-rows: repeat(var(--grid-size), 1fr);
+  gap: 0rem;
+}
+
+#board .grid span {
+  font-size: 2rem;
+}
+
+span[data-type="⬛"] {
+  opacity: 0.5;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+#data {
+  font-size: 2rem;
+}
+
+#legend {
+  display: flex;
+  justify-content: center;
+  gap: 1.4rem;
+  font-size: 1.6rem;
+  color: #fff;
+}
+
+#controls {
+  padding: 4rem;
+  padding-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  color: #fff;
+}
+
+#generate {
+  padding: 0.8rem 1.6rem;
+  background-color: #fff;
+  border-radius: 0.4rem;
+  font-size: 2rem;
+  text-transform: uppercase;
+  font-family: monospace;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+#generate:hover {
+  scale: 1.1;
+}
+
+/* #pin-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.pin-input {
+  width: 4rem;
+  padding: 1rem;
+  border: 0.2rem solid #777;
+  border-radius: 0.6rem;
+  text-align: center;
+  font-size: 1.6rem;
+  font-family: "Roboto Mono", monospace;
+  color: #777;
+  text-transform: uppercase;
+} */

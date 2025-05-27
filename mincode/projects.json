@@ -1,5 +1,17 @@
 [
   {
+    "id": "dungeon-generator",
+    "name": "Dungeon generator",
+    "createdOn": "2025-05-28 17:00:00 UTC",
+    "updatedOn": "2025-05-28 17:00:00 UTC",
+    "tags": ["html", "css", "js"],
+    "link": "https://adrian-gg.github.io/demos/mincode/projects/dungeon-generator/",
+    "thumbnail": {
+      "url": "https://adrian-gg.github.io/demos/mincode/img/projects/dungeon-generator.png",
+      "alt": "Dungeon generator"
+    }
+  },
+  {
     "id": "rotary-clock",
     "name": "Rotary clock",
     "createdOn": "2025-05-21 17:00:00 UTC",

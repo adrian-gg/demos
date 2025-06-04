@@ -1,5 +1,17 @@
 [
   {
+    "id": "sudoku",
+    "name": "Sudoku",
+    "createdOn": "2025-06-04 17:00:00 UTC",
+    "updatedOn": "2025-06-04 17:00:00 UTC",
+    "tags": ["html", "css", "js"],
+    "link": "https://adrian-gg.github.io/demos/mincode/projects/sudoku/",
+    "thumbnail": {
+      "url": "https://adrian-gg.github.io/demos/mincode/img/projects/sudoku.png",
+      "alt": "Sudoku"
+    }
+  },
+  {
     "id": "dungeon-generator",
     "name": "Dungeon generator",
     "createdOn": "2025-05-28 17:00:00 UTC",

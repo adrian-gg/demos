@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Sudoku</title>
+    <meta name="author" content="Adrián García" />
+
+    <!-- UA and Viewport -->
+    <meta http-equiv="X-UA-Compatible" content="Chrome=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
+      name="viewport"
+    />
+    <!-- END: UA and Viewport -->
+
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="./styles.css" />
+    <script src="https://code.jquery.com/jquery-3.5.0.min.js"></script>
+  </head>
+  <body
+    oncontextmenu="return false"
+    onselectstart="return false"
+    ondragstart="return false"
+  >
+    <!-- <h1>Sudoku</h1> -->
+
+    <div id="board"></div>
+
+    <div class="controls">
+      <form id="keyboard">
+        <label for="key-1" class="key">
+          <span>1</span>
+          <input type="radio" name="key" value="1" id="key-1" checked />
+        </label>
+        <label for="key-2" class="key">
+          <span>2</span>
+          <input type="radio" name="key" value="2" id="key-2" />
+        </label>
+        <label for="key-3" class="key">
+          <span>3</span>
+          <input type="radio" name="key" value="3" id="key-3" />
+        </label>
+        <label for="key-4" class="key">
+          <span>4</span>
+          <input type="radio" name="key" value="4" id="key-4" />
+        </label>
+        <label for="key-5" class="key">
+          <span>5</span>
+          <input type="radio" name="key" value="5" id="key-5" />
+        </label>
+        <label for="key-6" class="key">
+          <span>6</span>
+          <input type="radio" name="key" value="6" id="key-6" />
+        </label>
+        <label for="key-7" class="key">
+          <span>7</span>
+          <input type="radio" name="key" value="7" id="key-7" />
+        </label>
+        <label for="key-8" class="key">
+          <span>8</span>
+          <input type="radio" name="key" value="8" id="key-8" />
+        </label>
+        <label for="key-9" class="key">
+          <span>9</span>
+          <input type="radio" name="key" value="9" id="key-9" />
+        </label>
+      </form>
+      <button disabled>Solve</button>
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>

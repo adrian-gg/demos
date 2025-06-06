@@ -432,6 +432,18 @@
     }
   },
   {
+    "id": "dialogue-scene",
+    "name": "Dialogue scene",
+    "createdOn": "2023-04-01 00:33:31 UTC",
+    "updatedOn": "2023-04-01 02:28:25 UTC",
+    "tags": ["html", "css", "js"],
+    "link": "https://adrian-gg.github.io/demos/mincode/projects/dialogue-scene/",
+    "thumbnail": {
+      "url": "https://adrian-gg.github.io/demos/mincode/img/projects/dialogue-scene.png",
+      "alt": "Dialogue scene"
+    }
+  },
+  {
     "id": "analog-or-digital",
     "name": "Analog or digital?",
     "createdOn": "2023-03-29 17:25:26 UTC",

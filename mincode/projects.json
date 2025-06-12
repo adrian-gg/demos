@@ -1,5 +1,17 @@
 [
   {
+    "id": "illusion",
+    "name": "Illusion",
+    "createdOn": "2025-06-12 17:00:00 UTC",
+    "updatedOn": "2025-06-12 17:00:00 UTC",
+    "tags": ["html", "css"],
+    "link": "https://adrian-gg.github.io/demos/mincode/projects/illusion/",
+    "thumbnail": {
+      "url": "https://adrian-gg.github.io/demos/mincode/img/projects/illusion.png",
+      "alt": "Illusion"
+    }
+  },
+  {
     "id": "sudoku",
     "name": "Sudoku",
     "createdOn": "2025-06-04 17:00:00 UTC",

@@ -1,0 +1,113 @@
+/*
+ * ===================================================================
+ * -- RESET ----------------------------------------------------------
+ * ===================================================================
+ */
+
+* {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+input {
+  appearance: none;
+  border: none;
+  background: none;
+}
+
+input:focus-visible {
+  outline: none;
+}
+
+/*
+ * ===================================================================
+ * -- STYLES ---------------------------------------------------------
+ * ===================================================================
+ */
+
+:root {
+  --tileSize: 4rem;
+  --minTileSize: calc(var(--tileSize) / 4);
+  --minTileSpace: calc(var(--minTileSize) / 3);
+  --bg-color-dark: #000;
+  --bg-color-light: #fff;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  height: 100vh;
+  height: 100dvh;
+  background-color: #000;
+  display: grid;
+  place-items: center;
+  align-content: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.illusion {
+  aspect-ratio: 1;
+  width: calc(var(--tileSize) * 55);
+  outline: 0.4rem solid var(--bg-color-light);
+  background-image: repeating-conic-gradient(
+    var(--bg-color-light) 0 90deg,
+    var(--bg-color-dark) 0 180deg
+  );
+  background-size: calc(var(--tileSize) * 2) calc(var(--tileSize) * 2);
+  position: relative;
+
+  &::before,
+  &::after {
+    content: "";
+    aspect-ratio: 1;
+    background-image: conic-gradient(
+        at 25% 25%,
+        transparent 270deg,
+        var(--bg-color-light) 0
+      ),
+      conic-gradient(at 25% 25%, transparent 270deg, var(--bg-color-light) 0);
+    background-size: var(--tileSize) var(--tileSize);
+    background-position: var(--minTileSpace)
+        calc(var(--tileSize) - var(--minTileSize) - var(--minTileSpace)),
+      calc(var(--tileSize) - var(--minTileSize) - var(--minTileSpace))
+        var(--minTileSpace);
+    position: absolute;
+    inset: 0;
+    transition: background-position 0.6s ease-in-out;
+    clip-path: polygon(50% 0, 50% 100%, 100% 100%, 100% 50%, 0 50%, 0 0);
+    mix-blend-mode: difference;
+  }
+
+  &::after {
+    background-image: conic-gradient(
+        at 25% 25%,
+        transparent 270deg,
+        var(--bg-color-light) 0
+      ),
+      conic-gradient(at 25% 25%, transparent 270deg, var(--bg-color-light) 0);
+    rotate: 90deg;
+  }
+
+  &:checked {
+    &::before {
+      background-position: calc(
+            var(--tileSize) - var(--minTileSize) - var(--minTileSpace)
+          )
+          calc(var(--tileSize) - var(--minTileSize) - var(--minTileSpace)),
+        var(--minTileSpace) var(--minTileSpace);
+    }
+    &::after {
+      background-position: var(--minTileSpace) var(--minTileSpace),
+        calc(var(--tileSize) - var(--minTileSize) - var(--minTileSpace))
+          calc(var(--tileSize) - var(--minTileSize) - var(--minTileSpace));
+    }
+  }
+}

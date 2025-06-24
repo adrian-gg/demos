@@ -1,5 +1,17 @@
 [
   {
+    "id": "default-avatar-generator",
+    "name": "Default avatar generator",
+    "createdOn": "2025-06-25 17:00:00 UTC",
+    "updatedOn": "2025-06-25 17:00:00 UTC",
+    "tags": ["html", "css", "js"],
+    "link": "https://adrian-gg.github.io/demos/mincode/projects/default-avatar-generator/",
+    "thumbnail": {
+      "url": "https://adrian-gg.github.io/demos/mincode/img/projects/default-avatar-generator.png",
+      "alt": "Default avatar generator"
+    }
+  },
+  {
     "id": "liquid-glass",
     "name": "Liquid Glass",
     "createdOn": "2025-06-18 17:00:00 UTC",

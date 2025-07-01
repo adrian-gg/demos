@@ -1,5 +1,17 @@
 [
   {
+    "id": "pairs",
+    "name": "Pais",
+    "createdOn": "2025-07-02 17:00:00 UTC",
+    "updatedOn": "2025-07-02 17:00:00 UTC",
+    "tags": ["html", "css", "js"],
+    "link": "https://adrian-gg.github.io/demos/mincode/projects/pairs/",
+    "thumbnail": {
+      "url": "https://adrian-gg.github.io/demos/mincode/img/projects/pairs.png",
+      "alt": "Pais"
+    }
+  },
+  {
     "id": "default-avatar-generator",
     "name": "Default avatar generator",
     "createdOn": "2025-06-25 17:00:00 UTC",

@@ -163,12 +163,12 @@ body {
     width: 0%;
   }
   to {
-    width: 150%;
+    width: 300%;
   }
 }
 @keyframes curtain-out {
   from {
-    width: 150%;
+    width: 300%;
   }
   to {
     width: 0%;
@@ -335,7 +335,8 @@ body {
   border-image: url("./img/border.png") 8 / 1.8335rem round;
   display: flex;
   justify-content: space-evenly;
-  gap: 1rem;
+  gap: 0.5rem;
+  flex-wrap: wrap;
 }
 
 .heart {

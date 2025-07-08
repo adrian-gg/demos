@@ -1,5 +1,17 @@
 [
   {
+    "id": "squares-animation",
+    "name": "Squares animation",
+    "createdOn": "2025-07-09 17:00:00 UTC",
+    "updatedOn": "2025-07-09 17:00:00 UTC",
+    "tags": ["html", "css"],
+    "link": "https://adrian-gg.github.io/demos/mincode/projects/squares-animation/",
+    "thumbnail": {
+      "url": "https://adrian-gg.github.io/demos/mincode/img/projects/squares-animation.png",
+      "alt": "Squares animation"
+    }
+  },
+  {
     "id": "pairs",
     "name": "Pais",
     "createdOn": "2025-07-02 17:00:00 UTC",

@@ -1,5 +1,17 @@
 [
   {
+    "id": "projects-showcase",
+    "name": "Projects showcase",
+    "createdOn": "2025-07-17 17:00:00 UTC",
+    "updatedOn": "2025-07-17 17:00:00 UTC",
+    "tags": ["html", "css", "js"],
+    "link": "https://adrian-gg.github.io/demos/mincode/projects/projects-showcase/",
+    "thumbnail": {
+      "url": "https://adrian-gg.github.io/demos/mincode/img/projects/projects-showcase.png",
+      "alt": "Projects showcase"
+    }
+  },
+  {
     "id": "squares-animation",
     "name": "Squares animation",
     "createdOn": "2025-07-09 17:00:00 UTC",

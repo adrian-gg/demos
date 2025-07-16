@@ -1,0 +1,214 @@
+/*
+ * ===================================================================
+ * -- RESET ----------------------------------------------------------
+ * ===================================================================
+ */
+
+* {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-wrap: balance;
+}
+
+p,
+span {
+  text-wrap: pretty;
+}
+
+a {
+  color: initial;
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+/*
+ * ===================================================================
+ * -- STYLES ---------------------------------------------------------
+ * ===================================================================
+ */
+
+:root {
+  -webkit-tap-highlight-color: transparent;
+}
+
+html {
+  font-size: 10px;
+  font-family: monospace;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  height: 100dvh;
+  background-color: #202020;
+  position: relative;
+  color: #ffffff;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+body::before {
+  content: "";
+  width: 200%;
+  height: 200%;
+  background: transparent url("./img/noise-transparent.png") repeat 0 0;
+  background-size: 30rem 30rem;
+  position: fixed;
+  top: -50%;
+  left: -50%;
+  z-index: 100;
+  opacity: 0.9;
+  pointer-events: none;
+  will-change: transform;
+  -webkit-animation: noise-animation 0.3s steps(5) infinite;
+  animation: noise-animation 0.3s steps(5) infinite;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  padding: 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 10;
+}
+
+.menu {
+  max-width: 50rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.item {
+  padding: 1rem 2rem;
+  border-bottom: 0.1rem solid rgba(248, 245, 242, 0.1);
+  display: flex;
+  justify-content: space-between;
+  gap: 4rem;
+  overflow: hidden;
+  position: relative;
+  font-size: 1.6rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.item:last-child {
+  border-bottom: none;
+}
+
+.item::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translateY(100%);
+  transition: transform 0.8s cubic-bezier(0.45, 0.05, 0.55, 0.95) 0s;
+  pointer-events: none;
+}
+
+.item:hover::before {
+  transform: translateY(0);
+  transition: transform 0.2s cubic-bezier(0.45, 0.05, 0.55, 0.95) 0s;
+}
+
+.item-title,
+.item-date {
+  position: relative;
+  z-index: 2;
+  mix-blend-mode: exclusion;
+}
+
+.background {
+  width: 100%;
+  height: 100vh;
+  height: 100dvh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+  transform: scale(1.2);
+}
+
+.image--open {
+  -webkit-animation: init-image 0.8s ease-out forwards;
+  animation: init-image 0.8s ease-out forwards;
+}
+
+@keyframes noise-animation {
+  0% {
+    transform: translate(0, 0);
+  }
+
+  10% {
+    transform: translate(-2%, -3%);
+  }
+  20% {
+    transform: translate(-4%, 2%);
+  }
+  30% {
+    transform: translate(2%, -4%);
+  }
+  40% {
+    transform: translate(-2%, 5%);
+  }
+  50% {
+    transform: translate(-4%, 2%);
+  }
+  60% {
+    transform: translate(3%, 0);
+  }
+  70% {
+    transform: translate(0, 3%);
+  }
+  80% {
+    transform: translate(-3%, 0);
+  }
+  90% {
+    transform: translate(2%, 2%);
+  }
+  100% {
+    transform: translate(1%, 0);
+  }
+}
+
+@keyframes init-image {
+  to {
+    transform: scale(1);
+  }
+}

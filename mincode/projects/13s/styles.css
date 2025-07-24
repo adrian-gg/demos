@@ -13,10 +13,10 @@ html {
 /* -- VARIABLES ------------------------------------------------------ */
 
 :root {
-  --color-player1: #c9d3e4;
-  --color-player2: #ffdfc5;
-  --color-player1-rgb: 201, 228, 202;
-  --color-player2-rgb: 255, 197, 197;
+  --color-player1: #00bcd4;
+  --color-player2: #ff9800;
+  --color-player1-rgb: 0, 188, 212;
+  --color-player2-rgb: 255, 152, 0;
   --tile-size: 8rem;
 
   -webkit-tap-highlight-color: transparent;

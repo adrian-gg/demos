@@ -1,5 +1,17 @@
 [
   {
+    "id": "memo-game",
+    "name": "Memo game",
+    "createdOn": "2025-08-07 17:00:00 UTC",
+    "updatedOn": "2025-08-07 17:00:00 UTC",
+    "tags": ["html", "css", "js"],
+    "link": "https://adrian-gg.github.io/demos/mincode/projects/memo-game/",
+    "thumbnail": {
+      "url": "https://adrian-gg.github.io/demos/mincode/img/projects/memo-game.png",
+      "alt": "Memo game"
+    }
+  },
+  {
     "id": "time-in-words",
     "name": "Time in words",
     "createdOn": "2025-08-01 17:00:00 UTC",

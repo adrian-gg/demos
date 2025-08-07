@@ -5,7 +5,7 @@ const INITIAL_GAME = {
   currentScene: 0,
   currentNumber: "",
   yourAnswer: "",
-  level: 41,
+  level: 0,
   score: 0,
   timer: TIMER,
 }

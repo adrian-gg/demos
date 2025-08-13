@@ -1,5 +1,17 @@
 [
   {
+    "id": "netflix-slider",
+    "name": "Netflix slider",
+    "createdOn": "2025-08-13 17:00:00 UTC",
+    "updatedOn": "2025-08-13 17:00:00 UTC",
+    "tags": ["html", "css", "js"],
+    "link": "https://adrian-gg.github.io/demos/mincode/projects/netflix-slider/",
+    "thumbnail": {
+      "url": "https://adrian-gg.github.io/demos/mincode/img/projects/netflix-slider.png",
+      "alt": "Netflix slider"
+    }
+  },
+  {
     "id": "memo-game",
     "name": "Memo game",
     "createdOn": "2025-08-07 17:00:00 UTC",

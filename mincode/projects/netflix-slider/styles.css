@@ -1,0 +1,347 @@
+/*
+ * ===================================================================
+ * -- RESET ----------------------------------------------------------
+ * ===================================================================
+ */
+
+* {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-wrap: balance;
+}
+
+p,
+span {
+  text-wrap: pretty;
+}
+
+a {
+  color: initial;
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+input,
+textarea,
+button {
+  appearance: none;
+  border: none;
+  background: none;
+}
+
+input:focus-visible,
+textarea:focus-visible,
+button:focus-visible {
+  outline: none;
+}
+
+::-webkit-scrollbar-track,
+.overflow-y-auto::-webkit-scrollbar-track {
+  background-color: #dbdbdb;
+}
+::-webkit-scrollbar,
+.overflow-y-auto::-webkit-scrollbar {
+  background-color: #dbdbdb;
+}
+::-webkit-scrollbar-thumb,
+.overflow-y-auto::-webkit-scrollbar-thumb {
+  background-color: #555;
+}
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+/*
+ * ===================================================================
+ * -- STYLES ---------------------------------------------------------
+ * ===================================================================
+ */
+
+:root {
+  -webkit-tap-highlight-color: transparent;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  height: 100vh;
+  height: 100dvh;
+  background: #141414;
+  display: flex;
+  align-items: center;
+  color: #eee;
+}
+
+/* Initial fade effect when the slider first loads. */
+.flickfeed {
+  margin: 0 5rem;
+  overflow: hidden;
+  z-index: 1;
+  opacity: 0;
+  transition: opacity 0.3s ease-in;
+}
+.flickfeed.loaded {
+  opacity: 1;
+}
+.flickfeed .slick-initialized {
+  opacity: 1;
+  transition: opacity 0.3s ease-out;
+}
+
+.flix-parents {
+  margin: -4.5rem 0;
+  padding: 5rem 0;
+  overflow: hidden;
+  position: relative;
+}
+.flickfeed.video-list-slider {
+  border: none;
+  background: 0 0;
+  overflow: visible;
+  z-index: 11;
+}
+.slick-track {
+  margin-left: 0;
+  display: flex !important;
+  overflow: visible;
+}
+.slick-slide {
+  margin: 0 2px;
+  transition: transform 0.6s cubic-bezier(0.25, 0.8, 0.25, 1), z-index 0.3s;
+}
+.slick-slide:hover {
+  transform: scale(1.5);
+  z-index: 3;
+}
+.slick-list {
+  overflow: visible;
+}
+
+/* Custom flickfeed slider's Buttons */
+button.slick-arrow {
+  width: 5rem;
+  height: 100%;
+  border: none;
+  background: rgba(20, 20, 20, 0.8) !important;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  z-index: 10;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.3s ease-in;
+}
+button.slick-arrow span {
+  transition: scale 0.2s ease-in;
+}
+button.slick-arrow:hover span {
+  scale: 1.3;
+}
+button.slick-arrow.slick-next {
+  right: -5.3rem;
+}
+button.slick-arrow.slick-prev {
+  left: -5rem;
+}
+button.slick-disabled {
+  opacity: 0 !important;
+}
+.slick-prev.first-none {
+  opacity: 0;
+  cursor: default;
+}
+button.slick-next::before,
+button.slick-prev::before {
+  display: none;
+}
+button.slick-next span,
+button.slick-prev span {
+  font-size: 2rem;
+  color: #fff;
+  line-height: 1;
+  opacity: 0.75;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+button.slick-next:focus span,
+button.slick-next:hover span,
+button.slick-prev:focus span,
+button.slick-prev:hover span {
+  opacity: 1;
+}
+
+.flickfeed:hover .slick-arrow {
+  opacity: 1;
+}
+
+/* Custom flickfeed slider's Dots*/
+.slick-slider-dots {
+  display: flex;
+  position: absolute;
+  right: 5rem;
+  top: 3rem;
+}
+.slick-slider-dots ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: flex-end;
+  list-style: none;
+}
+.slick-slider-dots ul li {
+  margin: 0 0.3rem;
+  list-style: none;
+  pointer-events: none !important;
+}
+.slick-slider-dots ul li button {
+  width: 2rem;
+  height: 0.2rem;
+  padding: 0;
+  border: none;
+  background: #4d4d4d;
+  overflow: hidden;
+  color: #4d4d4d;
+}
+.slick-slider-dots ul li.slick-active button {
+  background: #aaa;
+  color: #aaa;
+}
+.slick-dots li button:before {
+  display: none;
+}
+
+/* Cards */
+.card {
+  width: 100%;
+  height: 100%;
+  border: none;
+  border-radius: 0.35rem;
+  outline: 2px solid transparent;
+  background-color: transparent;
+  overflow: hidden;
+  transition: all 0.6s cubic-bezier(0.25, 0.8, 0.25, 1),
+    box-shadow 0.5s ease-out;
+  position: relative;
+  box-shadow: none;
+  cursor: pointer;
+}
+.card:hover {
+  box-shadow: rgba(0, 0, 0, 0.08) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px,
+    rgba(0, 0, 0, 0.08) 0px 4px 8px, rgba(0, 0, 0, 0.08) 0px 8px 12px,
+    rgba(0, 0, 0, 0.08) 0px 12px 20px, rgba(0, 0, 0, 0.08) 0px 20px 20px;
+}
+
+.card-details {
+  width: 100%;
+  height: 100%;
+  padding: 1rem;
+  padding-bottom: 2.2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: end;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 1;
+  transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+.card-details:after {
+  content: "";
+  width: 100%;
+  height: 60%;
+  background-color: transparent;
+  background-image: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.8) 10%,
+    rgba(0, 0, 0, 0)
+  );
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 0;
+  transition: height 0.5s ease-out;
+}
+.card:hover .card-details {
+  top: 0;
+}
+
+.card-title {
+  margin: 0;
+  z-index: 1;
+  font-size: 1.4rem;
+}
+.card-description {
+  margin: 0;
+  z-index: 1;
+  font-size: 1rem;
+}
+button.more {
+  width: 100%;
+  height: 10%;
+  margin-left: 0;
+  border: none;
+  outline: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  position: absolute;
+  bottom: 5px;
+  left: 0;
+  z-index: 1;
+  color: #fff;
+  transition: bottom 0.5s ease-out;
+}
+
+/* Zoom Effect on hover */
+.prevslides {
+  transform: translateX(-3.3vw);
+}
+.nextslides {
+  transform: translateX(3.3vw);
+}
+.furthernextslides {
+  transform: translateX(6.5vw);
+}
+.furtherprevslides {
+  transform: translateX(-6.5vw);
+}
+.firster {
+  transform-origin: center left !important;
+}
+.laster {
+  transform-origin: center right !important;
+}
+.firster.laster {
+  transform-origin: center left !important;
+}
+
+@media screen and (max-width: 991px) {
+  .slick-slide:hover {
+    transform: scale(1);
+  }
+}

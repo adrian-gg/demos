@@ -1,5 +1,17 @@
 [
   {
+    "id": "parallax-grid",
+    "name": "Parallax grid",
+    "createdOn": "2025-08-20 17:00:00 UTC",
+    "updatedOn": "2025-08-20 17:00:00 UTC",
+    "tags": ["html", "css", "js"],
+    "link": "https://adrian-gg.github.io/demos/mincode/projects/parallax-grid/",
+    "thumbnail": {
+      "url": "https://adrian-gg.github.io/demos/mincode/img/projects/parallax-grid.png",
+      "alt": "Parallax grid"
+    }
+  },
+  {
     "id": "netflix-slider",
     "name": "Netflix slider",
     "createdOn": "2025-08-13 17:00:00 UTC",

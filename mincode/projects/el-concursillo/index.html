@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Concursillo</title>
+    <meta name="author" content="Adrián García" />
+
+    <!-- UA and Viewport -->
+    <meta http-equiv="X-UA-Compatible" content="Chrome=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
+      name="viewport"
+    />
+    <!-- END: UA and Viewport -->
+
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="./styles.css" />
+    <script src="https://code.jquery.com/jquery-3.5.0.min.js"></script>
+  </head>
+  <body
+    oncontextmenu="return false"
+    onselectstart="return false"
+    ondragstart="return false"
+  >
+    <!-- <section>
+      <div class="controllers">
+        <button class="btn" onclick="toggleUI()">Show UI</button>
+        <label for="levels-checkbox">
+          <input type="checkbox" name="levels-checkbox" id="levels-checkbox" />
+          <button class="btn" onclick="toggleQuestionNumbers()">
+            <span>Hide levels</span>
+            <span>Show levels</span>
+          </button>
+        </label>
+        <button class="btn" onclick="resolveAnswer()">Resolve</button>
+        <ul class="answers">
+          <li class="selected">A</li>
+          <li>B</li>
+          <li>C</li>
+          <li>D</li>
+        </ul>
+      </div>
+    </section> -->
+    <section>
+      <div class="container">
+        <!-- <div class="jokers-container">
+          <div class="jokers">
+            <div class="joker"></div>
+            <div class="joker"></div>
+            <div class="joker"></div>
+            <div class="joker"></div>
+          </div>
+        </div> -->
+        <div id="ui" class="board-container">
+          <div class="board">
+            <div id="levels" class="levels">
+              <div class="num">1</div>
+              <div class="num">2</div>
+              <div class="num">3</div>
+              <div class="num">4</div>
+              <div class="num">5</div>
+              <div class="num">6</div>
+              <div class="num">7</div>
+              <div class="num">8</div>
+              <div class="num">9</div>
+              <div class="num">10</div>
+              <div class="num">11</div>
+              <div class="num">12</div>
+              <div class="num">13</div>
+              <div class="num">14</div>
+              <div class="num">15</div>
+            </div>
+            <div class="level">
+              <div class="question"><p></p></div>
+              <div id="answer-options" class="answer-options disabled">
+                <label for="answer-option-1">
+                  <input
+                    type="radio"
+                    name="answer-option"
+                    id="answer-option-1"
+                    value="A"
+                  />
+                  <div class="answer">
+                    <span class="letter">A:&nbsp;</span><span></span>
+                  </div>
+                </label>
+                <label for="answer-option-2">
+                  <input
+                    type="radio"
+                    name="answer-option"
+                    id="answer-option-2"
+                    value="B"
+                  />
+                  <div class="answer">
+                    <span class="letter">B:&nbsp;</span><span></span>
+                  </div>
+                </label>
+                <label for="answer-option-3">
+                  <input
+                    type="radio"
+                    name="answer-option"
+                    id="answer-option-3"
+                    value="C"
+                  />
+                  <div class="answer">
+                    <span class="letter">C:&nbsp;</span><span></span>
+                  </div>
+                </label>
+                <label for="answer-option-4">
+                  <input
+                    type="radio"
+                    name="answer-option"
+                    id="answer-option-4"
+                    value="D"
+                  />
+                  <div class="answer">
+                    <span class="letter">D:&nbsp;</span><span></span>
+                  </div>
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section>
+      <div id="alerts" class="alerts">
+        <div class="alert">
+          <div class="message">
+            <p></p>
+          </div>
+          <button onclick="restart()">Reintentar</button>
+        </div>
+      </div>
+    </section>
+
+    <script src="./script.js"></script>
+  </body>
+</html>

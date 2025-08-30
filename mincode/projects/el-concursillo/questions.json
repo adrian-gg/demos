@@ -1,0 +1,522 @@
+[
+  {
+    "id": "ARXZXCXV",
+    "question": "¿Cuál es la capital de Francia?",
+    "answers": ["París", "Madrid", "Roma", "Berlín"],
+    "answer": 0,
+    "difficulty": "easy"
+  },
+  {
+    "id": "QWERTYSX",
+    "question": "¿Qué animal es conocido como el 'rey de la selva'?",
+    "answers": ["Tigre", "León", "Elefante", "Oso"],
+    "answer": 1,
+    "difficulty": "easy"
+  },
+  {
+    "id": "PLMJNGBH",
+    "question": "¿Cuántos continentes hay en el mundo?",
+    "answers": ["5", "6", "7", "8"],
+    "answer": 2,
+    "difficulty": "easy"
+  },
+  {
+    "id": "ZXCVBNML",
+    "question": "¿Qué planeta es conocido como el 'Planeta Rojo'?",
+    "answers": ["Júpiter", "Venus", "Saturno", "Marte"],
+    "answer": 3,
+    "difficulty": "easy"
+  },
+  {
+    "id": "POIUYTRE",
+    "question": "¿Cuál es el océano más grande del mundo?",
+    "answers": [
+      "Océano Pacífico",
+      "Océano Atlántico",
+      "Océano Índico",
+      "Océano Ártico"
+    ],
+    "answer": 0,
+    "difficulty": "easy"
+  },
+  {
+    "id": "ASDFGHJK",
+    "question": "¿Quién pintó la Mona Lisa?",
+    "answers": [
+      "Vincent van Gogh",
+      "Leonardo da Vinci",
+      "Pablo Picasso",
+      "Claude Monet"
+    ],
+    "answer": 1,
+    "difficulty": "easy"
+  },
+  {
+    "id": "LKJHGFDS",
+    "question": "¿Cuál es el idioma más hablado en el mundo por número de hablantes nativos?",
+    "answers": ["Inglés", "Español", "Mandarín", "Hindi"],
+    "answer": 2,
+    "difficulty": "easy"
+  },
+  {
+    "id": "MNBVCXZA",
+    "question": "¿En qué continente se encuentra el desierto del Sahara?",
+    "answers": ["Asia", "América del Sur", "Australia", "África"],
+    "answer": 3,
+    "difficulty": "easy"
+  },
+  {
+    "id": "QWERTYUI",
+    "question": "¿Cuál es el deporte más popular del mundo?",
+    "answers": ["Fútbol", "Baloncesto", "Tenis", "Críquet"],
+    "answer": 0,
+    "difficulty": "easy"
+  },
+  {
+    "id": "ZXCVBNMQ",
+    "question": "¿Cuántos huesos tiene un adulto humano promedio?",
+    "answers": ["106", "206", "306", "406"],
+    "answer": 1,
+    "difficulty": "easy"
+  },
+  {
+    "id": "PIUYTRDD",
+    "question": "¿Cuál es el símbolo químico del agua?",
+    "answers": ["CO2", "O2", "H2O", "NaCl"],
+    "answer": 2,
+    "difficulty": "easy"
+  },
+  {
+    "id": "VCXASDFG",
+    "question": "¿Cuál es la estación del año que sigue al verano?",
+    "answers": ["Primavera", "Invierno", "Otoño", "Monzón"],
+    "answer": 2,
+    "difficulty": "easy"
+  },
+  {
+    "id": "NBVCHGTR",
+    "question": "¿Qué animal pone los huevos más grandes?",
+    "answers": ["Gallina", "Águila", "Pato", "Avestruz"],
+    "answer": 3,
+    "difficulty": "easy"
+  },
+  {
+    "id": "MJNHGYUI",
+    "question": "¿Cuántos colores tiene el arcoíris?",
+    "answers": ["5", "6", "7", "8"],
+    "answer": 2,
+    "difficulty": "easy"
+  },
+  {
+    "id": "LKJFDSAP",
+    "question": "¿Cuál es el nombre del primer hombre en pisar la Luna?",
+    "answers": [
+      "Neil Armstrong",
+      "Buzz Aldrin",
+      "Yuri Gagarin",
+      "Michael Collins"
+    ],
+    "answer": 0,
+    "difficulty": "easy"
+  },
+  {
+    "id": "HGFEDCBA",
+    "question": "¿Qué forma tiene la Tierra?",
+    "answers": ["Plana", "Esférica", "Cuadrada", "Cúbica"],
+    "answer": 1,
+    "difficulty": "easy"
+  },
+  {
+    "id": "XCSAQWEW",
+    "question": "¿Cuál es la capital de Italia?",
+    "answers": ["Venecia", "Milán", "Roma", "Florencia"],
+    "answer": 2,
+    "difficulty": "easy"
+  },
+  {
+    "id": "ZAQWSSXD",
+    "question": "¿Qué gas respiran los seres humanos para vivir?",
+    "answers": ["Dióxido de carbono", "Nitrógeno", "Metano", "Oxígeno"],
+    "answer": 3,
+    "difficulty": "easy"
+  },
+  {
+    "id": "RFVTGBNH",
+    "question": "¿Qué país es famoso por la Gran Muralla?",
+    "answers": ["India", "Japón", "China", "Corea del Sur"],
+    "answer": 2,
+    "difficulty": "easy"
+  },
+  {
+    "id": "YHNMKJUY",
+    "question": "¿Cuál es el proceso por el cual las plantas producen su alimento?",
+    "answers": ["Fotosíntesis", "Respiración", "Transpiración", "Fermentación"],
+    "answer": 0,
+    "difficulty": "easy"
+  },
+  {
+    "id": "PXKJLMNO",
+    "question": "¿Cuál es el elemento químico con el símbolo 'Fe'?",
+    "answers": ["Flúor", "Hierro", "Fósforo", "Francio"],
+    "answer": 1,
+    "difficulty": "medium"
+  },
+  {
+    "id": "GHFVBNMC",
+    "question": "¿En qué año cayó el Muro de Berlín?",
+    "answers": ["1985", "1989", "1991", "1979"],
+    "answer": 1,
+    "difficulty": "medium"
+  },
+  {
+    "id": "TYUIPOIU",
+    "question": "¿Quién escribió la novela 'Cien años de soledad'?",
+    "answers": [
+      "Mario Vargas Llosa",
+      "Julio Cortázar",
+      "Gabriel García Márquez",
+      "Jorge Luis Borges"
+    ],
+    "answer": 2,
+    "difficulty": "medium"
+  },
+  {
+    "id": "CXVBNSKL",
+    "question": "¿Cuál es el río más largo del mundo?",
+    "answers": ["Río Nilo", "Río Yangtsé", "Río Misisipi", "Río Amazonas"],
+    "answer": 3,
+    "difficulty": "medium"
+  },
+  {
+    "id": "DFGRTAWQ",
+    "question": "¿Qué país es el hogar de la Ópera de Sídney?",
+    "answers": ["Nueva Zelanda", "Sudáfrica", "Australia", "Canadá"],
+    "answer": 2,
+    "difficulty": "medium"
+  },
+  {
+    "id": "ASZXCVBN",
+    "question": "¿Cuál es la capital de Canadá?",
+    "answers": ["Toronto", "Ottawa", "Vancouver", "Montreal"],
+    "answer": 1,
+    "difficulty": "medium"
+  },
+  {
+    "id": "QWERTYFD",
+    "question": "¿Quién fue el primer presidente de los Estados Unidos?",
+    "answers": [
+      "George Washington",
+      "Thomas Jefferson",
+      "Abraham Lincoln",
+      "John Adams"
+    ],
+    "answer": 0,
+    "difficulty": "medium"
+  },
+  {
+    "id": "LKJHGFDZ",
+    "question": "¿Qué sistema es utilizado para clasificar y nombrar organismos?",
+    "answers": [
+      "Sistema Métrico",
+      "Taxonomía de Linneo",
+      "Clasificación de Köppen",
+      "Tabla Periódica"
+    ],
+    "answer": 1,
+    "difficulty": "medium"
+  },
+  {
+    "id": "ZXCVBNMP",
+    "question": "¿Qué famoso científico propuso la Teoría de la Relatividad?",
+    "answers": [
+      "Isaac Newton",
+      "Albert Einstein",
+      "Stephen Hawking",
+      "Galileo Galilei"
+    ],
+    "answer": 1,
+    "difficulty": "medium"
+  },
+  {
+    "id": "POIULKJM",
+    "question": "¿Cuál es la montaña más alta de África?",
+    "answers": [
+      "Monte Kenia",
+      "Monte Toubkal",
+      "Pico Ruwenzori",
+      "Monte Kilimanjaro"
+    ],
+    "answer": 3,
+    "difficulty": "medium"
+  },
+  {
+    "id": "NBVCFDSA",
+    "question": "¿En qué año se disolvió la Unión Soviética?",
+    "answers": ["1989", "1990", "1991", "1992"],
+    "answer": 2,
+    "difficulty": "medium"
+  },
+  {
+    "id": "HGFEDCBA",
+    "question": "¿Qué instrumento musical tiene 88 teclas?",
+    "answers": ["Guitarra", "Violín", "Piano", "Batería"],
+    "answer": 2,
+    "difficulty": "medium"
+  },
+  {
+    "id": "QAZWSXED",
+    "question": "¿Cuál es el país más grande del mundo por superficie terrestre?",
+    "answers": ["Canadá", "Estados Unidos", "China", "Rusia"],
+    "answer": 3,
+    "difficulty": "medium"
+  },
+  {
+    "id": "RFVTGBYU",
+    "question": "¿Qué océano separa Europa de América?",
+    "answers": [
+      "Océano Pacífico",
+      "Océano Índico",
+      "Océano Atlántico",
+      "Océano Ártico"
+    ],
+    "answer": 2,
+    "difficulty": "medium"
+  },
+  {
+    "id": "IKJHGUFR",
+    "question": "¿Cuál es el proceso por el que una oruga se convierte en mariposa?",
+    "answers": ["Germinación", "Polinización", "Metamorfosis", "Evolución"],
+    "answer": 2,
+    "difficulty": "medium"
+  },
+  {
+    "id": "AZERTYUI",
+    "question": "¿Qué ciudad es conocida como la 'Ciudad Eterna'?",
+    "answers": ["Atenas", "Roma", "Estambul", "El Cairo"],
+    "answer": 1,
+    "difficulty": "medium"
+  },
+  {
+    "id": "MLKJIHGT",
+    "question": "¿Cuál es el autor de 'Don Quijote de la Mancha'?",
+    "answers": [
+      "Lope de Vega",
+      "Federico García Lorca",
+      "Miguel de Cervantes",
+      "Gabriel García Márquez"
+    ],
+    "answer": 2,
+    "difficulty": "medium"
+  },
+  {
+    "id": "FDSAQWEC",
+    "question": "¿Qué país fue el primero en otorgar el voto a las mujeres a nivel nacional?",
+    "answers": ["Estados Unidos", "Reino Unido", "Nueva Zelanda", "Finlandia"],
+    "answer": 2,
+    "difficulty": "medium"
+  },
+  {
+    "id": "BGRFVCDE",
+    "question": "¿Qué hormona es producida por el páncreas para regular el azúcar en sangre?",
+    "answers": ["Adrenalina", "Cortisol", "Insulina", "Tiroxina"],
+    "answer": 2,
+    "difficulty": "medium"
+  },
+  {
+    "id": "JUHYGTFR",
+    "question": "¿Cuál es el hueso más largo del cuerpo humano?",
+    "answers": ["Tibia", "Peroné", "Fémur", "Radio"],
+    "answer": 2,
+    "difficulty": "medium"
+  },
+  {
+    "id": "AZBYCXDW",
+    "question": "¿Qué famoso teorema matemático establece que 'en un triángulo rectángulo, el cuadrado de la longitud de la hipotenusa es igual a la suma de los cuadrados de las longitudes de los otros dos lados'?",
+    "answers": [
+      "Teorema de Tales",
+      "Teorema de Pitágoras",
+      "Teorema de Fermat",
+      "Teorema de Lagrange"
+    ],
+    "answer": 1,
+    "difficulty": "hard"
+  },
+  {
+    "id": "EVFUGTHS",
+    "question": "¿Cuál es el nombre del proceso por el cual una estrella masiva colapsa bajo su propia gravedad, resultando en una explosión violenta?",
+    "answers": ["Fusión nuclear", "Nebulosa", "Supernova", "Agujero negro"],
+    "answer": 2,
+    "difficulty": "hard"
+  },
+  {
+    "id": "IJOKLMNP",
+    "question": "¿Qué filósofo griego es conocido por su concepto de las 'Ideas' o 'Formas', que existen independientemente del mundo material?",
+    "answers": ["Aristóteles", "Sócrates", "Platón", "Parménides"],
+    "answer": 2,
+    "difficulty": "hard"
+  },
+  {
+    "id": "QRSTUVWX",
+    "question": "¿En qué año se firmó el Tratado de Versalles, que puso fin oficialmente a la Primera Guerra Mundial?",
+    "answers": ["1917", "1918", "1919", "1920"],
+    "answer": 2,
+    "difficulty": "hard"
+  },
+  {
+    "id": "YZABCDFG",
+    "question": "¿Cuál es la enzima responsable de la transcripción inversa en algunos virus, como el VIH?",
+    "answers": [
+      "ADN polimerasa",
+      "ARN polimerasa",
+      "Transcriptasa inversa",
+      "Helicasa"
+    ],
+    "answer": 2,
+    "difficulty": "hard"
+  },
+  {
+    "id": "HIJKLMNO",
+    "question": "¿Quién fue el emperador romano que legalizó el cristianismo en el Imperio Romano con el Edicto de Milán?",
+    "answers": ["Julio César", "Nerón", "Constantino I", "Augusto"],
+    "answer": 2,
+    "difficulty": "hard"
+  },
+  {
+    "id": "PQRSTUVW",
+    "question": "¿Qué teoría económica sugiere que la oferta y la demanda son los principales motores de una economía de mercado, sin intervención gubernamental?",
+    "answers": [
+      "Keynesianismo",
+      "Socialismo",
+      "Mercantilismo",
+      "Liberalismo clásico"
+    ],
+    "answer": 3,
+    "difficulty": "hard"
+  },
+  {
+    "id": "XYZABCDE",
+    "question": "¿Cuál es el nombre de la galaxia en la que se encuentra nuestro Sistema Solar?",
+    "answers": ["Andrómeda", "Triángulo", "Vía Láctea", "Sombrero"],
+    "answer": 2,
+    "difficulty": "hard"
+  },
+  {
+    "id": "FGHIJKLM",
+    "question": "¿Qué batalla naval fue decisiva en la Guerra de la Independencia de los Estados Unidos, asegurando el apoyo francés y español?",
+    "answers": [
+      "Batalla de Bunker Hill",
+      "Batalla de Saratoga",
+      "Batalla de Yorktown",
+      "Batalla de Chesapeake"
+    ],
+    "answer": 3,
+    "difficulty": "hard"
+  },
+  {
+    "id": "NOPQRSTU",
+    "question": "¿Qué pensador ilustrado francés es conocido por su defensa de la separación de poderes en el gobierno?",
+    "answers": [
+      "Jean-Jacques Rousseau",
+      "Voltaire",
+      "Montesquieu",
+      "Denis Diderot"
+    ],
+    "answer": 2,
+    "difficulty": "hard"
+  },
+  {
+    "id": "VWXYZABC",
+    "question": "¿Cuál es la principal característica geológica que define la 'Fosa de las Marianas'?",
+    "answers": [
+      "Una cordillera submarina",
+      "Un volcán submarino activo",
+      "La parte más profunda del océano",
+      "Un cañón submarino"
+    ],
+    "answer": 2,
+    "difficulty": "hard"
+  },
+  {
+    "id": "DEFGHIJK",
+    "question": "¿Qué compositor es considerado el 'Padre de la Sinfonía' por su contribución al desarrollo de esta forma musical?",
+    "answers": [
+      "Ludwig van Beethoven",
+      "Wolfgang Amadeus Mozart",
+      "Joseph Haydn",
+      "Johann Sebastian Bach"
+    ],
+    "answer": 2,
+    "difficulty": "hard"
+  },
+  {
+    "id": "LMNOPQRS",
+    "question": "¿Qué concepto en física describe la propiedad de la materia para resistir cualquier cambio en su estado de movimiento, ya sea en reposo o en movimiento uniforme?",
+    "answers": ["Energía", "Fuerza", "Aceleración", "Inercia"],
+    "answer": 3,
+    "difficulty": "hard"
+  },
+  {
+    "id": "TUVWXYZA",
+    "question": "¿Cuál es la capital de Etiopía?",
+    "answers": ["Nairobi", "El Cairo", "Adís Abeba", "Ciudad del Cabo"],
+    "answer": 2,
+    "difficulty": "hard"
+  },
+  {
+    "id": "BCDEFGHI",
+    "question": "¿Qué corriente artística del siglo XX se caracterizó por la descomposición de las figuras y objetos en formas geométricas?",
+    "answers": ["Impresionismo", "Surrealismo", "Cubismo", "Expresionismo"],
+    "answer": 2,
+    "difficulty": "hard"
+  },
+  {
+    "id": "JKLMNOPQ",
+    "question": "¿Qué enfermedad se atribuye a la deficiencia grave de vitamina C?",
+    "answers": ["Raquitismo", "Anemia", "Escorbuto", "Pelagra"],
+    "answer": 2,
+    "difficulty": "hard"
+  },
+  {
+    "id": "RSTUVWXY",
+    "question": "¿Qué figura histórica es conocida por ser la líder del levantamiento de la Vendeé durante la Revolución Francesa?",
+    "answers": [
+      "Madame de Staël",
+      "Charlotte Corday",
+      "Olympe de Gouges",
+      "La Vendeé fue una región, no una líder"
+    ],
+    "answer": 3,
+    "difficulty": "hard"
+  },
+  {
+    "id": "ZABCDEFG",
+    "question": "¿Cuál es el principal componente de la atmósfera terrestre en términos de volumen?",
+    "answers": ["Oxígeno", "Dióxido de carbono", "Argón", "Nitrógeno"],
+    "answer": 3,
+    "difficulty": "hard"
+  },
+  {
+    "id": "HIJKLMNOP",
+    "question": "¿Quién es el autor de 'El Príncipe', una influyente obra sobre filosofía política?",
+    "answers": [
+      "Thomas Hobbes",
+      "John Locke",
+      "Niccolò Maquiavelo",
+      "Jean-Jacques Rousseau"
+    ],
+    "answer": 2,
+    "difficulty": "hard"
+  },
+  {
+    "id": "QRSTUVWX",
+    "question": "¿Qué evento astronómico ocurre cuando la Luna pasa directamente entre el Sol y la Tierra, proyectando una sombra sobre la Tierra?",
+    "answers": [
+      "Eclipse lunar",
+      "Tránsito de Venus",
+      "Cometa",
+      "Eclipse solar"
+    ],
+    "answer": 3,
+    "difficulty": "hard"
+  }
+]

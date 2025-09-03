@@ -370,4 +370,8 @@ body.P2 .gradient-bot {
   .modal {
     min-height: 24%;
   }
+
+  .tile:not(.selected):hover {
+    scale: 1;
+  }
 }

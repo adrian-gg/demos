@@ -134,12 +134,12 @@ body {
   align-items: center;
   position: absolute;
   cursor: pointer;
-  /* transition: scale 0.2s; */
+  transition: scale 0.2s;
 }
 
-/* .tile:not(.selected):hover {
+.tile:not(.selected):hover {
   scale: 0.8;
-} */
+}
 
 .tile.P1,
 .tile.P2 {
@@ -368,5 +368,9 @@ body.P2 .gradient-bot {
 
   .modal {
     min-height: 24%;
+  }
+
+  .tile:not(.selected):hover {
+    scale: 1;
   }
 }

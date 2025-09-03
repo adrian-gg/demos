@@ -2,13 +2,25 @@
   {
     "id": "el-concursillo",
     "name": "El concursillo",
-    "createdOn": "2025-08-27 17:00:00 UTC",
-    "updatedOn": "2025-08-27 17:00:00 UTC",
+    "createdOn": "2025-09-03 17:00:00 UTC",
+    "updatedOn": "2025-09-03 17:00:00 UTC",
     "tags": ["html", "css", "js"],
     "link": "https://adrian-gg.github.io/demos/mincode/projects/el-concursillo/",
     "thumbnail": {
       "url": "https://adrian-gg.github.io/demos/mincode/img/projects/el-concursillo.png",
       "alt": "El concursillo"
+    }
+  },
+  {
+    "id": "16s",
+    "name": "16s",
+    "createdOn": "2025-08-27 17:00:00 UTC",
+    "updatedOn": "2025-08-27 17:00:00 UTC",
+    "tags": ["html", "css", "js"],
+    "link": "https://adrian-gg.github.io/demos/mincode/projects/16s/",
+    "thumbnail": {
+      "url": "https://adrian-gg.github.io/demos/mincode/img/projects/16s.png",
+      "alt": "16s"
     }
   },
   {

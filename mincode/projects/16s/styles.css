@@ -1,0 +1,382 @@
+/* -- RESET ---------------------------------------------------------- */
+
+* {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+/* -- VARIABLES ------------------------------------------------------ */
+
+:root {
+  --color-player1: #8159c9;
+  --color-player2: #ffc107;
+  --color-player1-rgb: 0, 188, 212;
+  --color-player2-rgb: 255, 152, 0;
+  --tile-size: 8rem;
+
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* -- GLOBAL STYLES -------------------------------------------------- */
+
+button {
+  padding: 1.2rem 1.8rem;
+  border: none;
+  border-radius: 0.8rem;
+  color: #fff;
+  font-size: 1.6rem;
+  font-weight: 900;
+  font-family: "M PLUS Rounded 1c", serif;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: opacity 0.2s, scale 0.1s;
+}
+
+button:hover {
+  scale: 0.95;
+}
+
+button:disabled {
+  pointer-events: none;
+  opacity: 0.2;
+}
+
+html {
+  font-size: 1.25vmin;
+  font-family: "M PLUS Rounded 1c", serif;
+  letter-spacing: 0.1rem;
+}
+
+body {
+  height: 100dvh;
+  background-color: #fff;
+  overflow: hidden;
+  position: relative;
+  transition: background 0.2s;
+}
+
+/* -- SECTIONS ------------------------------------------------------- */
+
+#info {
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 20;
+}
+
+.info-box {
+  padding: 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.info-box h1 {
+  margin-bottom: 2rem;
+  font-size: 8rem;
+  font-weight: 800;
+}
+
+.info-box h2 {
+  margin-bottom: 1rem;
+  font-size: 2rem;
+}
+
+.info-box p {
+  margin-bottom: 4rem;
+  font-size: 1.6rem;
+  text-wrap-style: balance;
+  text-align: center;
+}
+
+.info-box button {
+  background-color: #101010;
+}
+
+#game {
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+}
+
+#board {
+  margin: 4rem 0;
+  display: grid;
+  grid-template-columns: repeat(7, auto);
+  grid-template-rows: repeat(4, auto);
+  /* justify-items: center;
+  justify-content: center; */
+  gap: 1rem;
+  position: relative;
+  z-index: 9;
+}
+
+.tile {
+  width: var(--tile-size);
+  height: var(--tile-size);
+  padding: 1.4rem;
+  border-radius: 360px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: scale 0.2s;
+}
+
+.tile:not(.selected):hover {
+  scale: 0.8;
+}
+
+.tile.P1,
+.tile.P2 {
+  pointer-events: none;
+}
+
+.tile::before {
+  content: "";
+  width: calc(var(--tile-size) - 1.4rem);
+  height: calc(var(--tile-size) - 1.4rem);
+  border-radius: 360px;
+  background-color: #f5f5f5;
+  display: inline-block;
+  position: absolute;
+  z-index: -1;
+}
+
+.tile:nth-child(1) {
+  grid-column: 4;
+}
+.tile:nth-child(2) {
+  grid-column: 3;
+}
+.tile:nth-child(5) {
+  grid-column: 2;
+}
+.tile:nth-child(10) {
+  grid-column: 1;
+}
+
+body.P1 .tile.selected::before {
+  outline: 0.3rem solid var(--color-player1);
+}
+body.P2 .tile.selected::before {
+  outline: 0.3rem solid var(--color-player2);
+}
+
+.pawn {
+  width: calc(var(--tile-size) - 2.8rem);
+  height: calc(var(--tile-size) - 2.8rem);
+  border-radius: 360px;
+  background-color: #fff;
+}
+
+body.P1,
+.tile.P1 .pawn,
+#btn-P1,
+body.P1 .bar-top,
+body.P1 .bar-bot {
+  background-color: var(--color-player1);
+}
+
+body.P2,
+.tile.P2 .pawn,
+#btn-P2,
+body.P2 .bar-top,
+body.P2 .bar-bot {
+  background-color: var(--color-player2);
+}
+
+#btn-P1 {
+  transform: rotate(180deg);
+}
+
+#timer {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.gradients {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+.gradient {
+  width: 80%;
+  min-width: 100rem;
+  height: 40%;
+  display: none;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  filter: blur(31px);
+  opacity: 0.4;
+  animation: opacity 8s ease-in-out infinite;
+}
+
+body.P1 .gradient,
+body.P2 .gradient {
+  display: initial;
+}
+
+.gradient.playing {
+  display: initial;
+}
+
+@keyframes opacity {
+  50% {
+    opacity: 0.8;
+  }
+}
+
+.gradient-top {
+  top: -24%;
+}
+
+.gradient-bot {
+  bottom: -24%;
+}
+
+body.P1 .gradient-top,
+body.P1 .gradient-bot {
+  background-image: radial-gradient(
+    closest-side,
+    var(--color-player1) 0%,
+    transparent 90%
+  );
+}
+
+body.P2 .gradient-top,
+body.P2 .gradient-bot {
+  background-image: radial-gradient(
+    closest-side,
+    var(--color-player2) 0%,
+    transparent 90%
+  );
+}
+
+.time-bar {
+  width: 100%;
+  height: 2rem;
+  background-color: #f5f5f5;
+  position: absolute;
+  left: 0;
+  transition: background 0.2s;
+}
+
+.bar-top {
+  top: 0;
+}
+
+.bar-bot {
+  bottom: 0;
+}
+
+#alert {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  transition: opacity 0.2s;
+  opacity: 0;
+  pointer-events: none;
+}
+
+#alert.open {
+  opacity: 1;
+  pointer-events: initial;
+}
+
+.modal {
+  min-width: 38rem;
+  min-height: 28%;
+  padding: 4rem;
+  border-radius: 5rem 5rem 0 0;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  position: absolute;
+  transform: translateY(100%);
+  transition: transform ease-in-out 0.3s;
+}
+
+.modal-top {
+  top: 0;
+  rotate: 180deg;
+}
+
+.modal-bot {
+  bottom: 0;
+}
+
+#alert.open .modal-top {
+  transform: translateY(0%);
+}
+
+#alert.open .modal-bot {
+  transform: translateY(0%);
+}
+
+.modal p {
+  font-size: 4rem;
+}
+
+.modal button {
+  background-color: #303030;
+}
+
+.modal-top button {
+  background-color: var(--color-player1);
+}
+
+.modal-bot button {
+  background-color: var(--color-player2);
+}
+
+/* -- QUERIES -------------------------------------------------------- */
+
+@media (max-aspect-ratio: 13/16) {
+  html {
+    font-size: 1.5vmin;
+  }
+
+  .modal {
+    min-height: 24%;
+  }
+
+  .tile:not(.selected):hover {
+    scale: 1;
+  }
+}

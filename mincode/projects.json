@@ -1,5 +1,17 @@
 [
   {
+    "id": "animated-background-gradient",
+    "name": "Animated Background Gradient",
+    "createdOn": "2025-12-27 17:00:00 UTC",
+    "updatedOn": "2025-12-27 17:00:00 UTC",
+    "tags": ["html", "css", "js"],
+    "link": "https://adrian-gg.github.io/demos/mincode/projects/animated-background-gradient/",
+    "thumbnail": {
+      "url": "https://adrian-gg.github.io/demos/mincode/img/projects/animated-background-gradient.png",
+      "alt": "Animated Background Gradient"
+    }
+  },
+  {
     "id": "el-concursillo",
     "name": "El concursillo",
     "createdOn": "2025-09-03 17:00:00 UTC",

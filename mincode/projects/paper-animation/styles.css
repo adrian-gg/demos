@@ -1,0 +1,132 @@
+/*
+ * ===================================================================
+ * -- RESET ----------------------------------------------------------
+ * ===================================================================
+ */
+
+* {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 10px;
+}
+
+button {
+  appearance: none;
+  border: none;
+  background: none;
+}
+
+button:focus-visible {
+  outline: none;
+}
+
+/*
+ * ===================================================================
+ * -- STYLES ---------------------------------------------------------
+ * ===================================================================
+ */
+
+:root {
+  --c1: #1971ff;
+  --c2: #2c7dff;
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  height: 100vh;
+  height: 100dvh;
+  background: 
+    radial-gradient(circle, var(--c2) 25%, transparent 26%),
+    radial-gradient(circle at bottom left, var(--c2) 12%, transparent 13%),
+    radial-gradient(circle at bottom right, var(--c2) 12%, transparent 13%),
+    radial-gradient(circle at top left, var(--c2) 12%, transparent 13%),
+    radial-gradient(circle at top right, var(--c2) 12%, transparent 13%);
+  background-size: 2.5rem 2.5rem;
+  background-color: #1971ff;
+  opacity: 1;      
+}
+
+.main {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+.container {
+  filter: drop-shadow(0 2px 2px rgba(0, 0, 0, 0.3));
+}
+
+.box {
+  aspect-ratio: 16/9;
+  width: 68.4rem;
+  mask-image: url('./assets/sprite.png');
+  mask-mode: alpha;
+  mask-position: 0px 0px;
+  mask-size: 100% 700%;
+  overflow: hidden;
+  position: relative;
+  animation: open-paper-sprite 0.5s steps(6) forwards;
+}
+
+.paper {
+  width: 100%;
+  height: 100%;
+  background-image: url('./assets/overlay.png');
+  background-position: 0% 0%;
+  background-size: 100%;
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  animation: open-paper-overlay 0.5s steps(6) forwards;
+}
+
+.content {
+  width: 100%;
+  height: 100%;
+  background-image: url('./assets/paper.png');
+  background-color: #fff;
+}
+
+.btn {
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 360px;
+  background-color: rgb(255, 230, 0);
+  font-size: 1.6rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  color: #2b2700;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.btn:hover {
+  transform: scale(0.98);
+}
+
+@keyframes open-paper-sprite {
+  0% {
+    mask-position: 0px 0px;
+  }
+  100% {
+    mask-position: 0px 100%;
+  }
+}
+
+@keyframes open-paper-overlay {
+  0% {
+    background-position: 0% 0%;
+  }
+  100% {
+    background-position: 0% 100%;
+  }
+}

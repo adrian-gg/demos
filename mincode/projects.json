@@ -1,5 +1,17 @@
 [
   {
+    "id": "paper-animation",
+    "name": "Paper animation",
+    "createdOn": "2025-12-28 17:00:00 UTC",
+    "updatedOn": "2025-12-28 17:00:00 UTC",
+    "tags": ["html", "css", "js"],
+    "link": "https://adrian-gg.github.io/demos/mincode/projects/paper-animation/",
+    "thumbnail": {
+      "url": "https://adrian-gg.github.io/demos/mincode/img/projects/paper-animation.png",
+      "alt": "Paper animation"
+    }
+  },
+  {
     "id": "animated-background-gradient",
     "name": "Animated Background Gradient",
     "createdOn": "2025-12-27 17:00:00 UTC",

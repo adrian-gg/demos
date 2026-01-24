@@ -1,5 +1,17 @@
 [
   {
+    "id": "cables",
+    "name": "Cables",
+    "createdOn": "2026-01-26 17:00:00 UTC",
+    "updatedOn": "2026-01-26 17:00:00 UTC",
+    "tags": ["html", "css", "js"],
+    "link": "https://adrian-gg.github.io/demos/mincode/projects/cables/",
+    "thumbnail": {
+      "url": "https://adrian-gg.github.io/demos/mincode/img/projects/cables.png",
+      "alt": "Cables"
+    }
+  },
+  {
     "id": "paper-animation",
     "name": "Paper animation",
     "createdOn": "2025-12-28 17:00:00 UTC",

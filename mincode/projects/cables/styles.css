@@ -1,0 +1,91 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+:root {
+  --port-size: 2.6rem;
+  --port-thickness: 0.4rem;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 10px;
+  user-select: none;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  height: 100dvh;
+  padding: 3rem;
+  background: #0e0e0e;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: sans-serif;
+  color: #eee;
+}
+
+.rack {
+  position: relative;
+  display: flex;
+  gap: 4rem;
+}
+
+/* == SVG CABLES =============================== */
+svg {
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+  position: absolute;
+  inset: 0;
+  z-index: 4;
+  pointer-events: none;
+}
+
+/* == GRID PUERTOS ============================== */
+.ports-grid {
+  width: 36rem;
+  height: 36rem;
+  padding: 3rem;
+  border-radius: 2.2rem;
+  background: #1b1b1b;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  gap: 3rem;
+  z-index: 2;
+}
+
+.port {
+  width: var(--port-size);
+  height: var(--port-size);
+  margin: auto;
+  border: var(--port-thickness) solid #555;
+  border-radius: 50%;
+  background: #222;
+}
+
+.port.occupied {
+  border: var(--port-thickness) solid #eee;
+}
+
+/* == EXTREMIDADES ============================== */
+.end {
+  width: calc(var(--port-size) - (var(--port-thickness) * 2));
+  height: calc(var(--port-size) - (var(--port-thickness) * 2));
+  border: var(--port-thickness) solid;
+  border-radius: 50%;
+  background: #111;
+  position: absolute;
+  z-index: 5;
+  cursor: grab;
+  opacity: 0;
+}
+
+.end:active {
+  opacity: 1;
+  cursor: grabbing;
+}

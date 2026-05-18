@@ -1,0 +1,100 @@
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --size-cell: 3.2rem;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 10px;
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  min-height: 100dvh;
+  padding-top: 6.4rem;
+  display: flex;
+  align-items: center;
+  /* justify-content: center; */
+  flex-direction: column;
+  font-family: monospace, system-ui, sans-serif;
+  user-select: none;
+  gap: 6.4rem;
+  overflow-x: hidden;
+}
+
+input,
+textarea {
+  padding: 1.4rem 1.6rem;
+}
+
+textarea {
+  resize: none;
+  border-radius: 1.6rem;
+  border: 0.2rem solid silver;
+  font-family: sans-serif;
+}
+
+main {
+  width: calc(200% - 3.4rem);
+  min-height: var(--size-cell);
+  background-image: url("./assets/bg.png");
+  background-size: var(--size-cell);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+main::before,
+main::after {
+  content: "";
+  width: 100%;
+  height: 100dvh;
+  background-image: url("./assets/bg.png");
+  background-size: var(--size-cell);
+  position: absolute;
+  z-index: -99;
+  pointer-events: none;
+}
+
+main::before {
+  top: -100dvh;
+}
+
+main::after {
+  bottom: -100dvh;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(26, minmax(var(--size-cell), 1fr));
+  /* gap: 0.2rem; */
+}
+
+.cell {
+  aspect-ratio: 1/1;
+  background-image: url("./assets/blank.png");
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
+}
+
+.cell > div {
+  width: 100%;
+  height: 100%;
+}
+
+.cell,
+.cell > div {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}

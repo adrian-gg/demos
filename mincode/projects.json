@@ -1,14 +1,14 @@
 [
   {
-    "id": "circlular-glyphs",
-    "name": "Circlular Glyphs",
+    "id": "circular-glyphs",
+    "name": "Circular Glyphs",
     "createdOn": "2026-05-18 17:00:00 UTC",
     "updatedOn": "2026-05-18 17:00:00 UTC",
     "tags": ["html", "css", "js"],
-    "link": "https://adrian-gg.github.io/demos/mincode/projects/circlular-glyphs/",
+    "link": "https://adrian-gg.github.io/demos/mincode/projects/circular-glyphs/",
     "thumbnail": {
-      "url": "https://adrian-gg.github.io/demos/mincode/img/projects/circlular-glyphs.png",
-      "alt": "Circlular Glyphs"
+      "url": "https://adrian-gg.github.io/demos/mincode/img/projects/circular-glyphs.png",
+      "alt": "Circular Glyphs"
     }
   },
   {
